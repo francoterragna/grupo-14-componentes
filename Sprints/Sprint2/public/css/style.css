@@ -5,29 +5,59 @@
 }
 
 header{
-    background: linear-gradient(to bottom, #55f, #33a);
-    padding: 15px;
-    height: 80px;
+    background: #56f;
+    height: 130px;
+}
+
+.fa-search{
+    padding:0;
+}
+
+.lupa {
+    height: 20px;
+    margin-top: 15px;
+}
+
+.buscador{
+    margin-left: 50px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+
+
+.carrito{
+    margin-left: 50px;
+    border: none;
+    margin-top: 15px;
+    font-size: larger;
+    color: #ccc
 }
 
 .header-flex{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .hamburguesa{
-    text-align: center;
-    border: 2px solid white;
-    border-radius: 8px;
     margin-left: 50%;
-    padding:7px;
-    margin-top: 6px;
+    margin-top: 20px;
     color: white;
-    background-color: blue;
+    font-size: 25px;
+    background-color: #56f;
 }
 
 header p {
-    text-align: center;
+   text-align: center;
+   height: 35px;
+   line-height: 35px;
+   margin-top: 14px;
+    font-family: 'Righteous', cursive;
+    font-size: 25px;
+    color:white;
+    background-color: black;
 }
 
 nav{
@@ -62,4 +92,26 @@ main div h1 {
     padding: 10px;
     border-top:1px solid black;
     border-bottom: 1px solid black;
+}
+
+main{
+    text-align: center;
+}
+
+.mas-buscados, .notebooks {
+    padding: 15px;
+}
+
+main article{
+    border: 1px solid red;
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 25px
+}
+
+img {
+    width: 200px;
 }
