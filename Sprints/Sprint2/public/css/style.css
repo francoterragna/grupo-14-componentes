@@ -107,11 +107,12 @@ main div h1 {
 
 main{
     text-align: center;
+    background-color: rgb(230,230,230);
 }
 
 .mas-buscados, .notebooks {
     padding: 15px;
-    background-color: rgb(230,230,230);
+    
     border-top: 1px solid #888
 }
 
@@ -122,10 +123,15 @@ main article{
     margin-top: 25px;
     margin-left: 50px;
     margin-right: 50px;
-    padding: 25px;
+    padding: 15px 25px 25px 25px;
     height: 300px;
     width: 200px;
     background-color: white;
+}
+.fa-star{
+    position: relative;
+    right: 100px;
+    color: rgb(243, 191, 18)
 }
 
 img {
@@ -138,19 +144,28 @@ img {
     font-size: 24px;
     font-weight: bold;
 }
-.mercado-pago{
-    background-color: rgb(230,230,230);
+
+.fa-truck{
+    position:relative;
+    left: 100px;
+    bottom: 25px;
+    color: #4a4;
+    border: 1px solid #4a4;
+    padding: 7px;
+    border-radius: 50%;
 }
+
 .medios-de-pago{
-    height: 100px;
-background-color: whitesmoke;
-margin-left: 10px;
-margin-right: 10px;
-border: 1px solid gray;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    width: 90%;
+    margin: 0 auto;
+    bottom: 10px;
+    text-align: center;
 }
 .imagen-mp{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    /* height: 75px; */
     vertical-align: middle;
     display: inline-block;
     line-height: 75px;
@@ -162,21 +177,23 @@ border: 1px solid gray;
 }
 
 div span strong{
-    padding-top: 15px ;
-    line-height: 100px;
+    display: inline-block;
+    text-align: center;
+    /* padding-top: 15px ;
+    line-height: 100px; */
 }
 
 footer{
     background: #56f;
     width: 100%;
     color: white;
-    padding: 40px;
+    
 
 }
 .contenedor-principal{
-    max-width: 1200px;
-    width: 100%;
-    margin: auto
+    padding: 15px 15px 20px 15px;
+    /* width: 100%; */
+    text-align: center;
 }
 .contenedor-footer{
     display: inline-block;
@@ -193,6 +210,7 @@ footer{
 .columna1 p{
     font-size: 16px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .columna2{
