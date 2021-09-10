@@ -9,7 +9,9 @@ header{
     height: 130px;
     text-align: center;
 }
-
+.titulos-section{
+    color: #ffffff;
+}
 .fa-search{
     padding:0;
 }
@@ -103,11 +105,16 @@ main div h1 {
     padding: 10px;
     border-top:1px solid black;
     border-bottom: 1px solid black;
+    background-color: #56f;
+}
+.mas-buscados, .notebooks, .contenedor-mercado-pago{
+    background-image: url(https://img.freepik.com/vector-gratis/diseno-fondo-tecnologico_23-2148503801.jpg?size=626&ext=jpg);
+    
 }
 
 main{
     text-align: center;
-    background-color: rgb(230,230,230);
+    /* background-color: rgb(230,230,230); */
 }
 
 .mas-buscados, .notebooks {
@@ -246,4 +253,34 @@ footer{
 
 .contenedor-copyright{
     max-width: 100%;
+}
+
+/* Acá empieza el css del register */
+.container-form{
+    background-color: #ccc;
+    margin: 30px;
+    padding: 15px;
+    text-align: left;
+}
+.form-titulo{
+    margin: 20px;
+    text-align: left;
+    margin-left: 35px;
+}
+.boton-enviar{
+    background-color: rgb(24, 196, 24);
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 3px;
+}
+.boton-borrar{
+    background-color: red;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 3px;
+}
+.main-register{
+    
 }
