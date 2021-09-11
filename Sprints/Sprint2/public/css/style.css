@@ -273,28 +273,19 @@ footer{
     width: 70%;
     max-width: 300px;
     height: 25px;
-    margin: 10px 0px;
+    margin: 20px 0px;
     border-radius: 5px;
     border:1px solid #999;
-    padding-left: 8px
+    padding: 5px;
 }
 
 .ingresar-texto:focus{
     outline: none;
 }
 
-.form-perfil-usuario{
-    margin: 25px 0;
-}
-
-.perfil-usuario{
-    margin-top: 20px;
+label{
+    font-family: 'Source Code Pro', monospace;
     font-weight: bold;
-    font-size: 18px;;
-}
-
-.radio-comprador{
-    margin-right: 12px;
 }
 
 .boton-enviar{
