@@ -37,42 +37,42 @@ rel="stylesheet" />
             </ul>
         </nav>
     </header>
-    <main class="main-register">
-        <h2 class="form-titulo">Completá tus datos:</h2>
+    <main id="main-register">
+        <h2 class="form-titulo">Completá tus datos</h2>
         <div class="container-form">
-    <form action="/" method="GET" class="form-control">
+    <form action="/home" method="GET" class="form-control">
     
     <div class="form-nombre">
-        <label for="name">Nombre y Apellido:</label>
-        <input type="text" name="name">
+        <label for="name">Nombre y Apellido</label> <br>
+        <input class="ingresar-texto" type="text" name="name" placeholder="Nombre y apellido">
     </div>
     <div class="form-dni">
-        <label for="dni">DNI:</label>
-        <input type="number" name="dni">
+        <label for="dni">DNI</label><br>
+        <input class="ingresar-texto" type="number" name="dni" placeholder="DNI">
     </div>
     <div class="form-nacimiento">
-        <label for="nacimiento">Fecha de nacimiento:</label>
-        <input type="date">
+        <label for="nacimiento">Fecha de nacimiento</label><br>
+        <input class="ingresar-texto" type="date" name="nacimiento">
     </div>
     <div class="form-email">
-        <label for="email" name="email">Email:</label>
-        <input type="email" name="email">
+        <label for="email" name="email">Email</label><br>
+        <input class="ingresar-texto" type="email" name="email" placeholder="Correo electrónico">
     </div>
     <div class="form-perfil-usuario">
-        <label for="perfil-usuario">Perfil de usuario:</label>
-        <label for="comprador">Comprador <input type="radio" value="comprador"></label>
-        <label for="vendedor">Vendedor <input type="radio" value="vendedor"></label>
+        <label class="perfil-usuario">Perfil de usuario</label><br><br>
+        <label class="radio-comprador" for="comprador">Comprador <input type="radio" name="perfil" id="comprador"></label>
+        <label class="radio-vendedor" for="vendedor">Vendedor <input type="radio" name="perfil" id="vendedor"></label>
     </div>
     <div class="form-contraseña">
-        <label for="contraseña">Creá tu constraseña:</label>
-        <input type="password" name="contraseña">
+        <label for="contraseña">Creá tu constraseña</label><br>
+        <input class="ingresar-texto" type="password" name="contraseña">
     </div>
     <div class="form-confirm-contraseña">
-        <label for="c-contraseña" name="c-contraseña">Confirmá tu contraseña:</label>
-        <input type="password" name="c-contraseña">
+        <label for="c-contraseña" name="c-contraseña">Confirmá tu contraseña</label><br>
+        <input class="ingresar-texto" type="password" name="c-contraseña">
     </div>
 
-    <button type="submit" class="boton-enviar">Crear cuenta</button>
+    <button type="submit" class="boton-enviar">Enviar</button>
     <button type="reset" class="boton-borrar">Borrar</button>
 </div>
     
