@@ -5,10 +5,17 @@
 }
 
 header{
-    background: #56f;
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/85/919/639/asus-republic-of-gamers-gaming-laptop-gamer-hd-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position-y: bottom;
+    /* background-color: #298bbb; */
     height: 130px;
     text-align: center;
 }
+.logo{
+    color:white
+}
+
 .titulos-section{
     color: #ffffff;
 }
@@ -48,7 +55,6 @@ header{
     margin-top: 20px;
     color: white;
     font-size: 25px;
-    background-color: #56f;
 }
 
 header p {
@@ -76,6 +82,8 @@ nav{
     height: 100%;
     object-fit: cover;
 }
+
+
 
 main div h1 {
     color: white;
@@ -105,15 +113,12 @@ main div h1 {
     padding: 10px;
     border-top:1px solid black;
     border-bottom: 1px solid black;
-    background-color: #56f;
-}
-.mas-buscados, .notebooks, .contenedor-mercado-pago{
-    background-image: url(https://img.freepik.com/vector-gratis/diseno-fondo-tecnologico_23-2148503801.jpg?size=626&ext=jpg);
-    
+    background-color: #a48dff;
 }
 
 main{
     text-align: center;
+    background-image: url(https://img.freepik.com/vector-gratis/diseno-fondo-tecnologico_23-2148503801.jpg?size=626&ext=jpg);
     /* background-color: rgb(230,230,230); */
 }
 
@@ -255,6 +260,22 @@ footer{
     max-width: 100%;
 }
 
+.politicas {
+    margin-top: 15px;
+}
+
+.politicas a{
+    margin-left: 20px;
+}
+
+.politicas a:link{
+    color:white;
+}
+
+.politicas a:visited{
+    color:white
+}
+
 /* Acá empieza el css del register */
 .container-form{
     padding: 35px 0px;
@@ -289,25 +310,34 @@ label{
 }
 
 .boton-enviar{
-    background-color: rgb(24, 230, 24);
+    background-color: #eee;
     border: none;
     color: black;
-    border-radius: 5px;
     padding: 7px;
+    width: 80px;
     font-weight: bold;
     margin-right:25px;
     margin-top: 15px
 }
 .boton-borrar{
-    background-color: rgb(240,24,24);
+    background-color: #eee;
     border: none;
-    color: white;
-    border-radius: 5px;
+    color: black;
     font-weight: bold;
+    width:80px;
     padding: 7px;
     margin-left:25px;
     margin-top: 15px
 }
+
+.boton-borrar:hover{
+    box-shadow: 5px 5px 12px #222;
+}
+
+.boton-enviar:hover{
+    box-shadow: 5px 5px 12px #222;
+}
+
 #main-register{
     background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg);
     background-size: cover;
