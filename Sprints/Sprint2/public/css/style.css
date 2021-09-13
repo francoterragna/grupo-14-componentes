@@ -157,7 +157,7 @@ img {
     font-weight: bold;
 }
 
-.fa-truck{
+.camion-home{
     position:relative;
     left: 100px;
     bottom: 25px;
@@ -343,4 +343,9 @@ label{
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
+}
+
+/* Aca empieza el css del detalle de producto */
+.detalle-producto{
+    background-color: white;
 }
