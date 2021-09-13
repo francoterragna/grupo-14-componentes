@@ -47,46 +47,51 @@ rel="stylesheet" />
         <h2 class="carrito-titulo">Mi carrito<i class="fas fa-shopping-cart"></i></h2>
      <div class="contenedor-carrito">
 
-        <div class="carrito-tabla-control">
-        <table>
+        <table class="carrito-tabla-control">
         <thead class="fila-principal">
             <tr >
                 <th> <strong>Nombre</strong> </th>
                 <th><strong>Cantidad</strong></th>
-                <th><strong> Precio Total</strong></th>
-               
+                <th><strong>Precio Total</strong></th>
+               <th></th>
             </tr>
         </thead>
         <tbody class="fila-comun">
             <tr>
                 
                 <td class="nombre-producto">Procesador AMD Ryzen™ 5 1600</td>
-                <td class="cantidad-producto"> <span><input type="number"></span> 
-                <div class="botones-control">
+
+                <td class="cantidad-producto"><div class="botones-control"><input type="number" class="input-producto"> 
+                
                     <button class="boton-restar"><i class="fas fa-minus"></i></button>
                     <button class="boton-sumar"><i class="fas fa-plus"></i></button>
                 </div>
                 </td>
+
                 <td class="precio-producto">$20.500</td>
+
+                <td class="tarro-basura"><i class="fas fa-trash"></i></td>
             </tr>
             <tr class="fila-comun">
                 <td class="nombre-producto">Apple McBook Air 13"</td>
-                <td class="cantidad-producto"> <span><input type="number"></span> 
-                <div class="botones-control">
+                
+                <td class="cantidad-producto"> <div class="botones-control"><input type="number" class="input-producto"> 
+                
                     <button class="boton-restar"><i class="fas fa-minus"></i></button>
                     <button class="boton-sumar"><i class="fas fa-plus"></i></button>
                 </div>
                 </td>
                 <td class="precio-producto">$334.000</td>
+                <td class="tarro-basura"><i class="fas fa-trash"></i></td>
             </tr>
         </tbody>
         </table>
-        </div>
-     </div>
+    </div>
+     
      <div class="cupon">
-         <div class="cupon-input">
+         <div >
              <label for="cupon"></label>
-            <input type="text" placeholder="Escribir código cupón" name="cupon">
+            <input type="text" placeholder="Escribir código cupón" name="cupon" class="cupon-input">
          </div>
          <div >
            <button type="submit" name="cupon" class="cupon-boton" >APLICAR CUPÓN</button>
