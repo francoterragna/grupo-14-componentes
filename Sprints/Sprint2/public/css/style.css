@@ -349,3 +349,35 @@ label{
 .detalle-producto{
     background-color: white;
 }
+
+
+
+
+
+/* CSS carrito */
+.main-carrito{
+    color: white;
+}
+
+.contenedor-carrito{
+    background-color: rgba(255,255,255,0.3);
+    display: flex;
+    position: relative;
+    padding: 15px;
+    margin: 15px 15px 0 15px;
+}
+.cupon{
+    background-color: rgba(255,255,255,0.3); 
+    padding: 15px; 
+    margin: 0 15px;
+}
+.cupon-boton{
+    background-color: rgb(219, 22, 81);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.fila-principal{
+border: 1px solid red;
+}

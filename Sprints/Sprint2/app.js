@@ -13,4 +13,6 @@ app.get('/register', (req, res) =>{
 
 app.get('/producto', (req,res) => res.sendFile(path.join(__dirname, '/views/producto.html')));
 
+app.get('/carrito', (req,res) => res.sendFile(path.join(__dirname, '/views/carrito.html')));
+
 app.listen(3030, () => console.log("Servidor corriendo en el puerto 3030"));

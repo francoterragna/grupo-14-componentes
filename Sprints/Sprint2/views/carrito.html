@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<title>TODO GAMING</title>
+</head>
+<body>
+    <header>
+        <div class="header-flex">
+        <h2 class="logo">Logo</h2>
+        <input type="text" placeholder="Buscar..." class="buscador">
+        <button class="lupa"><i class="fas fa-search"></i></button>
+        <i class="fas fa-shopping-cart carrito"></i>
+        </div>
+        <a href="#"><i class="fas fa-bars hamburguesa"></i></a>
+        <p>12 y 18 CUOTAS SIN INTERÉS</p>
+
+        <nav>
+            
+            <ul>
+                <li>ARMÁ TU PC</li>
+                <li>PERIFÉRICOS</li>
+                <li>COMPONENTES DE PC</li>
+                <li>NOTEBOOKS</li>
+            </ul>
+
+            <ul class="nav-bar-bottom">
+           <li><a href="#"> Crea tu cuenta</a></li>  
+           <li> <a href="#">Ingresá</a> </li>  
+           <li><a href="#">Mis compras</a></li>  
+             
+            </ul>
+        </nav>
+    </header>
+    <main class="main-carrito">
+        <h2 class="carrito-titulo">Mi carrito<i class="fas fa-shopping-cart"></i></h2>
+     <div class="contenedor-carrito">
+
+        <div class="carrito-tabla-control">
+        <table>
+        <thead class="fila-principal">
+            <tr >
+                <th> <strong>Nombre</strong> </th>
+                <th><strong>Cantidad</strong></th>
+                <th><strong> Precio Total</strong></th>
+               
+            </tr>
+        </thead>
+        <tbody class="fila-comun">
+            <tr>
+                
+                <td class="nombre-producto">Procesador AMD Ryzen™ 5 1600</td>
+                <td class="cantidad-producto"> <span><input type="number"></span> 
+                <div class="botones-control">
+                    <button class="boton-restar"><i class="fas fa-minus"></i></button>
+                    <button class="boton-sumar"><i class="fas fa-plus"></i></button>
+                </div>
+                </td>
+                <td class="precio-producto">$20.500</td>
+            </tr>
+            <tr class="fila-comun">
+                <td class="nombre-producto">Apple McBook Air 13"</td>
+                <td class="cantidad-producto"> <span><input type="number"></span> 
+                <div class="botones-control">
+                    <button class="boton-restar"><i class="fas fa-minus"></i></button>
+                    <button class="boton-sumar"><i class="fas fa-plus"></i></button>
+                </div>
+                </td>
+                <td class="precio-producto">$334.000</td>
+            </tr>
+        </tbody>
+        </table>
+        </div>
+     </div>
+     <div class="cupon">
+         <div class="cupon-input">
+             <label for="cupon"></label>
+            <input type="text" placeholder="Escribir código cupón" name="cupon">
+         </div>
+         <div >
+           <button type="submit" name="cupon" class="cupon-boton" >APLICAR CUPÓN</button>
+         </div>
+     </div>
+    </main>    
+    
+    <footer>
+        <div class="contenedor-principal">
+        <div class="contenedor-footer">
+         <div class="columna1">
+             <h1>Más información de la compañía</h1>
+             <p>Somos una página de venta de PC's, componentes y accesorios con un amplio catálogo de marcas y productos. El mejor precio y calidad lo vas a encontrar acá, donde desde el año 2015 te brindamos asesoramiento gratuito con vendedores altamente capacitados y una garantía de 1 año en todos los productos.</p>
+         </div>
+
+         <div class="columna2"> 
+             <h1>Nuestras redes y contactos</h1>
+             <div class="filas"> 
+                 <img src="http://assets.stickpng.com/thumbs/584ac2d03ac3a570f94a666d.png">
+                 <label>Síguenos en Facebook</label>
+             </div>
+             <div class="filas"> 
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png">
+                 <label>Síguenos en Instagram</label>
+             </div>
+             <div class="filas"> 
+                 <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png">
+                 <label>Nuestro Whatsapp</label>
+             </div>
+             <div class="filas"> 
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png">
+                 <label>Nuestro Mail</label>
+             </div>
+            </div>   
+        <div class="columna3">
+             <h1>¿Dónde estamos?</h1>   
+              <div class="filas2">
+                  
+                <label>Dirección 1234
+                <img src="https://i.blogs.es/b4dd5c/maps/1366_2000.png">
+            </label>
+        </div> 
+            </div>        
+            
+        </div>
+
+    <div class="contenedor-copyright"> 
+     <div class="copyright">
+        © Todos los derechos reservados|TodoGaming 
+     </div>
+     <div class="politicas">
+       <a href="#">Información</a>
+      <a href="#">Política y privacidad</a>
+       <a href="#">Términos y condiciones</a>
+     </div>
+    </div>
+</div>
+    </footer>
+</body>
+</html>
