@@ -13,7 +13,7 @@ rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-<title>TODO GAMING</title>
+<title>Login</title>
 </head>
 <body>
     <header>
@@ -43,8 +43,20 @@ rel="stylesheet" />
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-login">
+        <h2 class="titulo-login">Ingresar</h2>
+        <form action="/home" method="GET" class="form-login">
+        <label for="usuario" class="label-login">Nombre de usuario</label>
+             <br><input class="input-usuario" type="text" name="usuario" placeholder="Usuario"><br>
         
+        <label for="contraseña" class="label-login">Contraseña</label>
+             <br><input class="input-contraseña" type="password" name="contraseña" placeholder="Contraseña"><br>
+        
+        <a href="#" class="olvidar-contraseña">¿Olvidaste tu contraseña?</a><br>
+        <button type="submit" class="ingresar-boton">Ingresar</button>
+       
+        <p class="registrarse-texto">¿No tenés cuenta? ¡Registrate!</p><a href="/register" class="enlace-registrarse"><div class="registrarse-boton">Registrarse</div></a>
+        </form>
     </main>
     <footer>
         <div class="contenedor-principal">

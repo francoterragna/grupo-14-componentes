@@ -407,18 +407,66 @@ border: 1px solid red;
 .cupon-input:focus{
 outline: none;
 }
-/*
-.carrito-tabla-control{
-    display: flex;
-    border: 1px solid green;
-    flex-direction: column;
-    justify-content: space-around;
 
+/* Aca empieza el CSS del login */
+
+.main-login{
+    text-align: center;
+    background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
-.fila-principal{
-    display: flex;
-    justify-content: space-between;
-}*/
+.titulo-login{
+    margin: 5px 0 25px 0
+}
 
+.form-login{
+    width: 70%;
+    margin: 0 auto;
+}
 
+.input-usuario{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.input-contraseña{
+    margin-top:10px;
+}
+
+.olvidar-contraseña{
+    font-size: 70%;
+}
+
+.registrarse-texto{
+    font-size: 16px;
+    margin: 20px 0 5px 0;
+}
+
+.ingresar-boton{
+    margin-top:15px;
+    padding: 6px;
+    color:white;
+    font-weight: bold;
+    background-color:black;
+    border-radius: 8px;
+}
+
+.registrarse-boton{
+    text-align: center;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: orange;
+    margin: 8px auto;
+    color:black;
+    font-weight: bold;
+    padding:4px
+}
+
+.enlace-registrarse{
+    
+    text-decoration: none;
+}
