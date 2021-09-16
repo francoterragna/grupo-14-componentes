@@ -4,6 +4,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    min-width: 375px;
+}
+
 header{
     background-image: url(https://p4.wallpaperbetter.com/wallpaper/85/919/639/asus-republic-of-gamers-gaming-laptop-gamer-hd-wallpaper-preview.jpg);
     background-size: cover;
@@ -61,7 +65,7 @@ header{
 }
 
 .hamburguesa{
-    margin-top: 20px;
+    margin-top: 15px;
     color: white;
     font-size: 25px;
 }
@@ -70,7 +74,7 @@ header p {
    text-align: center;
    height: 35px;
    line-height: 35px;
-   margin-top: 5px;
+   margin-top: 10px;
     font-family: 'Righteous', cursive;
     font-size: 25px;
     color:white;
@@ -90,6 +94,7 @@ nav{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position:relative
 }
 
 
@@ -101,34 +106,39 @@ main div h1 {
 }
 
 .fa-arrow-left{
-    line-height: 200px;
-    margin-left: 15px;
+    top:220px;
     position: absolute;
-    left: 0;
+    left: 3%;
     font-size: 25px;
     color: white;
+    z-index:100;
 }
 .fa-arrow-right{
-    line-height:  200px;
+    top: 220px;
     font-size: 25px;
-    margin-right: 15px;
     position: absolute;
-    right: 0;
+    right: 3%;
     color: white
 }
 
 .productos-destacados{
     text-align: center;
     padding: 10px;
+    line-height: 50px;
     border-top:1px solid black;
     border-bottom: 1px solid black;
     background-color: #a48dff;
+    /* background-color: white; */
+    height: 50px;
 }
 
 main{
     text-align: center;
     background-image: url(https://img.freepik.com/vector-gratis/diseno-fondo-tecnologico_23-2148503801.jpg?size=626&ext=jpg);
-    /* background-color: rgb(230,230,230); */
+}
+
+.main-home-fondo{
+    background-color: rgba(255,255,255,0.3);
 }
 
 .mas-buscados, .notebooks {
@@ -208,18 +218,18 @@ footer{
     background: #333;
     width: 100%;
     color: white;
-    
-
 }
 .contenedor-principal{
     padding: 15px 15px 20px 15px;
     /* width: 100%; */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contenedor-footer{
     display: inline-block;
     /* Poner el display flex en mediaQ de escritorio */
-    justify-content: space-between;
 }
 .columna1{
     max-width: 400px;
@@ -488,4 +498,37 @@ outline: none;
 .enlace-registrarse{
     
     text-decoration: none;
+}
+
+
+@media (min-width:600px){
+    nav{
+        display: flex;
+        color:white;
+        justify-content: space-between;
+    }
+    .hamburguesa{
+        display: none;
+    }
+
+    .ul-izquierdo{
+        display: flex;
+    }
+
+    .ul-derecha{
+        display: flex;
+    }
+
+    header{
+        height: 132px;
+    }
+
+    header p{
+        margin-top:34px;
+    }
+
+    .contenedor-principal{
+        flex-direction: row;
+    }
+
 }
