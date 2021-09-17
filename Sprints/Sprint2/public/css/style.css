@@ -364,16 +364,73 @@ label{
     background-position-x: center;
 }
 
-/* Aca empieza el css del detalle de producto */
+/* -----------------------------------------
+Aca empieza el css del detalle de producto 
+--------------------------------------------*/
 .detalle-producto{
     background-color: white;
 }
 
+.contenedor-garantia-stock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 20%;
+}
 
+.contenedor-garantia-stock p {
+    padding-top: 10px;
+    line-height: 10px;
+}
 
+.iconos-producto{
+    margin-right: 13px;
+    color: #080;
+    font-size: 20px;
+}
 
+.button-comprar, .button-agregar-carrito{
+    width: 35%;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold ;
+}
+.button-comprar{
+background-color: #3483fa; 
+color: white;   
+border-radius: 5px;
+border: none;
+}
+.button-agregar-carrito{
+background-color: #ddd;
+color:#3483fa;
+border-radius: 5px;
+border: none;
+}
 
-/* CSS carrito */
+.caracteristicas-producto{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-left: 25%;
+    padding-top: 15px;
+}
+
+.caracteristicas-producto p {
+    padding-top:10px;
+}
+
+.caracteristicas-producto:last-child{
+    padding-bottom: 15px;
+}
+
+.titulo-producto{
+    color: #555;
+}
+
+/*-----------------------------------
+ CSS carrito 
+ ------------------------------------*/
  .main-carrito{
     color: white;
 }
@@ -427,7 +484,9 @@ border: 1px solid red;
 outline: none;
 }
 
-/* Aca empieza el CSS del login */
+/*------------------------------ 
+Aca empieza el CSS del login 
+--------------------------------*/
 
 .main-login{
     text-align: center;
