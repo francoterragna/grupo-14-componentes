@@ -400,6 +400,7 @@ background-color: #3483fa;
 color: white;   
 border-radius: 5px;
 border: none;
+animation: aumentar .5s infinite linear alternate;
 }
 .button-agregar-carrito{
 background-color: #ddd;
@@ -426,6 +427,60 @@ border: none;
 
 .titulo-producto{
     color: #555;
+}
+
+.imagen-producto{
+    width: 80%;
+}
+
+.div-cantidad-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* margin-left: 20%;
+    position:relative;
+    width: 100%;
+    height: 40px; */
+}
+
+.cantidad-productos-detalle{
+    font-size: 25px;
+    width: 47px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.cantidad-productos-detalle:focus{
+    outline: none;
+}
+
+.sumar-restar-producto-menos {
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sumar-restar-producto-mas{
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@keyframes aumentar {
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(107%);
+    }
 }
 
 /*-----------------------------------
@@ -560,7 +615,7 @@ Aca empieza el CSS del login
 }
 
 
-@media (min-width:600px){
+@media (min-width:611px){
     nav{
         display: flex;
         color:white;
