@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 body{
@@ -376,6 +377,8 @@ Aca empieza el css del detalle de producto
     flex-direction: column;
     align-items: flex-start;
     padding: 25px 20%;
+    border-top: 1px solid gray;
+    
 }
 
 .contenedor-garantia-stock p {
@@ -427,6 +430,7 @@ border: none;
 
 .titulo-producto{
     color: #555;
+    margin-bottom: 2%;
 }
 
 .imagen-producto{
@@ -437,8 +441,9 @@ border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5%;
 }
 
 .cantidad-productos-detalle{
@@ -479,6 +484,7 @@ border: none;
 .consultas-producto{
     margin: 25px 0 25px 0;
     padding: 10px;
+    border-top: 1px solid gray;
 }
 
 .p-consultas{
