@@ -14,6 +14,7 @@ header{
     height: 96px;
     text-align: center;
     width: 100%;
+    height: 20%;
 }
 
 .titulos-section{
@@ -267,6 +268,8 @@ footer{
 .columna3 h1{
     font-size: 24px;
 }
+
+
 .filas2{
     margin-top: 20px;
 }
@@ -596,7 +599,7 @@ Aca empieza el CSS del login
 
 .main-login{
     text-align: center;
-    background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg);
+    /* background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -652,9 +655,9 @@ Aca empieza el CSS del login
     width: 100px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: orange;
+    background-color: black;
     margin: 8px auto;
-    color:black;
+    color:white;
     font-weight: bold;
     padding:4px
 }
@@ -663,6 +666,23 @@ Aca empieza el CSS del login
     
     text-decoration: none;
 }
+
+.login-facebook{
+    padding: 10px;
+    background-color: #3b5998;
+    margin-bottom: 10px;
+}
+.button-facebook{
+    color: white;
+}
+.fa-facebook-square{
+    color: white;
+    font-size: 20px;
+}
+.login-facebook label{
+    color: white;
+}
+
 
 
 /* @media(min-width:380px){
