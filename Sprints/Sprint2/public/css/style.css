@@ -63,21 +63,49 @@ header{
     padding: 12px 15px 2px 15px;
 }
 
+.seis-cuotas {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+     font-family: 'Righteous', cursive;
+     font-size: 25px;
+     color:white;
+     background-color: black;
+     margin-top: 10px;
+ }
+
+.menu-desplegable{
+    position:fixed;
+    z-index: 100;
+    background-color: white;
+    height: 100vh;
+    width:100vw;
+    margin-top: -50px;
+    left: 115%;
+    transition: .6s;
+    font-size: 18px;
+    font-family: 'Roboto'
+}
+
+.menu-desplegable p {
+    padding: 25px 0 0 25px;
+    display: block;
+    text-align: left;
+}
+
+.hamburguesa:hover .menu-desplegable{
+    left: 30%;
+    text-align: left;
+}
+
+.hamburguesa:hover> body{
+    background-color: rgba(200,200,200, 0.5);
+}
+
 .hamburguesa{
     color: #000;
     font-size: 25px;
     padding-left: 10px;
-}
-
-header p {
-   text-align: center;
-   height: 35px;
-   line-height: 35px;
-    font-family: 'Righteous', cursive;
-    font-size: 25px;
-    color:white;
-    background-color: black;
-    margin-top: 10px;
 }
 
 .logo{
@@ -97,8 +125,6 @@ header p {
 nav{
     display:none
 }
-
-
 
 main{
     text-align: center;
@@ -257,7 +283,7 @@ footer{
     width: 100%;
     color: white;
 }
-.contenedor-principal{
+.contenedor-principal-footer{
     padding: 15px 15px 20px 15px;
     /* width: 100%; */
     text-align: center;
@@ -369,7 +395,6 @@ footer{
 }
 
 label{
-    font-family: 'Source Code Pro', monospace;
     font-weight: bold;
 }
 
