@@ -168,6 +168,52 @@ main{
     background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/188/770/rte/banner-accesorios.jpg);
 }
 
+.gorras {
+    background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/188/770/rte/banner-gorras.jpg);
+}
+
+.gorras span {
+    background-color: #bf1313;
+    color: black;
+}
+
+.camperas{
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/514/822/545/call-of-duty-ghosts-dark-white-video-games-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+.bermudas{
+    /* background-color: #536b78; */
+    background-image: url(https://media.istockphoto.com/photos/particle-dark-backgrounds-picture-id1072907026?b=1&k=6&m=1072907026&s=170667a&w=0&h=V_vm8OYN24cF0yg6AR59hKi1lIw-HIKPgK5IozYmN2Q=);
+    background-size: cover;
+}
+
+.bermudas span{
+    background-color: black;
+    color: #bf1313;
+}
+
+.sudaderas{
+background-image: url(https://fondosmil.com/fondo/13230.png);
+background-size: contain;
+}
+
+
+.sudaderas span{
+    background-color: #fff;
+    color: #000;
+    
+}
+
+.accesorios{
+    background-image: url(https://fondosmil.com/fondo/14382.jpg);
+    background-size: cover;
+}
+
+.accesorios span{
+    background-color: #bf1313;
+    color:black;
+}
 
 a{
     text-decoration: none;
@@ -368,10 +414,8 @@ label{
 }
 
 #main-register{
-    background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
+    
+    background-color: #fff;
 }
 
 /* -----------------------------------------
@@ -541,9 +585,7 @@ border: none;
 /*-----------------------------------
  CSS carrito 
  ------------------------------------*/
- .main-carrito{
-    color: white;
-}
+
 
 .contenedor-carrito{
     background-color: rgba(255,255,255,0.3);
@@ -553,7 +595,7 @@ border: none;
     
 }
 .carrito-titulo{
-    
+    color: black;
     padding: 15px;
     text-align: left;
 }
@@ -579,7 +621,20 @@ border: 1px solid red;
 .nombre-producto, .precio-producto, .cantidad-producto{
     padding: 5px;
     width: 33%;
+    color: black;
 }
+
+.div-precio-total{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.div-precio-total p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
 .cupon{
     
     padding: 15px; 
@@ -609,7 +664,7 @@ Aca empieza el CSS del login
     background-color: rgba(255,255,255,0.5);
 }
 .titulo-login{
-    margin: 0px 0 25px 0
+    margin: 10px 0 25px 0
 }
 
 .form-login{
@@ -617,6 +672,8 @@ Aca empieza el CSS del login
     margin: 0 auto;
     padding:1px;
 }
+
+
 
 .input-login{
     margin-top:10px;
