@@ -15,7 +15,7 @@
 5- Dejar de modificar el código sin previo aviso a los compañeros del team.
 
 
-
+SPRINT 3:
 
 1- ¿Qué fue lo más dificil que les tocó hacer?
 2- ¿Qué fue lo que más les gustó hacer?
