@@ -1,75 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-<link rel="stylesheet" href="/css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-<title>PARIS INDUMENTARIA</title>
-</head>
+    <%- include('./partials/head.ejs') %>
 <body>
-    <header>
-        <div class="header-flex">
-        <a href="/home"><img src="https://http2.mlstatic.com/D_NQ_NP_758613-MLA47047446747_082021-W.jpg" alt="" class="logo"></a>
-        <i class="far fa-user-circle user"></i>
-        <div class="lupa-barra">
-            
-            <!-- <input type="text" placeholder="Buscar..." class="buscador"> -->
-            <button class="lupa"><i class="fas fa-search"></i></button>
-            
-        </div>
-        <i class="fas fa-bars hamburguesa">
-            <div class="menu-desplegable">
-                <p>REMERAS</p>
-                <p>BUZOS</p>
-                <p>PANTALONES</p>
-                <p>CAMISAS</p>
-                <p>TRAJES DE BAÑO</p>
-                <p>MEDIAS</p>
-                <p>GORRAS</p>
-                <p>CAMPERAS</p>
-                <p>BERMUDAS</p>
-                <p>SUDADERAS</p>
-                <p>ACCESORIOS</p>
-                <i class="fas fa-times"></i>
-            </div>
-        </i>
-        <i class="fas fa-shopping-cart carrito"></i>
-        </div>
-        <nav>
-            
-            <ul class="ul-izquierdo">
-                <li>REMERAS</li>
-                <li>BUZOS</li>
-                <li>PANTALONES</li>
-                <li>CAMISAS</li>
-                <li>TRAJES DE BAÑO</li>
-                <li>MEDIAS</li>
-                <li>GORRAS</li>
-                <li>CAMPERAS</li>
-                <li>BERMUDAS</li>
-                <li>SUDADERAS</li>
-                <li>BUSCAR</li>
-                <li>CARRITO</li>
-            </ul>
-    
-            <ul class="ul-derecha">
-           <li><a href="#"> Crea tu cuenta</a></li>  
-           <li> <a href="#">Ingresá</a> </li>  
-           <li><a href="#">Mis compras</a></li>  
-             
-            </ul>
-        </nav>
-       <div class="aviso-cuotas"> <p class="seis-cuotas">6 y 12 CUOTAS SIN INTERÉS</p> </div>
-    </header>
+    <%- include('./partials/header.ejs') %>
     <main class="main-carrito">
         <h2 class="carrito-titulo">Mi carrito<i class="fas fa-shopping-cart"></i></h2>
      <div class="contenedor-carrito">
@@ -129,55 +62,6 @@ rel="stylesheet" />
      </div>
     </main>    
     
-    <footer>
-        <div class="contenedor-principal-footer">
-            <div class="contenedor-footer">
-                <div class="columna1">
-                    <h1>Más información de la compañía</h1>
-                    <p>Somos una página de venta de PC's, componentes y accesorios con un amplio catálogo de marcas y productos. El mejor precio y calidad lo vas a encontrar acá, donde desde el año 2015 te brindamos asesoramiento gratuito con vendedores altamente capacitados y una garantía de 1 año en todos los productos.</p>
-                </div>
-
-                <div class="columna2"> 
-                    <h1>Nuestras redes y contactos</h1>
-                    <div class="filas"> 
-                        <img src="http://assets.stickpng.com/thumbs/584ac2d03ac3a570f94a666d.png">
-                        <label>Síguenos en Facebook</label>
-                    </div>
-                    <div class="filas"> 
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png">
-                        <label>Síguenos en Instagram</label>
-                    </div>
-                    <div class="filas"> 
-                        <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c543.png">
-                        <label>Nuestro Whatsapp</label>
-                    </div>
-                    <div class="filas"> 
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png">
-                        <label>Nuestro Mail</label>
-                    </div>
-                </div>   
-                <div class="columna3">
-                    <h1>¿Dónde estamos?</h1>   
-                    <div class="filas2">
-                        <label>Dirección 1234
-                        <img class="mapa-footer" src="https://i.blogs.es/b4dd5c/maps/1366_2000.png">
-                        </label>
-                    </div> 
-                </div>        
-            
-            </div>
-
-                <div class="contenedor-copyright"> 
-                <div class="copyright">
-                    <p>© Todos los derechos reservados|TodoGaming</p> 
-                </div>
-                <div class="politicas">
-                    <a href="#">Información</a>
-                    <a href="#">Política y privacidad</a>
-                    <a href="#">Términos y condiciones</a>
-                </div>
-                </div>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>
