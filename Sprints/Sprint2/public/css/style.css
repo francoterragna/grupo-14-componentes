@@ -790,8 +790,8 @@ Aca empieza el CSS del login
 @media (min-width:750px){
     nav{
         display: flex;
-        color:white;
-        justify-content: space-between;
+        color:black;
+        justify-content: flex-end;
     }
     .hamburguesa{
         display: none;
@@ -799,10 +799,16 @@ Aca empieza el CSS del login
 
     .ul-izquierdo{
         display: flex;
+        
     }
 
     .ul-derecha{
         display: flex;
+    }
+
+    .ul-derecha li a{
+        padding: 0 6px;
+        color: #000;
     }
 
     header{
@@ -816,5 +822,40 @@ Aca empieza el CSS del login
     .contenedor-principal{
         flex-direction: row;
     }
+    .detalle-producto img{
+        width: 30%;
+    }
+    .contenedor-garantia-stock{
+        align-items: center;
+    }
+    .caracteristicas-producto{
+        justify-content: center;
+    }
+    .caracteristicas-producto p {
+        margin: 0 25px
+    }
+    .textarea-consultas{
+        width: 50%;
+    }
+    .input-email-consulta{
+        width: 50%;
+    }
+    .consultas-producto button{
+        width: 50%;
+    }
 
+}
+
+@media (min-width:751px){
+    .main-home{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-home a{
+        width: 50%;
+    }
+    .contenedor-mercado-pago{
+        width: 90%;
+    }
 }
