@@ -1,0 +1,903 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+body{
+    min-width: 375px;
+}
+
+header{
+    background-color: #ffffff;
+    height: 96px;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+
+.titulos-section{
+    color: #000000;
+}
+.fa-search{
+    padding:0;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.lupa {
+    border:none;
+    font-size: 16px;
+}
+
+.buscador{
+    width: 100%;
+    border:none;
+    border-radius: 5px 0 0 5px;
+    padding-left: 5px;
+}
+
+.buscador:focus{
+    outline:none;
+}
+
+.lupa-barra{
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+}
+
+.carrito{
+    border: none;
+    font-size: larger;
+    color: #000;
+    margin-right: 10px;
+}
+
+.user{
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px 2px 15px;
+}
+
+.seis-cuotas {
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+     font-family: 'Righteous', cursive;
+     font-size: 25px;
+     color:white;
+     background-color: black;
+     margin-top: 10px;
+ }
+
+.menu-desplegable{
+    position:fixed;
+    z-index: 100;
+    background-color: white;
+    height: 100vh;
+    width:100vw;
+    margin-top: -50px;
+    left: 115%;
+    top: 50px;
+    transition: .6s;
+    font-size: 18px;
+    font-family: 'Roboto';
+    border-left: 2px solid #bbb;
+    overflow: scroll;
+}
+
+.menu-desplegable p {
+    padding: 30px 0 13px 25px;
+    display: block;
+    text-align: left;
+}
+
+
+
+.hamburguesa:hover .menu-desplegable{
+    left: 35%;
+    text-align: left;
+}
+
+.fa-times{
+    position:absolute;
+    top: 15px;
+    left: 55%;
+    font-size: 25px;
+}
+
+.fa-times:active .menu-desplegable{
+    display: none;
+}
+
+.hamburguesa{
+    color: #000;
+    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo{
+    color:white;
+    width: 50px;
+    height: 50px; 
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.aviso-cuotas{
+    z-index: 10;
+}
+
+
+
+nav{
+    display:none
+}
+
+main{
+    text-align: center;
+}
+
+
+.section-home {
+    height: 150px;
+    width: 99%;
+    border: 1px solid #888;
+    margin: 30px auto;
+    line-height: 150px;
+    font-size: 25px;
+    color:black;
+    font-style: none;
+    font-weight:bold;
+}
+
+.section-home span{
+    padding: 8px;
+    color:black;
+    background-color: white;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.remera{
+    background-image: url(https://media.discordapp.net/attachments/878420009041395797/890270794662432818/HD-wallpaper-oriental-pattern-black-abstract.png?width=739&height=657);
+    background-size: 100%;
+    object-fit: cover;
+}
+
+.buzos{
+    background-image: url(https://cdn.discordapp.com/attachments/878420009041395797/890270392189591632/images.png);
+}
+
+.buzos span{
+    background-color: #bf1313;
+}
+
+.pantalones{
+    background-image: url(https://cdn.discordapp.com/attachments/878420009041395797/890270235687522394/images.png);
+}
+
+.pantalones span {
+    background-color: #000;
+    color: #bf1313;
+}
+
+.camisas{
+    background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/188/770/rte/banner-medias.jpg);
+}
+
+.camisas span{
+    background-color: #bf1313;
+}
+
+.traje-baño{
+    background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/188/770/rte/banner-bermudas1.jpg);
+}
+
+.traje-baño span{
+    background-color: #000;
+    color:#bf1313
+}
+
+.medias{
+    background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/188/770/rte/banner-accesorios.jpg);
+}
+
+.gorras {
+    background-image: url(https://d2r9epyceweg5n.cloudfront.net/stores/188/770/rte/banner-gorras.jpg);
+}
+
+.gorras span {
+    background-color: #bf1313;
+    color: black;
+}
+
+.camperas{
+    background-image: url(https://p4.wallpaperbetter.com/wallpaper/514/822/545/call-of-duty-ghosts-dark-white-video-games-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+.bermudas{
+    /* background-color: #536b78; */
+    background-image: url(https://media.istockphoto.com/photos/particle-dark-backgrounds-picture-id1072907026?b=1&k=6&m=1072907026&s=170667a&w=0&h=V_vm8OYN24cF0yg6AR59hKi1lIw-HIKPgK5IozYmN2Q=);
+    background-size: cover;
+}
+
+.bermudas span{
+    background-color: black;
+    color: #bf1313;
+}
+
+.sudaderas{
+background-image: url(https://fondosmil.com/fondo/13230.png);
+background-size: contain;
+}
+
+
+.sudaderas span{
+    background-color: #fff;
+    color: #000;
+    
+}
+
+.accesorios{
+    background-image: url(https://fondosmil.com/fondo/14382.jpg);
+    background-size: cover;
+}
+
+.accesorios span{
+    background-color: #bf1313;
+    color:black;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.medios-de-pago{
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    width: 90%;
+    margin: 0 auto;
+    bottom: 10px;
+    text-align: center;
+}
+
+
+.imagen-mp{
+    width: 50px;
+    height: 60px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 75px;
+   
+}
+.texto-mp{
+    padding-top: -20px;
+    
+}
+
+div span strong{
+    display: inline-block;
+    text-align: center;
+    /* padding-top: 15px ;
+    line-height: 100px; */
+}
+
+footer{
+    background: black;
+    width: 100%;
+    color: white;
+}
+.contenedor-principal-footer{
+    padding: 15px 15px 20px 15px;
+    /* width: 100%; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-footer{
+    display: inline-block;
+    /* Poner el display flex en mediaQ de escritorio */
+}
+.columna1{
+    max-width: 400px;
+}
+
+.mapa-footer{
+    width: 80%;
+    height: 280px;
+}
+
+.columna1 h1{
+    font-size: 24px;
+}
+.columna1 p{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.columna2{
+    max-width: 400px;
+    margin-bottom: 30px;
+
+}
+.columna2 h1{
+    font-size: 24px;
+}
+.columna2 .filas{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20%;
+    
+    
+}
+.filas img{
+    width: 35px;
+    height: 35px;
+}
+.filas label{
+    margin-top: -10px ;
+    margin-left: 10px;
+    
+}
+.columna3{
+    max-width: 400px;
+margin-bottom: 40px;
+}
+.columna3 h1{
+    font-size: 24px;
+}
+
+
+.filas2{
+    margin-top: 20px;
+}
+
+.contenedor-copyright{
+    max-width: 100%;
+}
+
+.politicas {
+    margin-top: 15px;
+}
+
+.politicas a{
+    margin-left: 20px;
+}
+
+.politicas a:link{
+    color:white;
+}
+
+.politicas a:visited{
+    color:white
+}
+
+/* ------------------------------- */
+/* Acá empieza el css del register */
+/* ------------------------------- */
+
+.container-form{
+    padding: 35px 0px;
+    text-align: center;
+    background-color: rgba(200,200,200, 0.5);
+}
+.form-titulo{
+    /* margin: 20px; */
+    background-color: rgba(200,200,200, 0.5);
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.ingresar-texto{
+    width: 70%;
+    max-width: 300px;
+    height: 25px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    border:1px solid #999;
+    padding: 5px;
+}
+
+.ingresar-texto:focus{
+    outline: none;
+}
+
+label{
+    font-weight: bold;
+}
+
+.boton-enviar{
+    background-color: #eee;
+    border: none;
+    color: black;
+    padding: 7px;
+    width: 80px;
+    font-weight: bold;
+    margin-right:25px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 15px 0 #555;
+}
+
+.boton-enviar:active{
+    background-color: #888;
+}
+
+.boton-borrar{
+    background-color: #eee;
+    border: none;
+    color: black;
+    font-weight: bold;
+    width:80px;
+    padding: 7px;
+    margin-left:25px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 15px 0 #555;
+}
+
+.boton-borrar:active{
+    background-color: #555;
+}
+
+.boton-borrar:hover{
+    box-shadow: 5px 5px 12px #222;
+}
+
+.boton-enviar:hover{
+    box-shadow: 5px 5px 12px #222;
+}
+
+#main-register{
+    
+    background-color: #fff;
+}
+
+/* -----------------------------------------
+Aca empieza el css del detalle de producto 
+--------------------------------------------*/
+.detalle-producto{
+    background-color: white;
+}
+
+.contenedor-garantia-stock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 20%;
+    border-top: 1px solid gray;
+    
+}
+
+.contenedor-garantia-stock p {
+    padding-top: 10px;
+    line-height: 10px;
+}
+
+.iconos-producto{
+    margin-right: 13px;
+    color: #080;
+    font-size: 20px;
+}
+
+.button-comprar, .button-agregar-carrito{
+    width: 35%;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold ;
+}
+.button-comprar{
+background-color: #3483fa; 
+color: white;   
+border-radius: 5px;
+border: none;
+animation: aumentar .5s infinite linear alternate;
+}
+.button-agregar-carrito{
+background-color: #ddd;
+color:#3483fa;
+border-radius: 5px;
+border: none;
+}
+
+.titulo-producto{
+    color: #555;
+    margin-bottom: 2%;
+}
+
+.imagen-producto{
+    padding-top: 25px;
+    width: 70%;
+}
+
+.div-cantidad-producto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5%;
+}
+
+.cantidad-productos-detalle{
+    font-size: 25px;
+    width: 47px;
+    margin-right: 15px;
+    text-align: center;
+    border: 2px solid #aaa
+}
+
+.cantidad-productos-detalle:focus{
+    outline: none;
+}
+
+.sumar-restar-producto-menos {
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #aaa
+}
+
+.sumar-restar-producto-mas{
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #3483fa;
+    border:none;
+    border-radius: 5px;
+}
+
+.titulo-talles{
+    padding-top: 15px
+}
+
+.caracteristicas-producto{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+}
+
+.caracteristicas-producto p {
+    padding: 5px 5px ;
+    border: 1px solid #ccc
+}
+
+.consultas-producto{
+    margin: 25px 0 25px 0;
+    padding: 10px;
+    border-top: 1px solid gray;
+}
+
+.p-consultas{
+    margin-bottom: 16px;
+    font-size: 22px;
+}
+
+.label-email-consulta{
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-email-consulta{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 70%;
+    padding: 2px 5px 2px 5px;
+}
+
+.textarea-consultas{
+    width: 70%;
+    padding-left: 16px;
+    padding-top: 8px;
+}
+
+.consultas-producto button {
+    padding: 5px;
+    width: 70%;
+    margin-top: 8px;
+    background-color: #3483fa;
+    color:white;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
+}
+
+@keyframes aumentar {
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(107%);
+    }
+}
+
+/*-----------------------------------
+ CSS carrito 
+ ------------------------------------*/
+
+
+.contenedor-carrito{
+    background-color: rgba(255,255,255,0.3);
+    padding: 15px;
+    margin: 15px 15px 0 15px;
+    margin: 0 auto;
+    
+}
+.carrito-titulo{
+    color: black;
+    padding: 15px;
+    text-align: left;
+}
+.cupon-boton{
+    background-color: rgb(219, 22, 81);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+    
+}
+.cupon-boton:hover{
+    box-shadow: 0px 0px 15px 0 #666;
+}
+.fila-principal{
+border: 1px solid red;
+}
+.input-producto{  
+    width: 22px;
+} 
+
+.nombre-producto, .precio-producto, .cantidad-producto{
+    padding: 5px;
+    width: 33%;
+    color: black;
+}
+
+.div-precio-total{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.div-precio-total p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.cupon{
+    
+    padding: 15px; 
+    margin: 0 15px;
+}
+.cupon-input{
+    margin: 15px;
+    padding: 2px;
+}
+.cupon-input:focus{
+outline: none;
+}
+
+/*------------------------------ 
+Aca empieza el CSS del login 
+--------------------------------*/
+
+.main-login{
+    text-align: center;
+    /* background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.fondo-login{
+    background-color: rgba(255,255,255,0.5);
+}
+.titulo-login{
+    margin: 10px 0 25px 0
+}
+
+.form-login{
+    width: 70%;
+    margin: 0 auto;
+    padding:1px;
+}
+
+
+
+.input-login{
+    margin-top:10px;
+    margin-bottom:20px;
+    padding:3px;
+    border: 2px solid #888;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.input-login:focus{
+    outline: none;
+}
+
+.olvidar-contraseña{
+    font-size: 70%;
+}
+
+.registrarse-texto{
+    font-size: 16px;
+    margin: 20px 0 5px 0;
+}
+
+.ingresar-boton{
+    margin-top:15px;
+    padding: 8px;
+    color:white;
+    font-weight: bold;
+    background-color:black;
+    border-radius: 8px;
+    border:none
+}
+
+.registrarse-boton{
+    text-align: center;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+    margin: 8px auto;
+    color:white;
+    font-weight: bold;
+    padding:4px
+}
+
+.enlace-registrarse{
+    
+    text-decoration: none;
+}
+
+.login-facebook{
+    padding: 10px;
+    background-color: #3b5998;
+    margin-bottom: 10px;
+}
+.button-facebook{
+    color: white;
+}
+.fa-facebook-square{
+    color: white;
+    font-size: 20px;
+}
+.login-facebook label{
+    color: white;
+}
+
+@media (min-width:750px){
+    nav{
+        display: flex;
+        color:black;
+        justify-content: flex-end;
+    }
+    .hamburguesa{
+        display: none;
+    }
+
+    .ul-izquierdo{
+        display: flex;
+        
+    }
+
+    .ul-derecha{
+        display: flex;
+    }
+
+    .ul-derecha li a{
+        padding: 0 6px;
+        color: #000;
+    }
+
+    header{
+        height: 15%;
+    }
+
+    header p{
+        margin-top:34px;
+    }
+
+    .contenedor-principal{
+        flex-direction: row;
+    }
+    .detalle-producto img{
+        width: 30%;
+    }
+    .contenedor-garantia-stock{
+        align-items: center;
+    }
+    .caracteristicas-producto{
+        justify-content: center;
+    }
+    .caracteristicas-producto p {
+        margin: 0 25px
+    }
+    .textarea-consultas{
+        width: 50%;
+    }
+    .input-email-consulta{
+        width: 50%;
+    }
+    .consultas-producto button{
+        width: 50%;
+    }
+   
+}
+
+@media (min-width:751px){
+    .main-home{
+        
+        display: flex;
+       flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-home a{
+        width: 50%;
+    }
+    .contenedor-mercado-pago{
+        width: 90%;
+    }
+
+}
+@media(min-width:980px){
+    .contenedor-footer{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 90%;
+    
+    }
+    .columna3 img{
+        max-width: 180px;
+        max-height: 180px;
+    }
+.columna3, .columna2, .columna1{
+    width: 33%;
+    max-width: 33%;
+    
+}
+.contenedor-copyright{
+    margin-top: 20px;
+}
+.columna2 img{
+    width: 25px;
+    height: 25px;
+}
+.columna1 p{
+    text-align: left;
+}
+
+.filas{
+    text-align: left;
+    margin-left: 45px;
+}
+/* .columna3 h1, .columna2 h1, .columna1 h1{
+    /* margin-bottom: 10px; */
+} 
+
