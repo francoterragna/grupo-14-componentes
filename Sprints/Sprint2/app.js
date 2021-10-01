@@ -3,8 +3,9 @@ const app = express();
 const mainRouter = require ("./routes/mainRouter");
 const productosRouter = require ('./routes/productosRouter');
 const usersRouter = require ('./routes/usersRouter');
-
 const path = require('path');
+const PORT = process.env.PORT || 3030;
+
 
 app.use(express.static('./public'));
 
@@ -16,4 +17,4 @@ app.use('/users', usersRouter)
 
 app.use('/productos', productosRouter);
 
-app.listen(3030, () => console.log("Servidor corriendo en el puerto 3030"));
+app.listen(PORT, () => console.log("Servidor corriendo en el puerto 3030"));
