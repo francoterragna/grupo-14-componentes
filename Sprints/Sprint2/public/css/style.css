@@ -843,13 +843,14 @@ Aca empieza el CSS del login
     .consultas-producto button{
         width: 50%;
     }
-
+   
 }
 
 @media (min-width:751px){
     .main-home{
+        
         display: flex;
-        flex-wrap: wrap;
+       flex-wrap: wrap;
         justify-content: center;
     }
     .main-home a{
@@ -858,4 +859,24 @@ Aca empieza el CSS del login
     .contenedor-mercado-pago{
         width: 90%;
     }
+
+}
+@media(min-width:1200px){
+    .contenedor-footer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .columna3 img{
+        max-width: 200px;
+        max-height: 200px;
+    }
+.columna3, .columna2, .columna1{
+    width: 33%;
+
+}
+.contenedor-copyright{
+    margin-top: 35px;
+}
 }
