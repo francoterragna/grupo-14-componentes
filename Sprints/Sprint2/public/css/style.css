@@ -51,7 +51,8 @@ header{
 .carrito{
     border: none;
     font-size: larger;
-    color: #000
+    color: #000;
+    margin-right: 10px;
 }
 
 .user{
@@ -111,6 +112,10 @@ header{
     top: 15px;
     left: 55%;
     font-size: 25px;
+}
+
+.fa-times:active .menu-desplegable{
+    display: none;
 }
 
 .hamburguesa{
@@ -258,8 +263,6 @@ a{
 }
 
 
-
-
 .medios-de-pago{
     background-color: whitesmoke;
     border: 1px solid gray;
@@ -378,7 +381,10 @@ footer{
     color:white
 }
 
+/* ------------------------------- */
 /* Acá empieza el css del register */
+/* ------------------------------- */
+
 .container-form{
     padding: 35px 0px;
     text-align: center;
@@ -776,16 +782,6 @@ Aca empieza el CSS del login
 .login-facebook label{
     color: white;
 }
-
-
-
-/* @media(min-width:380px){
-    header{
-        height: 15%;
-    }
-    
-} */
-
 
 @media (min-width:750px){
     nav{
