@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Agregar producto</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        <div class="container-form">
+            <h2>Agregar un producto</h2><br>
+            <form action="/" method="GET">
+                <div>
+                    <label for="nuevo-producto">Nombre del producto</label> <br>
+                    <input type="text" class="ingresar-texto">
+                </div>
+                <div>
+                    <label for="descripcion-producto">Descripcion del producto</label><br>
+                    <textarea name="descripcion-producto" id="" cols="43" rows="5"></textarea>
+                </div>
+                <div>
+                    <label for="insertar-imagen">Insertar imagen</label> <br>
+                    <input type="file" name="imagen-producto-nuevo" src="img-producto-nuevo" alt="img-producto-nuevo">
+                </div>
+                <div>
+                    <label for="categoria-producto">Categoría</label><br>
+                    <select name="" id="">
+                        <option value="">REMERA</option>
+                        <option value="">BUZO</option>
+                        <option value="">PANTALON</option>
+                        <option value="">CAMISA</option>
+                        <option value="">TRAJE DE BAÑO</option>
+                        <option value="">MEDIAS</option>
+                        <option value="">GORRA</option>
+                        <option value="">CAMPERA</option>
+                        <option value="">BERMUDA</option>
+                        <option value="">SUDADERA</option>
+                        <option value="">ACCESORIO</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Talle</label>
+                    <select name="talles" id="talles">
+                        <option value="">XS</option>
+                        <option value="">S</option>
+                        <option value="">M</option>
+                        <option value="">L</option>
+                        <option value="">XL</option>
+                        <option value="">XXL</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="precio">Precio</label><br>
+                    <span>$  </span><input type="number" name="precio-producto" id="precio-producto">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
