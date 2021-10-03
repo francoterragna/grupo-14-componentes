@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Lista de usuarios</title>
+</head>
+<body>
+    <ul>
+    <% users.forEach(function(user){ %>
+        <a href="/usuarios/detalle/<%=user.id%>"><%= user.name %></a> <br>
+    <% }) %> 
+    </ul>
+</body>
+</html>

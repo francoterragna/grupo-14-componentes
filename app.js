@@ -20,4 +20,8 @@ app.use('/productos', productosRouter);
 
 app.use('/administrador', adminRoutes);
 
+app.use((req,res,next) => {
+    res.status(404).render('not-found')
+});
+
 app.listen(PORT, () => console.log("Servidor corriendo en el puerto 3030"));
