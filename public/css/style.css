@@ -779,6 +779,9 @@ Aca empieza el CSS del login
     padding: 10px;
     background-color: #3b5998;
     margin-bottom: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+
 }
 .button-facebook{
     color: white;
@@ -808,6 +811,66 @@ Aca empieza el CSS del login
     font-weight: bold;
     border-radius: 6px;
     box-shadow: 5px 5px 8px 0 #aaa;
+}
+
+/* ACÁ EMPIEZA EL CSS DE MODIFICAR PRODUCTO */
+
+
+.editar-talles{
+    display: flex;
+    width: 50%;
+    margin:0 auto;
+    justify-content: space-between;
+    padding: 15px 25px;
+    margin-bottom: 45px;
+}
+
+.editar-talles p {
+    padding: 5px 5px ;
+    border: 1px solid #ccc;
+    
+}
+
+.modificar-contain{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.edit-img-icon{
+    position: absolute;
+    top: 5%;
+    font-size: 30px;
+    /* right: 35%; */
+    color: #999;
+}
+
+.edit-name-icon{
+    margin-left: 20px;
+    color: #999;
+}
+
+/* 404 */
+
+.main-not-found{
+    height: 70%;
+    text-align: center;
+    margin-top: 30%;
+}
+
+.modificar-button{
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: rgba(34, 206, 4, 0.979);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.fa-check-square{
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 @media (min-width:750px){
@@ -866,7 +929,9 @@ Aca empieza el CSS del login
     .consultas-producto button{
         width: 50%;
     }
-   
+    .detalle-producto-edit img{
+        width: 30%;
+    }
 }
 
 @media (min-width:751px){

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Editar producto</title>
+</head>
+
+<%- include('./partials/header.ejs') %> 
+
+
+<body>
+
+  <main>
+     <div class="modificar-contain">
+    <div class="detalle-producto-edit">
+        <img src="https://img.ar.class.posot.com/es_ar/2017/01/16/Remeras-estampadas-Personalizadas-20170116014459.jpg" alt="Monitor LED Samsung" class="imagen-producto"><a href=""><i class="far fa-edit edit-img-icon"></i></a>
+        <div class="modificar-titulo-contain"><h2 class ="titulo-producto">Remera apretón<a href=""><i class="far fa-edit edit-name-icon"></i></a></h2></div>
+        <h2 style="margin-bottom: 5%;">$2.000<i class="far fa-edit edit-name-icon"></i></h2>
+    </div>
+ 
+    <h3 class= "titulo-talles">Actualizar talles disponibles<i class="far fa-edit edit-name-icon"></i></h3>
+    <div class="editar-talles">
+        <p>XS</p>
+        <p>S</p>
+        <p>M</p>
+        <p>L</p>
+        <p>XL</p>
+        <p>XXL</p>
+    </div>
+
+</div>
+<button type="submit" class="modificar-button">
+    GUARDAR CAMBIOS<i class="far fa-check-square"></i>
+</button>
+ </main>  
+
+</body>
+
+<%- include('./partials/footer.ejs') %> 
+
+
+</html>
