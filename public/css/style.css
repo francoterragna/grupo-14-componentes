@@ -813,7 +813,9 @@ Aca empieza el CSS del login
     box-shadow: 5px 5px 8px 0 #aaa;
 }
 
+/* ---------------------------------------- */
 /* ACÁ EMPIEZA EL CSS DE MODIFICAR PRODUCTO */
+/* ---------------------------------------- */
 
 
 .editar-talles{
@@ -850,13 +852,6 @@ Aca empieza el CSS del login
     color: #999;
 }
 
-/* 404 */
-
-.main-not-found{
-    height: 70%;
-    text-align: center;
-    margin-top: 30%;
-}
 
 .modificar-button{
     margin-bottom: 30px;
@@ -866,6 +861,19 @@ Aca empieza el CSS del login
     border-radius: 5px;
     font-size: 20px;
 }
+
+.modificar-button:hover{
+    cursor: pointer;
+}
+
+/* 404 */
+
+.main-not-found{
+    height: 70%;
+    text-align: center;
+    margin-top: 30%;
+}
+
 .fa-check-square{
     margin-left: 10px;
     color: white;
@@ -984,7 +992,21 @@ Aca empieza el CSS del login
     text-align: left;
     margin-left: 45px;
 }
-/* .columna3 h1, .columna2 h1, .columna1 h1{
-    /* margin-bottom: 10px; */
-} 
+
+    .contenedor-carrito{
+        width: 70%;
+    }
+
+    .cupon-boton:hover{
+        cursor: pointer;
+    }
+
+    .div-precio-total{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+
+}
+
 

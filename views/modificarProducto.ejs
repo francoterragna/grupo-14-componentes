@@ -14,7 +14,9 @@
      <div class="modificar-contain">
     <div class="detalle-producto-edit">
         <img src="https://img.ar.class.posot.com/es_ar/2017/01/16/Remeras-estampadas-Personalizadas-20170116014459.jpg" alt="Monitor LED Samsung" class="imagen-producto"><a href=""><i class="far fa-edit edit-img-icon"></i></a>
-        <div class="modificar-titulo-contain"><h2 class ="titulo-producto">Remera apretón<a href=""><i class="far fa-edit edit-name-icon"></i></a></h2></div>
+        <!-- <div class="modificar-titulo-contain">
+            <h2 class ="titulo-producto">Remera apretón<a href=""><i class="far fa-edit edit-name-icon"></i></a></h2>
+        </div>
         <h2 style="margin-bottom: 5%;">$2.000<i class="far fa-edit edit-name-icon"></i></h2>
     </div>
  
@@ -28,10 +30,31 @@
         <p>XXL</p>
     </div>
 
-</div>
-<button type="submit" class="modificar-button">
-    GUARDAR CAMBIOS<i class="far fa-check-square"></i>
-</button>
+</div> -->
+
+<form action="/administrador/modificarProducto?_method=PUT" method="POST">
+    <span>Nombre de producto:</span>
+    <input type="text" name="" value="Remera apretón" id=""><br>
+    <span>Precio: $</span>
+    <input type="number" value="2000" name="" id=""><br>
+    <label>Talles disponibles:</label><br>
+    <label for="XS">XS</label>
+    <input type="checkbox" name="talles" id="XS">
+    <label for="S">S</label>
+    <input type="checkbox" name="talles" id="S">
+    <label for="M">M</label>
+    <input type="checkbox" name="talles" id="M">
+    <label for="L">L</label>
+    <input type="checkbox" name="talles" id="L">
+    <label for="XL">XL</label>
+    <input type="checkbox" name="talles" id="XL">
+    <label for="XXL">XXL</label>
+    <input type="checkbox" name="talles" id="XXL"><br>
+    
+    <button type="submit" class="modificar-button">
+        GUARDAR CAMBIOS<i class="far fa-check-square"></i>
+    </button>
+</form>
  </main>  
 
 </body>
