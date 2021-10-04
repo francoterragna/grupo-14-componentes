@@ -226,7 +226,6 @@ main{
 }
 
 .bermudas{
-    /* background-color: #536b78; */
     background-image: url(https://media.istockphoto.com/photos/particle-dark-backgrounds-picture-id1072907026?b=1&k=6&m=1072907026&s=170667a&w=0&h=V_vm8OYN24cF0yg6AR59hKi1lIw-HIKPgK5IozYmN2Q=);
     background-size: cover;
 }
@@ -384,6 +383,10 @@ margin-bottom: 40px;
 
 .politicas a:visited{
     color:white
+}
+
+textarea{
+    resize: none;
 }
 
 /* ------------------------------- */
@@ -786,6 +789,25 @@ Aca empieza el CSS del login
 }
 .login-facebook label{
     color: white;
+}
+
+/* --------------------------------------------- */
+/* ACÁ EMPIEZA EL CSS DEL ADMIN AGREGAR PRODUCTO */
+/* --------------------------------------------- */
+
+.descripcion-producto{
+    margin: 15px;
+    padding: 10px;
+}
+
+.agregar-submit{
+    padding: 12px;
+    background-color: #3483fa;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 5px 5px 8px 0 #aaa;
 }
 
 @media (min-width:750px){

@@ -17,15 +17,15 @@
                 </div>
                 <div>
                     <label for="descripcion-producto">Descripcion del producto</label><br>
-                    <textarea name="descripcion-producto" id="" cols="43" rows="5"></textarea>
+                    <textarea name="descripcion-producto" id="" cols="43" rows="5" class="descripcion-producto"></textarea>
                 </div>
                 <div>
-                    <label for="insertar-imagen">Insertar imagen</label> <br>
+                    <label for="insertar-imagen" class="label-insertar-img">Insertar imagen</label> <br> <br>
                     <input type="file" name="imagen-producto-nuevo" src="img-producto-nuevo" alt="img-producto-nuevo">
-                </div>
+                </div><br><br>
                 <div>
                     <label for="categoria-producto">Categoría</label><br>
-                    <select name="" id="">
+                    <select name="" id="" class="ingresar-texto">
                         <option value="">REMERA</option>
                         <option value="">BUZO</option>
                         <option value="">PANTALON</option>
@@ -40,8 +40,8 @@
                     </select>
                 </div>
                 <div>
-                    <label for="">Talle</label>
-                    <select name="talles" id="talles">
+                    <label for="">Talle</label><br>
+                    <select name="talles" id="talles" class="ingresar-texto">
                         <option value="">XS</option>
                         <option value="">S</option>
                         <option value="">M</option>
@@ -52,8 +52,9 @@
                 </div>
                 <div>
                     <label for="precio">Precio</label><br>
-                    <span>$  </span><input type="number" name="precio-producto" id="precio-producto">
+                    <span>$  </span><input type="number" name="precio-producto" id="precio-producto" class="ingresar-texto">
                 </div>
+                <input type="submit" value="Agregar" class="agregar-submit">
             </form>
         </div>
     </main>
