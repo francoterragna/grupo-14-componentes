@@ -102,7 +102,7 @@ header{
 
 
 
-.hamburguesa:hover .menu-desplegable{
+.hamburguesa:active .menu-desplegable{
     left: 35%;
     text-align: left;
 }
@@ -837,12 +837,13 @@ Aca empieza el CSS del login
     display: flex;
     flex-direction: column;
     position: relative;
+    background-color: #fff;
 }
 
 .edit-img-icon{
     position: absolute;
     top: 5%;
-    font-size: 30px;
+    font-size: 24px;
     /* right: 35%; */
     color: #999;
 }
@@ -866,6 +867,26 @@ Aca empieza el CSS del login
     cursor: pointer;
 }
 
+.fa-check-square{
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 700ms;
+}
+
+.modificar-button:hover .fa-check-square{
+transform:rotateZ(15deg);
+}
+
+.detalle-producto-edit .imagen-producto{
+    width: 40%
+}
+
+.main-modificar input{
+    margin: 25px 5px 25px 5px;
+}
+
 /* 404 */
 
 .main-not-found{
@@ -874,12 +895,6 @@ Aca empieza el CSS del login
     margin-top: 30%;
 }
 
-.fa-check-square{
-    margin-left: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-}
 
 @media (min-width:750px){
     nav{
@@ -939,6 +954,9 @@ Aca empieza el CSS del login
     }
     .detalle-producto-edit img{
         width: 30%;
+    }
+    .detalle-producto-edit .imagen-producto{
+        width: 35%
     }
 }
 
@@ -1007,6 +1025,9 @@ Aca empieza el CSS del login
     }
 
 
+    .detalle-producto-edit .imagen-producto{
+        width: 20%
+    }
 }
 
 

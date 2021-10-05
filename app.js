@@ -6,9 +6,9 @@ const usuariosRouter = require ('./routes/usersRouter');
 const adminRoutes = require('./routes/adminRoutes');
 const path = require('path');
 const PORT = process.env.PORT || 3030;
-const methodOverride = require('method-override');
+// const methodOverride = require('method-override');
 
-app.use(methodOverride("_method"));
+// app.use(methodOverride("_method"));
 
 app.use(express.static('./public'));
 
