@@ -54,7 +54,17 @@ header{
     color: #000;
     margin-right: 10px;
 }
-
+.carrito:hover{
+    animation: movimiento 0.2s linear infinite alternate;
+}
+@keyframes movimiento {
+    0%{
+        transform: rotateZ(25deg);
+    }
+    100%{
+        transform: rotateZ(-25deg);
+    }
+}
 .user{
     font-size: 30px;
     padding-left: 20px;
@@ -895,6 +905,12 @@ transform:rotateZ(15deg);
     margin-top: 30%;
 }
 
+textarea:focus{
+outline: #ccc;
+}
+input:focus{
+outline: #ccc;
+    }
 
 @media (min-width:750px){
     nav{
@@ -990,26 +1006,26 @@ transform:rotateZ(15deg);
         max-width: 180px;
         max-height: 180px;
     }
-.columna3, .columna2, .columna1{
+ .columna3, .columna2, .columna1{
     width: 33%;
     max-width: 33%;
     
-}
-.contenedor-copyright{
+ }
+ .contenedor-copyright{
     margin-top: 20px;
-}
-.columna2 img{
+ }
+ .columna2 img{
     width: 25px;
     height: 25px;
-}
-.columna1 p{
+ }
+ .columna1 p{
     text-align: left;
-}
+ }
 
-.filas{
+ .filas{
     text-align: left;
     margin-left: 45px;
-}
+ }
 
     .contenedor-carrito{
         width: 70%;
