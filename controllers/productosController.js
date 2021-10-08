@@ -1,6 +1,7 @@
 const productosController = {
+    index: (req,res) => res.render ('productos'),
     detalle: (req,res) => res.render('detalleProducto'),
-    carrito: (req,res) => res.render('carrito')
+    carrito: (req,res) => res.render('carrito'),
 }
 
 module.exports = productosController;
