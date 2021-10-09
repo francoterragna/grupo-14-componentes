@@ -1,5 +1,5 @@
 const productosController = {
-    index: (req,res) => res.render ('productos'),
+    // index: (req,res) => res.render ('productos'),
     detalle: (req,res) => res.render('detalleProducto'),
     carrito: (req,res) => res.render('carrito'),
 }

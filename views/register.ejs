@@ -8,32 +8,31 @@
     <main id="main-register">
         <h2 class="form-titulo">Completá tus datos</h2>
         <div class="container-form">
-            <form action="/usuarios/register" method="POST" class="form-control">
+            <form action="/usuarios/register" method="POST" class="form-control" enctype="multipart/form-data">
             
                 <div class="form-nombre">
-                    <label for="name">Nombre y Apellido</label> <br>
-                    <input class="ingresar-texto" type="text" name="name" placeholder="Nombre y apellido" required>
+                    <label>Nombre</label> <br>
+                    <input class="ingresar-texto" type="text" name="firstname" placeholder="Nombre" required>
                 </div>
-                <div class="form-dni">
-                    <label for="dni">DNI</label><br>
-                    <input class="ingresar-texto" type="number" name="dni" placeholder="DNI" required>
-                </div>
-                <div class="form-nacimiento">
-                    <label for="nacimiento">Fecha de nacimiento</label><br>
-                    <input class="ingresar-texto" type="date" name="nacimiento" required>
+                <div class="form-nombre">
+                    <label>Apellido</label> <br>
+                    <input class="ingresar-texto" type="text" name="lastname" placeholder="Apellido" required>
                 </div>
                 <div class="form-email">
-                    <label for="email" name="email">Email</label><br>
+                    <label>Email</label><br>
                     <input class="ingresar-texto" type="email" name="email" placeholder="Correo electrónico" required>
                 </div>
-            
+                <div>
+                    <label>Elegí tu foto de perfil</label><br><br>
+                    <input type="file" name="img-profile" id="">
+                </div><br>
                 <div class="form-contraseña">
-                    <label for="contraseña">Creá tu constraseña</label><br>
-                    <input class="ingresar-texto" type="password" name="contraseña" required>
+                    <label>Creá tu constraseña</label><br>
+                    <input class="ingresar-texto" type="password" name="password" required>
                 </div>
                 <div class="form-confirm-contraseña">
-                    <label for="c-contraseña" name="c-contraseña">Confirmá tu contraseña</label><br>
-                    <input class="ingresar-texto" type="password" name="c-contraseña" required>
+                    <label>Confirmá tu contraseña</label><br>
+                    <input class="ingresar-texto" type="password" name="confirmPassword" required>
                 </div>
 
                 <button type="submit" class="boton-enviar">Enviar</button>

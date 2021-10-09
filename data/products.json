@@ -1,0 +1,9 @@
+[{
+    "id": 1,
+    "name": "Ami",
+    "description": "Remera blanca",
+    "image": "img-default.png",
+    "category": "remera",
+    "price": 4726,
+    "tail": "L"
+  }]
