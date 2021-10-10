@@ -193,6 +193,19 @@ main{
     font-family: 'Luckiest Guy', cursive;
 }
 
+.oferta{
+    background-image: url(https://us.123rf.com/450wm/maxborovkov/maxborovkov1603/maxborovkov160300080/53629759-fiesta-de-fondo-negro-con-confeti-de-color-ilustraci%C3%B3n-del-vector-.jpg?ver=6);
+    /* background-size: 100%; */
+    
+    background-position: center;
+}
+
+.oferta span{
+    background-color: #fff;
+    
+}
+
+
 .remera{
     background-image: url(https://media.discordapp.net/attachments/878420009041395797/890270794662432818/HD-wallpaper-oriental-pattern-black-abstract.png?width=739&height=657);
     background-size: 100%;
@@ -1067,6 +1080,12 @@ outline: #ccc;
        flex-wrap: wrap;
         justify-content: center;
     }
+    .main-home .oferta{
+        width: 100%;
+    }
+    .main-home .home-oferta{
+        width: 99%;
+    }
     .main-home a{
         width: 50%;
     }
@@ -1076,6 +1095,8 @@ outline: #ccc;
 
 }
 @media(min-width:980px){
+
+
     .contenedor-footer{
         display: flex;
         align-items: flex-start;
