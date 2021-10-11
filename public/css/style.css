@@ -363,8 +363,6 @@ a{
 div span strong{
     display: inline-block;
     text-align: center;
-    /* padding-top: 15px ;
-    line-height: 100px; */
 }
 
 footer{
@@ -374,7 +372,6 @@ footer{
 }
 .contenedor-principal-footer{
     padding: 15px 15px 20px 15px;
-    /* width: 100%; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -382,7 +379,6 @@ footer{
 }
 .contenedor-footer{
     display: inline-block;
-    /* Poner el display flex en mediaQ de escritorio */
 }
 .columna1{
     max-width: 400px;
@@ -1029,18 +1025,55 @@ transform:rotateZ(15deg);
 /* position: absolute; */
 }
 
-
-/* 404 */
+/* --------------- */
+/* ------404------ */
+/* --------------- */
 
 .main-not-found{
     height: 70%;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 6%;
+}
+.main-not-found h2 {
+    border: 5px solid red;
+    width: 200px;
+    margin: 0 auto;
+    color: red;
+    height: 200px;
+    border-radius: 50%;
+    line-height: 86px;
+    animation: aumentar .5s infinite linear alternate;
+}
+
+.main-not-found p {
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+.boton-volver{
+    padding:20px 70px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #3483fa;
+}
+
+.boton-volver:hover{
+    box-shadow: 10px 10px 15px 0px #666;
+    cursor: pointer;
+    border: none;
+    background-color: gradient;
+}
+
+.boton-volver a{
+    color: #000;
+    font-size: 20px;
 }
 
 textarea:focus{
 outline: #ccc;
 }
+
 input:focus{
 outline: #ccc;
     }
