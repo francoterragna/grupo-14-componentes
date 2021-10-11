@@ -22,6 +22,8 @@ app.use('/productos', productosRouter);
 
 app.use('/administrador', adminRoutes);
 
+
+
 app.use((req,res,next) => {
     res.status(404).render('not-found');
     next();
