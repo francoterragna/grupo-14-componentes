@@ -67,8 +67,15 @@ header{
 }
 .user{
     font-size: 30px;
-    padding-left: 20px;
+    margin-left: 20px;
     color: #000;
+    transition: all 0.4s;
+    text-align: center;
+    
+}
+
+.user:hover{
+    transform:scale(110%);
 }
 
 .header-flex{
@@ -184,6 +191,8 @@ main{
 
 .section-home:hover{
     box-shadow: 0 0 15px 15px #666;
+    transform: scale(105%);
+    z-index: 1000;
 }
 
 .section-home span{
@@ -198,10 +207,17 @@ main{
     /* background-size: 100%; */
     
     background-position: center;
+   
 }
 
+
+
+
 .oferta span{
-    background-color: #fff;
+    background-color: #000;
+    color: #ffffff;
+    animation: aumentar .3s infinite linear alternate; 
+    font-weight: lighter;
     
 }
 
@@ -994,6 +1010,26 @@ transform:rotateZ(15deg);
     margin: 25px 5px 25px 5px;
 }
 
+/* =============== */
+/* CSS de productSelect */
+/* ================= */
+
+.main-product{
+    max-width: 100%;
+}
+
+.article-product{
+    border: 1px solid #ccc;
+    width: 99%;
+    
+    /* position: relative; */
+}
+.article-product img{
+    width: 100%;
+/* position: absolute; */
+}
+
+
 /* 404 */
 
 .main-not-found{
@@ -1071,6 +1107,19 @@ outline: #ccc;
     .detalle-producto-edit .imagen-producto{
         width: 35%
     }
+    .section-product{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .article-product{
+        border: 1px solid #ccc;
+        width: 40%;
+        margin: 25px 10px;
+        
+        
+    }
 }
 
 @media (min-width:751px){
@@ -1092,10 +1141,12 @@ outline: #ccc;
     .contenedor-mercado-pago{
         width: 90%;
     }
-
+    
 }
 @media(min-width:980px){
-
+   .user{
+       padding-left: 0;
+   }
 
     .contenedor-footer{
         display: flex;
@@ -1148,6 +1199,13 @@ outline: #ccc;
 
     .detalle-producto-edit .imagen-producto{
         width: 20%
+    }
+    .article-product{
+        border: 1px solid #ccc;
+        width: 23%;
+        margin: 15px 5px;
+        
+        
     }
 }
 
