@@ -15,9 +15,10 @@ const storage = multer.diskStorage({
 const adminController = require('../controllers/adminController');
     
 router.get('/agregarProducto', adminController.agregarProducto);
-router.post('/agregarProducto',uploadFile.single('imagen-producto-nuevo') ,adminController.create);
+router.post('/agregarProducto',uploadFile.single('imagenProductoNuevo') ,adminController.create);
 
-router.get('/modificarProducto', adminController.modificarProducto);
+router.get('/modificarProducto/:id', adminController.modificarProducto);
+router.put('/modificarProducto/:id', uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios)
 
 
 module.exports = router;

@@ -667,7 +667,6 @@ border: none;
 .consultas-producto{
     margin: 25px 0 25px 0;
     padding: 10px;
-    border-top: 1px solid gray;
 }
 
 .p-consultas{
@@ -1017,12 +1016,10 @@ transform:rotateZ(15deg);
 .article-product{
     border: 1px solid #ccc;
     width: 99%;
-    
-    /* position: relative; */
+    margin-top: 15px;
 }
 .article-product img{
     width: 100%;
-/* position: absolute; */
 }
 
 /* --------------- */
@@ -1079,6 +1076,25 @@ outline: #ccc;
     }
 
 @media (min-width:750px){
+
+    .main-home{
+        
+        display: flex;
+       flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-home .oferta{
+        width: 100%;
+    }
+    .main-home .home-oferta{
+        width: 99%;
+    }
+    .main-home a{
+        width: 50%;
+    }
+    .contenedor-mercado-pago{
+        width: 90%;
+    }
     nav{
         display: flex;
         color:black;
@@ -1140,22 +1156,25 @@ outline: #ccc;
     .detalle-producto-edit .imagen-producto{
         width: 35%
     }
+
+    
+
     .section-product{
     border: 1px solid black;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     }
     .article-product{
-        border: 1px solid #ccc;
         width: 40%;
         margin: 25px 10px;
-        
-        
+    }
+    .article-product img{
+        height: 300px;
+        object-fit: cover;
     }
 }
 
-@media (min-width:751px){
+/* @media (min-width:751px){
     .main-home{
         
         display: flex;
@@ -1175,11 +1194,24 @@ outline: #ccc;
         width: 90%;
     }
     
-}
+} */
 @media(min-width:980px){
    .user{
        padding-left: 0;
    }
+
+    .contenedor-carrito{
+        width: 70%;
+    }
+
+    .cupon-boton:hover{
+        cursor: pointer;
+    }
+
+    .div-precio-total{
+        width: 50%;
+        margin: 0 auto;
+    }
 
     .contenedor-footer{
         display: flex;
@@ -1215,30 +1247,17 @@ outline: #ccc;
     text-align: left;
     margin-left: 45px;
  }
-
-    .contenedor-carrito{
-        width: 70%;
-    }
-
-    .cupon-boton:hover{
-        cursor: pointer;
-    }
-
-    .div-precio-total{
-        width: 50%;
-        margin: 0 auto;
-    }
-
-
     .detalle-producto-edit .imagen-producto{
         width: 20%
     }
+    
     .article-product{
-        border: 1px solid #ccc;
-        width: 23%;
-        margin: 15px 5px;
-        
-        
+        width: 30%;
+        margin: 25px 10px;
+    }
+    .article-product img{
+        height: 500px;
+        object-fit: cover;
     }
 }
 

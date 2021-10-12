@@ -21,11 +21,36 @@ const adminController = {
         }
         products.push(newProduct);
         fs.writeFileSync(productsFilePath,JSON.stringify(products,null, ' '));
-        res.redirect('/administrador/agregarProducto')
-    }        ,
+        res.redirect('/administrador/agregarProducto');
+    },
     
     
-    modificarProducto: (req,res) => res.render('modificarProducto'),
+    modificarProducto: (req,res) =>{
+        let id = req.params.id;
+		let product = products.find(product => product.id == id); 
+        res.render('modificarProducto', {product})
+    }, 
+
+    enviarCambios: (req,res) =>{
+        let id = req.params.id;
+		let product = products.find(product => product.id == id);
+
+        product ={
+            id: product.id,
+            ...req.body
+        };
+
+        let newProduct = products.map(product => {
+			if (product.id == product.id) {
+				return product = {...product};
+			}
+			return product;
+		});
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
+		res.redirect('/');
+
+    }
 
 };
 

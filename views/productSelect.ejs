@@ -4,43 +4,29 @@
         <title>Remeras</title>
 
  <body>
-    <%- include('./partials/header.ejs') %> 
-    <h1>Remeras</h1>  
-
+    <%- include('./partials/header.ejs') %>
+    <!-- <h1> <%= category.category + 's'%>  </h1> -->
+    
     <main class="main-product">
         <section class="section-product">
-
-            <article class="article-product">
-             <img src="/img/products/products-default.png" alt="Imagen">
-                <h4>Titulo</h4>
-                <p>Precio</p>
-                <p>Descuento</p>
-            </article>
-            <article class="article-product">
-             <img src="/img/products/products-default.png" alt="Imagen">
-                <h4>Titulo</h4>
-                <p>Precio</p>
-                <p>Descuento</p>
-            </article>
-            <article class="article-product">
-             <img src="/img/products/products-default.png" alt="Imagen">
-                <h4>Titulo</h4>
-                <p>Precio</p>
-                <p>Descuento</p>
-            </article>
-            <article class="article-product">
-             <img src="/img/products/products-default.png" alt="Imagen">
-                <h4>Titulo</h4>
-                <p>Precio</p>
-                <p>Descuento</p>
-            </article>
-
+            
+            <% category.forEach(producto => { %>   
+                <article class="article-product">
+                    <a href="/productos/detalle/<%= producto.id %> ">
+                 <img src="/img/products/<%= producto.image %>" alt="Imagen">
+                 <h4> <%= producto.name %>  </h4>
+                 <p>$<%= producto.price %> </p>
+                 <% if(producto.discount > 0){ %> 
+                 <p><%= producto.discount %>% de descuento </p>
+                 <% }else{ %> 
+                     <p> </p>
+                     <% } %> 
+                    </a>
+                    </article>
+            <% }) %> 
         </section>
      
     </main>
-
-
-
     <%- include('./partials/footer.ejs') %> 
  </body>
 </html>

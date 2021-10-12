@@ -1,11 +1,42 @@
 [
  {
-  "id": 1,
-  "name": "Ami",
-  "description": "Remera blanca",
-  "image": "img-default.png",
+  "id": 2,
+  "name": "Remera París",
+  "description": "Remera paris Messi",
   "category": "remera",
-  "price": 4726,
-  "size": "L"
+  "size": "M",
+  "discount": "10",
+  "price": "25000",
+  "image": "1634059312561_img_.jpg"
+ },
+ {
+  "id": 3,
+  "name": "Buzo",
+  "description": "Buzo negro",
+  "category": "buzo",
+  "size": "L",
+  "discount": "",
+  "price": "15000",
+  "image": "1634060899870_img_.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Remera París negra",
+  "description": "Remera bien piola",
+  "category": "remera",
+  "size": "L",
+  "discount": "10",
+  "price": "2000",
+  "image": "1634062915555_img_.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Remera blanca",
+  "description": "Remera blanca",
+  "category": "remera",
+  "size": "M",
+  "discount": "15",
+  "price": "354",
+  "image": "1634063882064_img_.jpg"
  }
 ]

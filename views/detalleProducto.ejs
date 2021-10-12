@@ -5,10 +5,20 @@
 <body>
      <%- include('./partials/header.ejs') %>
     <main>
+        <!-- <%= console.log(product.name) %>  -->
         <div class="detalle-producto">
-            <img src="https://img.ar.class.posot.com/es_ar/2017/01/16/Remeras-estampadas-Personalizadas-20170116014459.jpg" alt="Monitor LED Samsung" class="imagen-producto">
-            <h2 class ="titulo-producto">Remera apretón</h2>
-            <h2 style="margin-bottom: 5%;">$2.000</h2>
+            <img src='/img/products/<%=product.image %>'  alt=<%=product.description%>  class="imagen-producto">
+            <h2 class ="titulo-producto"><%= product.name %> </h2>
+            <h2>$<%= product.price %> </h2><br>
+            <h3 class= "titulo-talles">Talles</h3>
+            <div class="caracteristicas-producto">
+                <p>XS</p>
+                <p>S</p>
+                <p>M</p>
+                <p>L</p>
+                <p>XL</p>
+                <p>XXL</p>
+            </div>
             <div class= "contenedor-garantia-stock">
                 <p><i class="fas fa-check iconos-producto"></i>Stock disponible</p>
                 <p><i class="fas fa-truck iconos-producto"></i>Envíos a todo el país</p>
@@ -21,17 +31,7 @@
                 <button class="sumar-restar-producto-mas">+</button>
                 <button class="sumar-restar-producto-menos">-</button>
             </div>
-            
-            <h3 class= "titulo-talles">Talles</h3>
-            <div class="caracteristicas-producto">
-                <p>XS</p>
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
-                <p>XXL</p>
-            </div>
-            
+        
             <form method="POST" action="/" class ="consultas-producto">
                 <p class="p-consultas">¿Nos querés hacer alguna pregunta sobre éste producto?</p><br>
                 <label for="email-consulta" class="label-email-consulta">Dejanos tu email</label><br>

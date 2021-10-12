@@ -13,27 +13,66 @@
   <main class="main-modificar">
      <div class="modificar-contain">
     <div class="detalle-producto-edit">
-        <img src="https://img.ar.class.posot.com/es_ar/2017/01/16/Remeras-estampadas-Personalizadas-20170116014459.jpg" alt="Monitor LED Samsung" class="imagen-producto"><a href=""><i class="far fa-edit edit-img-icon"></i></a>
-        <!-- <div class="modificar-titulo-contain">
-            <h2 class ="titulo-producto">Remera apretón<a href=""><i class="far fa-edit edit-name-icon"></i></a></h2>
-        </div>
-        <h2 style="margin-bottom: 5%;">$2.000<i class="far fa-edit edit-name-icon"></i></h2>
-    </div>
- 
-    <h3 class= "titulo-talles">Actualizar talles disponibles<i class="far fa-edit edit-name-icon"></i></h3>
-    <div class="editar-talles">
-        <p>XS</p>
-        <p>S</p>
-        <p>M</p>
-        <p>L</p>
-        <p>XL</p>
-        <p>XXL</p>
-    </div>
+        <img src='/img/products/<%=product.image%>'  alt=<%= product.description %>  class="imagen-producto">
+        
 
-</div> -->
+        <form action="/administrador/agregarProducto?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="nuevo-producto">Nombre del producto</label> <br>
+                <input type="text" class="ingresar-texto" name="name" placeholder=<%= product.name %>  required>
+            </div>
+            <div>
+                <label for="descripcion-producto">Descripcion del producto</label><br>
+                <textarea name="description" id="" cols="43" rows="5" class="descripcion-producto" required></textarea>
+            </div>
+            <div>
+                <label for="insertar-imagen" class="label-insertar-img">Insertar imagen</label> <br> <br>
+                <input type="file" name="imagenProductoModificado" required src="imagenProductoModificado" alt="img-producto-nuevo" class='file-select'>
+            </div><br><br>
+            <div>
+                <label for="categoria-producto">Categoría</label><br>
+                <select name="category" id="categoria-producto" class="ingresar-texto" >
+                    <option value="remera">REMERA</option>
+                    <option value="buzo">BUZO</option>
+                    <option value="pantalon">PANTALON</option>
+                    <option value="camisa">CAMISA</option>
+                    <option value="malla">TRAJE DE BAÑO</option>
+                    <option value="medias">MEDIAS</option>
+                    <option value="gorra">GORRA</option>
+                    <option value="campera">CAMPERA</option>
+                    <option value="bermuda">BERMUDA</option>
+                    <option value="sudadera">SUDADERA</option>
+                    <option value="accesorio">ACCESORIO</option>
+                </select>
+            </div>
+            <label>Talles disponibles:</label><br>
+            <label for="XS">XS</label>
+            <input type="checkbox" name="size" value="XS" id="XS">
+            <label for="S">S</label>
+            <input type="checkbox" name="size" value="S" id="S">
+            <label for="M">M</label>
+            <input type="checkbox" name="size" value="M" id="M">
+            <label for="L">L</label>
+            <input type="checkbox" name="size" value="L" id="L">
+            <label for="XL">XL</label>
+            <input type="checkbox" name="size" value="XL" id="XL">
+            <label for="XXL">XXL</label>
+            <input type="checkbox" name="size" value="XXL" id="XXL"><br>
+            <div>
+                <label for="descuento">Descuento</label><br>
+                <input type="number" name="discount" class="ingresar-texto" placeholder= '<%=product.discount%>%'  >
+            </div>
+            <div>
+                <label for="precio">Precio</label><br>
+                <span>$  </span><input type="number" name="price" id="precio-producto" placeholder='<%= product.price %> ' class="ingresar-texto" required>
+            </div>
+            <button type="submit" class="modificar-button">
+                GUARDAR CAMBIOS<i class="far fa-check-square"></i>
+            </button>
+        </form>
 
-<form action="/administrador/modificarProducto?_method=PUT" method="POST">
-    <span>Nombre de producto:</span>
+<!-- <form action="/administrador/modificarProducto?_method=PUT" method="POST">
+    <span>Nombre de producto:</span><br>
     <input type="text" name="" value="Remera apretón" id=""><br>
     <span>Descripción del producto:</span><br><br>
     <textarea name="descripcion-editar" id="" cols="30" rows="5"></textarea> <br>
@@ -41,22 +80,22 @@
     <input type="number" value="2000" name="" id=""><br>
     <label>Talles disponibles:</label><br>
     <label for="XS">XS</label>
-    <input type="checkbox" name="talles" id="XS">
+    <input type="checkbox" name="size" value="XS" id="XS">
     <label for="S">S</label>
-    <input type="checkbox" name="talles" id="S">
+    <input type="checkbox" name="size" value="S" id="S">
     <label for="M">M</label>
-    <input type="checkbox" name="talles" id="M">
+    <input type="checkbox" name="size" value="M" id="M">
     <label for="L">L</label>
-    <input type="checkbox" name="talles" id="L">
+    <input type="checkbox" name="size" value="L" id="L">
     <label for="XL">XL</label>
-    <input type="checkbox" name="talles" id="XL">
+    <input type="checkbox" name="size" value="XL" id="XL">
     <label for="XXL">XXL</label>
-    <input type="checkbox" name="talles" id="XXL"><br>
+    <input type="checkbox" name="size" value="XXL" id="XXL"><br>
     
     <button type="submit" class="modificar-button">
         GUARDAR CAMBIOS<i class="far fa-check-square"></i>
     </button>
-</form>
+</form> -->
  </main>  
 
 </body>
@@ -65,3 +104,4 @@
 
 
 </html>
+

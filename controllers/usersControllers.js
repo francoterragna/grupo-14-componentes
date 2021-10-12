@@ -29,13 +29,8 @@ const usersController = {
     },
 
     list: (req,res) => {
-        let users = [
-            {id: 1, name: 'Franco'},
-            {id: 2, name: 'Ulises'},
-            {id: 3, name: 'Santiago'},
-            {id: 4, name: 'Darío'},
-        ];
-        res.render('usersList', {'users': users});
+        
+        res.render('usersList', { users});
     }
 }
 

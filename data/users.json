@@ -1,8 +1,8 @@
 [
  {
   "id": 1,
-  "first_name": "Olga",
-  "last_name": "Bunclark",
+  "firstName": "Olga",
+  "lastName": "Bunclark",
   "email": "obunclark0@weebly.com",
   "password": "yPUOPpnC",
   "category": "client",
@@ -10,8 +10,8 @@
  },
  {
   "id": 2,
-  "first_name": "Christoper",
-  "last_name": "Kubacki",
+  "firstName": "Christoper",
+  "lastName": "Kubacki",
   "email": "ckubacki1@japanpost.jp",
   "password": "NkkzGz",
   "category": "admin",
@@ -19,8 +19,8 @@
  },
  {
   "id": 3,
-  "firstname": "Franco",
-  "lastname": "Terragna",
+  "firstName": "Franco",
+  "lastName": "Terragna",
   "email": "francoterragna@hotmail.com",
   "password": "hola",
   "confirm-password": "hola",
