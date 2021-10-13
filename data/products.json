@@ -38,5 +38,365 @@
   "discount": "15",
   "price": "354",
   "image": "1634063882064_img_.jpg"
+ },
+ {
+  "id": 6,
+  "name": "Remera Nirvana",
+  "description": "Remera negra con estampado de la banda Nirvana",
+  "category": "remera",
+  "size": "L",
+  "discount": "20",
+  "price": "4000",
+  "image": "1634080901977_img_.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Remera Hollister",
+  "description": "Remera Hollister color azul oscuro con estampado colorido",
+  "category": "remera",
+  "size": "M",
+  "discount": "10",
+  "price": "3200",
+  "image": "1634081013537_img_.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Remera con Botones",
+  "description": "Remera blanca con botones",
+  "category": "remera",
+  "size": "XS",
+  "discount": "",
+  "price": "2500",
+  "image": "1634081068882_img_.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Remera negra",
+  "description": "Remera negra con estampado de sonrisa blanca",
+  "category": "remera",
+  "size": "L",
+  "discount": "15",
+  "price": "3000",
+  "image": "1634081104621_img_.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Remera Bob Marley",
+  "description": "Remera negra con estampado de Bob Marley y su tradicional frase",
+  "category": "remera",
+  "size": "XL",
+  "discount": "30",
+  "price": "5000",
+  "image": "1634081158676_img_.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Remera con bolsillo",
+  "description": "Remera blanca y gris con bolsillo ",
+  "category": "remera",
+  "size": "L",
+  "discount": "",
+  "price": "4000",
+  "image": "1634081189094_img_.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Remera Calavera ",
+  "description": "Remera Blanca con estampado de Calavera",
+  "category": "remera",
+  "size": "XXL",
+  "discount": "20",
+  "price": "2000",
+  "image": "1634081226372_img_.jpg"
+ },
+ {
+  "id": 13,
+  "name": "Remera negra",
+  "description": "Remera negra ajustada al cuerpo",
+  "category": "remera",
+  "size": "S",
+  "discount": "5",
+  "price": "4000",
+  "image": "1634081261533_img_.jpg"
+ },
+ {
+  "id": 14,
+  "name": "Buzo Nike",
+  "description": "Buzo Nike Gris",
+  "category": "buzo",
+  "size": "L",
+  "discount": "20",
+  "price": "7000",
+  "image": "1634082044835_img_.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Buzo Beige",
+  "description": "Buzo Beige",
+  "category": "buzo",
+  "size": "XS",
+  "discount": "50",
+  "price": "6000",
+  "image": "1634082093078_img_.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Buzo Adidas",
+  "description": "Buzo Adidas Gris",
+  "category": "buzo",
+  "size": "M",
+  "discount": "20",
+  "price": "8000",
+  "image": "1634082121023_img_.jpg"
+ },
+ {
+  "id": 17,
+  "name": "Buzo Blanco",
+  "description": "Buzo Blanco Abercrombie",
+  "category": "buzo",
+  "size": "M",
+  "discount": "10",
+  "price": "9000",
+  "image": "1634082165575_img_.jpg"
+ },
+ {
+  "id": 18,
+  "name": "Buzo Adidas Deportivo",
+  "description": "Buzo Adidas Gris ",
+  "category": "buzo",
+  "size": "L",
+  "discount": "20",
+  "price": "4000",
+  "image": "1634082212148_img_.jpg"
+ },
+ {
+  "id": 19,
+  "name": "Buzo Fila Tricolor",
+  "description": "Buzo Fila Tricolor",
+  "category": "buzo",
+  "size": "XXL",
+  "discount": "",
+  "price": "5000",
+  "image": "1634082250780_img_.jpg"
+ },
+ {
+  "id": 20,
+  "name": "Buzo Hollister",
+  "description": "Buzo Hollister Negro",
+  "category": "buzo",
+  "size": "S",
+  "discount": "60",
+  "price": "10000",
+  "image": "1634082288966_img_.jpg"
+ },
+ {
+  "id": 21,
+  "name": "Buzo Abercrombie",
+  "description": "Buzo Abercrombie",
+  "category": "buzo",
+  "size": "XL",
+  "discount": "20",
+  "price": "4000",
+  "image": "1634082326077_img_.jpg"
+ },
+ {
+  "id": 22,
+  "name": "Buzo Tommy",
+  "description": "Buzo Tommy Azul",
+  "category": "buzo",
+  "size": "S",
+  "discount": "15",
+  "price": "4500",
+  "image": "1634082390380_img_.jpg"
+ },
+ {
+  "id": 23,
+  "name": "Buzo Fila Negro",
+  "description": "Buzo Fila Negro",
+  "category": "buzo",
+  "size": "XL",
+  "discount": "25",
+  "price": "7600",
+  "image": "1634082435855_img_.jpg"
+ },
+ {
+  "id": 24,
+  "name": "Jean Celeste Roto",
+  "description": "Jean Celeste Roto",
+  "category": "pantalon",
+  "size": "M",
+  "discount": "20",
+  "price": "5000",
+  "image": "1634082973362_img_.png"
+ },
+ {
+  "id": 25,
+  "name": "Jean Celeste Chupin",
+  "description": "Jean Celeste Chupin",
+  "category": "pantalon",
+  "size": "S",
+  "discount": "10",
+  "price": "3000",
+  "image": "1634083010629_img_.jpg"
+ },
+ {
+  "id": 26,
+  "name": "Pantalón Cuadrille Negro",
+  "description": "Pantalón Cuadrille Negro",
+  "category": "pantalon",
+  "size": "L",
+  "discount": "20",
+  "price": "6000",
+  "image": "1634083042484_img_.jpg"
+ },
+ {
+  "id": 27,
+  "name": "Jean Blanco",
+  "description": "Jean Blanco",
+  "category": "pantalon",
+  "size": "XL",
+  "discount": "20",
+  "price": "7800",
+  "image": "1634083069108_img_.jpg"
+ },
+ {
+  "id": 28,
+  "name": "Pantalón Cuadrille Gris",
+  "description": "Pantalón Cuadrille Gris",
+  "category": "pantalon",
+  "size": "XS",
+  "discount": "50",
+  "price": "6000",
+  "image": "1634083092858_img_.jpg"
+ },
+ {
+  "id": 29,
+  "name": "Jogger Oscuro",
+  "description": "Jogger Oscuro",
+  "category": "pantalon",
+  "size": "M",
+  "discount": "20",
+  "price": "3200",
+  "image": "1634083121897_img_.jpg"
+ },
+ {
+  "id": 30,
+  "name": "Jogger Crema",
+  "description": "Jogger Crema",
+  "category": "pantalon",
+  "size": "L",
+  "discount": "5",
+  "price": "4000",
+  "image": "1634083150401_img_.jpg"
+ },
+ {
+  "id": 31,
+  "name": "Jean Negro Roto",
+  "description": "Jean Negro Roto",
+  "category": "pantalon",
+  "size": "XL",
+  "discount": "20",
+  "price": "6580",
+  "image": "1634083182484_img_.jpg"
+ },
+ {
+  "id": 32,
+  "name": "Jean Blanco Roto",
+  "description": "Jean Blanco Roto",
+  "category": "pantalon",
+  "size": "XL",
+  "discount": "20",
+  "price": "4500",
+  "image": "1634083212039_img_.jpg"
+ },
+ {
+  "id": 33,
+  "name": "Camisa Cuadros",
+  "description": "Camisa Cuadros rojos y negros",
+  "category": "camisa",
+  "size": "M",
+  "discount": "10",
+  "price": "6790",
+  "image": "1634084060352_img_.jpg"
+ },
+ {
+  "id": 34,
+  "name": "Camisa Rayas ",
+  "description": "Camisa Rayas ",
+  "category": "camisa",
+  "size": "XXL",
+  "discount": "20",
+  "price": "4500",
+  "image": "1634084134945_img_.jpg"
+ },
+ {
+  "id": 35,
+  "name": "Camisa Cuadros",
+  "description": "Blanco y negro",
+  "category": "camisa",
+  "size": "M",
+  "discount": "10",
+  "price": "4000",
+  "image": "1634084174850_img_.jpg"
+ },
+ {
+  "id": 36,
+  "name": "Camisa Estampados",
+  "description": "Camisa Estampados",
+  "category": "camisa",
+  "size": "L",
+  "discount": "40",
+  "price": "7000",
+  "image": "1634084236113_img_.jpg"
+ },
+ {
+  "id": 37,
+  "name": "Camisa Azul Oscuro",
+  "description": "Camisa Elegante Azul Oscuro",
+  "category": "camisa",
+  "size": "S",
+  "discount": "15",
+  "price": "8000",
+  "image": "1634084283326_img_.jpg"
+ },
+ {
+  "id": 38,
+  "name": "Camisa Celeste",
+  "description": "Camisa Celeste Elegante",
+  "category": "camisa",
+  "size": "XL",
+  "discount": "50",
+  "price": "3500",
+  "image": "1634084317500_img_.jpg"
+ },
+ {
+  "id": 39,
+  "name": "Camisa con Puntos",
+  "description": "Camisa blanca con Puntos negros ",
+  "category": "camisa",
+  "size": "L",
+  "discount": "10",
+  "price": "6000",
+  "image": "1634084360225_img_.jpg"
+ },
+ {
+  "id": 40,
+  "name": "Camisa manga corta",
+  "description": "Camisa manga corta mostaza",
+  "category": "camisa",
+  "size": "M",
+  "discount": "10",
+  "price": "5000",
+  "image": "1634084426774_img_.jpg"
+ },
+ {
+  "id": 41,
+  "name": "Camisa manga corta",
+  "description": "Camisa Floreada",
+  "category": "camisa",
+  "size": "M",
+  "discount": "30",
+  "price": "3000",
+  "image": "1634084467062_img_.jpg"
  }
 ]

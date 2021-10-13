@@ -9,8 +9,8 @@
     
     <main class="main-product">
         <section class="section-product">
-            
             <% category.forEach(producto => { %>   
+            
                 <article class="article-product">
                     <a href="/productos/detalle/<%= producto.id %> ">
                  <img src="/img/products/<%= producto.image %>" alt="Imagen">
@@ -23,9 +23,9 @@
                      <% } %> 
                     </a>
                     </article>
-            <% }) %> 
-        </section>
-     
+                    <% }) %> 
+                </section>
+                
     </main>
     <%- include('./partials/footer.ejs') %> 
  </body>
