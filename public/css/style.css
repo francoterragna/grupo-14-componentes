@@ -589,7 +589,7 @@ background-color: #3483fa;
 color: white;   
 border-radius: 5px;
 border: none;
--webkit-animation:aumentar .5s infinite linear alternate;
+-webkit-animation: alternate;
 animation: aumentar .5s infinite linear alternate;
 }
 .button-agregar-carrito{
