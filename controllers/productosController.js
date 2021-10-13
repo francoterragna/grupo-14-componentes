@@ -14,7 +14,7 @@ const productosController = {
     carrito: (req,res) => res.render('carrito'),
     showProduct: (req,res) =>{
         let id = req.params.id;
-        let category = products.filter(producto => (producto.category + 's') == id)
+        let category = products.filter(producto => producto.category == id)
         res.render('productSelect', {category})
     } 
 }

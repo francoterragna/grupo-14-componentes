@@ -186,6 +186,7 @@ main{
     font-size: 20px;
     right: 30px;
     top: -45px;
+    -webkit-animation: descuento .3s infinite linear alternate; ;
     animation: descuento .3s infinite linear alternate;
 }
 /* .descuento-section{
@@ -588,6 +589,7 @@ background-color: #3483fa;
 color: white;   
 border-radius: 5px;
 border: none;
+-webkit-animation:aumentar .5s infinite linear alternate;
 animation: aumentar .5s infinite linear alternate;
 }
 .button-agregar-carrito{
