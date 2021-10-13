@@ -398,5 +398,165 @@
   "discount": "30",
   "price": "3000",
   "image": "1634084467062_img_.jpg"
+ },
+ {
+  "id": 42,
+  "name": "Traje de Baño con dibujos",
+  "description": "Traje de Baño Blanco con estampas de colores",
+  "category": "malla",
+  "size": "L",
+  "discount": "10",
+  "price": "4000",
+  "image": "1634091835595_img_.jpg"
+ },
+ {
+  "id": 43,
+  "name": "Traje de Baño con rayas",
+  "description": "Traje de baño con rayas blancas y azules",
+  "category": "malla",
+  "size": "S",
+  "discount": "",
+  "price": "3000",
+  "image": "1634091957402_img_.jpg"
+ },
+ {
+  "id": 44,
+  "name": "Traje de Baño Liso",
+  "description": "Traje de Baño Liso Color verde militar",
+  "category": "malla",
+  "size": "L",
+  "discount": "",
+  "price": "2500",
+  "image": "1634092445761_img_.jpg"
+ },
+ {
+  "id": 45,
+  "name": "Traje de Baño con dibujos",
+  "description": "Traje de baño rosa con dibujos de cactus",
+  "category": "malla",
+  "size": "XXL",
+  "discount": "",
+  "price": "3400",
+  "image": "1634092477289_img_.jpg"
+ },
+ {
+  "id": 46,
+  "name": "Traje de Baño Liso",
+  "description": "Traje de Baño Liso color Rojo",
+  "category": "malla",
+  "size": "L",
+  "discount": "",
+  "price": "2800",
+  "image": "1634092512171_img_.jpg"
+ },
+ {
+  "id": 47,
+  "name": "Traje de Baño Liso",
+  "description": "Traje de Baño Liso color rosa",
+  "category": "malla",
+  "size": "M",
+  "discount": "10",
+  "price": "2000",
+  "image": "1634092550330_img_.jpg"
+ },
+ {
+  "id": 48,
+  "name": "Traje de Baño con dibujos",
+  "description": "Traje de Baño con dibujos color negro y dibujos azules",
+  "category": "malla",
+  "size": "XL",
+  "discount": "20",
+  "price": "4000",
+  "image": "1634092635243_img_.jpg"
+ },
+ {
+  "id": 49,
+  "name": "Traje de Baño Liso",
+  "description": "Traje de Baño Liso: Color Azul marino",
+  "category": "malla",
+  "size": "M",
+  "discount": "10",
+  "price": "2000",
+  "image": "1634092665900_img_.jpg"
+ },
+ {
+  "id": 50,
+  "name": "Traje de Baño con dibujos",
+  "description": "Traje de Baño con dibujos y colores tropicales",
+  "category": "malla",
+  "size": "S",
+  "discount": "5",
+  "price": "4000",
+  "image": "1634092701882_img_.jpg"
+ },
+ {
+  "id": 51,
+  "name": "Medias B&W",
+  "description": "Medias blancas con líneas negras",
+  "category": "medias",
+  "size": "S",
+  "discount": "",
+  "price": "1000",
+  "image": "1634093641928_img_.jpg"
+ },
+ {
+  "id": 52,
+  "name": "Medias Fuego",
+  "description": "Medias Fuego en blanco y en negro",
+  "category": "medias",
+  "size": "M",
+  "discount": "10",
+  "price": "800",
+  "image": "1634093685160_img_.jpg"
+ },
+ {
+  "id": 53,
+  "name": "Medias Aliens",
+  "description": "Medias negras con Aliens Verdes",
+  "category": "medias",
+  "size": "M",
+  "discount": "",
+  "price": "800",
+  "image": "1634093714134_img_.jpg"
+ },
+ {
+  "id": 54,
+  "name": "Medias Rolling Stones",
+  "description": "Medias Rolling Stones en blanco y en negro",
+  "category": "medias",
+  "size": "M",
+  "discount": "5",
+  "price": "1000",
+  "image": "1634093798322_img_.jpg"
+ },
+ {
+  "id": 55,
+  "name": "Medias Jordan",
+  "description": "Medias Jordan Rojas",
+  "category": "medias",
+  "size": "M",
+  "discount": "20",
+  "price": "1000",
+  "image": "1634093825651_img_.jpg"
+ },
+ {
+  "id": 56,
+  "name": "Medias Stars War",
+  "description": "Medias Stars War Negras y amarillas",
+  "category": "medias",
+  "size": "M",
+  "discount": "10",
+  "price": "2000",
+  "image": "1634093871333_img_.jpg"
+ },
+ {
+  "id": 57,
+  "name": "Medias NASA",
+  "description": "Medias con dibujos de la NASA",
+  "category": "medias",
+  "size": "M",
+  "discount": "10",
+  "price": "1200",
+  "image": "1634093903043_img_.jpg"
  }
 ]
