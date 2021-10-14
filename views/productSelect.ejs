@@ -15,7 +15,7 @@
                     <a href="/productos/detalle/<%= producto.id %> ">
                  <img src="/img/products/<%= producto.image %>" alt="Imagen">
                  <h4> <%= producto.name %>  </h4>
-                 <p>$<%= producto.price %> </p>
+                 <h5>$<%= producto.price %> </h5>
                  <% if(producto.discount > 0){ %> 
                  <p><%= producto.discount %>% de descuento </p>
                  <% }else{ %> 
