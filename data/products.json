@@ -808,5 +808,85 @@
   "discount": "",
   "price": "2000",
   "image": "1634175598682_img_.jpg"
+ },
+ {
+  "id": 83,
+  "name": "Neseser negro con tachas",
+  "description": "Neseser negro con cierre frontal y tachas",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "",
+  "price": "3200",
+  "image": "1634242101177_img_.jpg"
+ },
+ {
+  "id": 84,
+  "name": "Riñonera Nike",
+  "description": "Riñonera nike azul",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "",
+  "price": "2100",
+  "image": "1634242249545_img_.jpg"
+ },
+ {
+  "id": 85,
+  "name": "Billetera Maradona",
+  "description": "Billetera con la cara de Maradona",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "",
+  "price": "1000",
+  "image": "1634243139124_img_.jpg"
+ },
+ {
+  "id": 86,
+  "name": "Billetera Everlast",
+  "description": "Billetera Everlast gris y azul",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "10",
+  "price": "1520",
+  "image": "1634243174137_img_.jpg"
+ },
+ {
+  "id": 87,
+  "name": "Billetera Everlast marrón",
+  "description": "Billetera Everlast marrón ",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "15",
+  "price": "2000",
+  "image": "1634243238352_img_.jpg"
+ },
+ {
+  "id": 88,
+  "name": "Riñonera negra",
+  "description": "Riñonera negra",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "",
+  "price": "2200",
+  "image": "1634243311692_img_.jpg"
+ },
+ {
+  "id": 89,
+  "name": "Neseser negro",
+  "description": "Neseser negro",
+  "category": "accesorio",
+  "size": "XS",
+  "discount": "",
+  "price": "1500",
+  "image": "1634243445371_img_.jpg"
+ },
+ {
+  "id": 90,
+  "name": "Medias sucias",
+  "description": "Medias manchadas de tierra",
+  "category": "medias",
+  "size": "XS",
+  "discount": "",
+  "price": "2",
+  "image": "1634243528617_img_.jpg"
  }
 ]

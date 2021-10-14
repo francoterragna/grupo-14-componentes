@@ -7,18 +7,16 @@ const adminRoutes = require('./routes/adminRoutes');
 const path = require('path');
 const PORT = process.env.PORT || 3030;
 const methodOverride = require('method-override');
-app.use(methodOverride("_method"));
-
-app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
+app.use(methodOverride("_method"));
+app.use(express.static('./public'));
 app.use('/', mainRouter) ;
-
 app.use('/usuarios', usuariosRouter)
-
 app.use('/productos', productosRouter);
-
 app.use('/administrador', adminRoutes);
 
 
