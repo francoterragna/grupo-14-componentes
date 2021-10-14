@@ -558,5 +558,255 @@
   "discount": "10",
   "price": "1200",
   "image": "1634093903043_img_.jpg"
+ },
+ {
+  "id": 58,
+  "name": "Campera AFA",
+  "description": "Campera del campeón de América",
+  "category": "campera",
+  "size": "L",
+  "discount": "25",
+  "price": "20000",
+  "image": "1634172638743_img_.jpg"
+ },
+ {
+  "id": 59,
+  "name": "Campera gris",
+  "description": "Campera gris con capucha",
+  "category": "campera",
+  "size": "M",
+  "discount": "25",
+  "price": "12500",
+  "image": "1634172719455_img_.jpg"
+ },
+ {
+  "id": 60,
+  "name": "Campera Lacoste",
+  "description": "Campera color beige Lacoste",
+  "category": "campera",
+  "size": "M",
+  "discount": "25",
+  "price": "16000",
+  "image": "1634172784864_img_.jpg"
+ },
+ {
+  "id": 61,
+  "name": "Campera Ferrari",
+  "description": "Campera Ferrari negra y roja",
+  "category": "campera",
+  "size": "L",
+  "discount": "25",
+  "price": "28000",
+  "image": "1634172912051_img_.jpg"
+ },
+ {
+  "id": 62,
+  "name": "Campera negra",
+  "description": "Cempera negra loar",
+  "category": "campera",
+  "size": "L",
+  "discount": "25",
+  "price": "12000",
+  "image": "1634172978472_img_.jpg"
+ },
+ {
+  "id": 63,
+  "name": "Campera Montagne",
+  "description": "Campera Montagne beige con polar",
+  "category": "campera",
+  "size": "L",
+  "discount": "25",
+  "price": "24000",
+  "image": "1634173058092_img_.jpg"
+ },
+ {
+  "id": 64,
+  "name": "Campera rompe viento",
+  "description": "Campera rompe viento roja y azul",
+  "category": "campera",
+  "size": "M",
+  "discount": "25",
+  "price": "16500",
+  "image": "1634173121983_img_.jpg"
+ },
+ {
+  "id": 65,
+  "name": "Campera negra simple",
+  "description": "Campera negra con cierre rojo",
+  "category": "campera",
+  "size": "L",
+  "discount": "25",
+  "price": "14000",
+  "image": "1634173150642_img_.jpg"
+ },
+ {
+  "id": 66,
+  "name": "Campera Nike negra",
+  "description": "Campera Nike negra",
+  "category": "campera",
+  "size": "L",
+  "discount": "25",
+  "price": "18000",
+  "image": "1634173204562_img_.jpg"
+ },
+ {
+  "id": 67,
+  "name": "Malla roja ",
+  "description": "Malla del fenómeno",
+  "category": "malla",
+  "size": "L",
+  "discount": "25",
+  "price": "2000",
+  "image": "1634173612319_img_.jpg"
+ },
+ {
+  "id": 68,
+  "name": "Bermuda rosa",
+  "description": "Bermuda rosa",
+  "category": "bermuda",
+  "size": "M",
+  "discount": "15",
+  "price": "4000",
+  "image": "1634173688778_img_.jpg"
+ },
+ {
+  "id": 69,
+  "name": "Bermuda verde",
+  "description": "Bermuda verde con bolsillo",
+  "category": "bermuda",
+  "size": "M",
+  "discount": "10",
+  "price": "4200",
+  "image": "1634173716587_img_.jpg"
+ },
+ {
+  "id": 70,
+  "name": "Bermuda de jean",
+  "description": "Bermuda de jean azul",
+  "category": "bermuda",
+  "size": "M",
+  "discount": "",
+  "price": "3000",
+  "image": "1634173743623_img_.jpg"
+ },
+ {
+  "id": 71,
+  "name": "Bermuda negra",
+  "description": "Bermuda negra con bolsillo",
+  "category": "bermuda",
+  "size": "M",
+  "discount": "",
+  "price": "2000",
+  "image": "1634173795190_img_.jpg"
+ },
+ {
+  "id": 72,
+  "name": "Bermuda negra",
+  "description": "Bermuda negra sin cierre",
+  "category": "bermuda",
+  "size": "L",
+  "discount": "",
+  "price": "2400",
+  "image": "1634173828556_img_.jpg"
+ },
+ {
+  "id": 73,
+  "name": "Bermuda militar",
+  "description": "Bermuda cargo militar",
+  "category": "bermuda",
+  "size": "L",
+  "discount": "",
+  "price": "5000",
+  "image": "1634174562165_img_.jpg"
+ },
+ {
+  "id": 74,
+  "name": "Gorra cara Diego",
+  "description": "Gorra de la cara de Diego",
+  "category": "gorra",
+  "size": "S",
+  "discount": "",
+  "price": "1500",
+  "image": "1634175128264_img_.jpeg"
+ },
+ {
+  "id": 75,
+  "name": "Gorro negro Adidas",
+  "description": "Gorro negro Adidas",
+  "category": "gorra",
+  "size": "S",
+  "discount": "",
+  "price": "1200",
+  "image": "1634175155913_img_.jpg"
+ },
+ {
+  "id": 76,
+  "name": "Gorra Goku",
+  "description": "Gorra goku negra",
+  "category": "gorra",
+  "size": "M",
+  "discount": "",
+  "price": "2000",
+  "image": "1634175196163_img_.jpg"
+ },
+ {
+  "id": 77,
+  "name": "Gorra tazmania",
+  "description": "Gorra demonio de tazmania",
+  "category": "gorra",
+  "size": "M",
+  "discount": "",
+  "price": "2100",
+  "image": "1634175225448_img_.jpg"
+ },
+ {
+  "id": 78,
+  "name": "Gorra bugs bunny",
+  "description": "Gorra bugs bunny",
+  "category": "gorra",
+  "size": "M",
+  "discount": "",
+  "price": "2000",
+  "image": "1634175273595_img_.jpg"
+ },
+ {
+  "id": 79,
+  "name": "Gorra AFA",
+  "description": "Gorra AFA azul",
+  "category": "gorra",
+  "size": "M",
+  "discount": "10",
+  "price": "1500",
+  "image": "1634175301164_img_.jpg"
+ },
+ {
+  "id": 80,
+  "name": "Gorra símbolo $",
+  "description": "Gorra simbolo dólar",
+  "category": "gorra",
+  "size": "M",
+  "discount": "",
+  "price": "1500",
+  "image": "1634175360934_img_.jpg"
+ },
+ {
+  "id": 81,
+  "name": "Gorro U.R.S.S negro",
+  "description": "Gorro de la Unión de la República Socialista Soviética negro",
+  "category": "gorra",
+  "size": "M",
+  "discount": "",
+  "price": "5000",
+  "image": "1634175443659_img_.jpg"
+ },
+ {
+  "id": 82,
+  "name": "Piluso dólares",
+  "description": "Piluso estampado con dólares",
+  "category": "gorra",
+  "size": "M",
+  "discount": "",
+  "price": "2000",
+  "image": "1634175598682_img_.jpg"
  }
 ]

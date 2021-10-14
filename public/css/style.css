@@ -589,10 +589,6 @@ background-color: #3483fa;
 color: white;   
 border-radius: 5px;
 border: none;
--webkit-animation: aumentar .5s infinite linear alternate;
--moz-animation: aumentar .5s infinite linear alternate;
--ms-animation: aumentar .5s infinite linear alternate;
--o-animation: aumentar .5s infinite linear alternate;
 animation: aumentar .5s infinite linear alternate;
 }
 .button-agregar-carrito{
@@ -601,6 +597,7 @@ color:#3483fa;
 border-radius: 5px;
 border: none;
 }
+
 
 .titulo-producto{
     color: #555;
@@ -1274,7 +1271,8 @@ outline: #ccc;
    }
    .article-product img{
        height: 400px;
-       object-fit: cover;
+       object-fit: contain;
+       object-position: top;
    }
 }
 
