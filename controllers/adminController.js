@@ -27,30 +27,47 @@ const adminController = {
     
     modificarProducto: (req,res) =>{
         let id = req.params.id;
-		let product = products.find(product => product.id == id); 
-        res.render('modificarProducto', {product})
+		let productToEdit = products.find(product => product.id == id); 
+        res.render('modificarProducto', {productToEdit})
     }, 
 
     enviarCambios: (req,res) =>{
         let id = req.params.id;
-		let product = products.find(product => product.id == id);
+		let productToEdit = products.find(product => product.id == id);
+        let newImage;
+        if(req.file == undefined){
+            newImage = productToEdit.image
+        }else{
+           newImage = req.file.filename
+        }
 
-        product ={
-            id: product.id,
-            ...req.body
+
+        productToEdit ={
+            id: productToEdit.id,
+            ...req.body,
+            image : newImage
         };
 
-        let newProduct = products.map(product => {
-			if (product.id == product.id) {
-				return product = {...product};
+        let newProduct = products.map(producto => {
+			if (producto.id == productToEdit.id) {
+				return producto = {...productToEdit};
 			}
-			return product;
+			return producto;
 		});
 
         fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 		res.redirect('/');
 
+    },
+    delete: (req,res) => {
+      let  id = req.params.id;
+      let finalProducts =   products.filter(product => product.id != id)
+
+      fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
+      res.redirect('/')
     }
+    
+    
 
 };
 

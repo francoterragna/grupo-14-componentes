@@ -19,6 +19,7 @@ router.post('/agregarProducto',uploadFile.single('imagenProductoNuevo') ,adminCo
 
 router.get('/modificarProducto/:id', adminController.modificarProducto);
 router.put('/modificarProducto/:id', uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios)
+router.delete('/eliminar/:id', adminController.delete)
 
 
 module.exports = router;

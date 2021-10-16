@@ -9,6 +9,14 @@ body{
     min-width: 375px;
 }
 
+/* .__                       .___            
+|  |__   ____ _____     __| _/___________ 
+|  |  \_/ __ \\__  \   / __ |/ __ \_  __ \
+|   Y  \  ___/ / __ \_/ /_/ \  ___/|  | \/
+|___|  /\___  >____  /\____ |\___  >__|   
+     \/     \/     \/      \/    \/     */
+
+
 header{
     background-color: #ffffff;
     height: 96px;
@@ -986,6 +994,27 @@ Aca empieza el CSS del login
     color: #999;
 }
 
+.eliminar-button{
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: rgba(211, 20, 20, 0.979);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 75%;
+}
+
+.fa-times-circle{
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 700ms
+}
+
+.eliminar-button:hover .fa-times-circle{
+    transform:rotateZ(350deg);
+    }
 
 .modificar-button{
     margin-bottom: 30px;
@@ -994,6 +1023,13 @@ Aca empieza el CSS del login
     border: none;
     border-radius: 5px;
     font-size: 20px;
+    width: 75%;
+    
+}
+
+
+.eliminar-button:hover{
+    cursor: pointer;
 }
 
 .modificar-button:hover{
@@ -1243,6 +1279,9 @@ outline: #ccc;
     
 } */
 @media(min-width:980px){
+    .modificar-button, .eliminar-button{
+        width: 30%;
+    }
    .user{
        padding-left: 0;
    }

@@ -23,8 +23,6 @@ const usersController = {
             })
         }
 
-
-
         let imageName;
         if (req.file != undefined){
             imageName = req.file.filename;

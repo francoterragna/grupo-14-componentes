@@ -21,13 +21,12 @@
  },
  {
   "id": 4,
-  "name": "Remera París negra",
-  "description": "Remera bien piola",
+  "name": "Remera París Negra",
+  "description": "Remera bien piolonaaa\r\n                 \r\n                 \r\n                ",
   "category": "remera",
-  "size": "L",
-  "discount": "10",
-  "price": "2000",
-  "image": "1634062915555_img_.jpg"
+  "discount": "20",
+  "price": "4000",
+  "image": "1634399383827_img_.jpg"
  },
  {
   "id": 5,
@@ -878,15 +877,5 @@
   "discount": "",
   "price": "1500",
   "image": "1634243445371_img_.jpg"
- },
- {
-  "id": 90,
-  "name": "Medias sucias",
-  "description": "Medias manchadas de tierra",
-  "category": "medias",
-  "size": "XS",
-  "discount": "",
-  "price": "2",
-  "image": "1634243528617_img_.jpg"
  }
 ]
