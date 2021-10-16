@@ -7,20 +7,37 @@
     <%- include('./partials/header.ejs') %>
     <main id="main-register">
         <h2 class="form-titulo">Completá tus datos</h2>
+       
         <div class="container-form">
             <form action="/usuarios/register" method="POST" class="form-control" enctype="multipart/form-data">
             
                 <div class="form-nombre">
                     <label>Nombre</label> <br>
-                    <input class="ingresar-texto" type="text" name="firstname" placeholder="Nombre" required>
+                    <input class="ingresar-texto" type="text" name="firstName" 
+                    value="<%= locals.oldData ? oldData.firstName : null %>" >
+                    <% if (locals.errors && errors.firstName) { %>
+                     
+                        <div class="text-danger"> <%= errors.firstName.msg %>   </div>
+                        <% } %>
                 </div>
+                
                 <div class="form-nombre">
                     <label>Apellido</label> <br>
-                    <input class="ingresar-texto" type="text" name="lastname" placeholder="Apellido" required>
+                    <input class="ingresar-texto" type="text" name="lastName" 
+                    value="<%= locals.oldData ? oldData.lastName : null %>" >
+                    <% if (locals.errors && errors.lastName) { %>
+                     
+                        <div class="text-danger"> <%= errors.lastName.msg %>   </div>
+                        <% } %>
                 </div>
                 <div class="form-email">
                     <label>Email</label><br>
-                    <input class="ingresar-texto" type="email" name="email" placeholder="Correo electrónico" required>
+                    <input class="ingresar-texto" type="email" name="email" 
+                     value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                     
+                        <div class="text-danger"> <%= errors.email.msg %>   </div>
+                        <% } %>
                 </div>
                 <div>
                     <label>Elegí tu foto de perfil</label><br><br>
@@ -28,11 +45,16 @@
                 </div><br>
                 <div class="form-contraseña">
                     <label>Creá tu constraseña</label><br>
-                    <input class="ingresar-texto" type="password" name="password" required>
+                    <input class="ingresar-texto" type="password" name="password" 
+                    value="<%= locals.oldData ? oldData.password : null %>" >
+                    <% if (locals.errors && errors.password) { %>
+                     
+                        <div class="text-danger"> <%= errors.password.msg %>   </div>
+                        <% } %>
                 </div>
                 <div class="form-confirm-contraseña">
                     <label>Confirmá tu contraseña</label><br>
-                    <input class="ingresar-texto" type="password" name="confirmPassword" required>
+                    <input class="ingresar-texto" type="password" name="confirmPassword" >
                 </div>
 
                 <button type="submit" class="boton-enviar">Enviar</button>
