@@ -25,22 +25,22 @@ const usersController = {
 
 
 
-        // let imageName;
-        // if (req.file != undefined){
-        //     imageName = req.file.filename;
-        // }else{
-        //     imageName = 'img-default.jpg';
-        // }
+        let imageName;
+        if (req.file != undefined){
+            imageName = req.file.filename;
+        }else{
+            imageName = 'img-default.jpg';
+        }
 
-        // let newUser = {
-        //     id: users[users.length-1].id + 1,
-        //     ...req.body,
-        //     image: imageName
-        // };
+        let newUser = {
+            id: users[users.length-1].id + 1,
+            ...req.body,
+            image: imageName
+        };
 
-        // users.push(newUser);
-        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
-        // res.redirect('/');
+        users.push(newUser);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
+        res.redirect('/');
     },
 
     list: (req,res) => {

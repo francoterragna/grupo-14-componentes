@@ -25,6 +25,14 @@
   "password": "hola",
   "confirm-password": "hola",
   "image": "1633792798102_img_.JPG"
+ },
+ {
+  "id": 4,
+  "firstName": "Juan",
+  "lastName": "Sanchez",
+  "email": "juan@gmail.com",
+  "password": "vyV3AA.!PnLCG5#",
+  "confirmPassword": "vyV3AA.!PnLCG5#",
+  "image": "1634394464763_img_.jpg"
  }
- 
 ]
