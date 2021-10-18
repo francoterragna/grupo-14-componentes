@@ -1,6 +1,7 @@
 const express = require ('express');
 const app = express();
 const path = require('path');
+const session = require ('express-session');
 const PORT = process.env.PORT || 3030;
 
 
@@ -15,11 +16,19 @@ const adminRoutes = require('./routes/adminRoutes');
 // Definiendo el TEMPLATE ENGINES
 app.set('view engine', 'ejs');
 
+//CONFIGURACIONES PARA PUT Y DELETE
 const methodOverride = require('method-override');
 app.use(methodOverride("_method"));
+
+//PARA QUE FUNCIONE EL PROCESO POR POST
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+
+//DEFINIENDO ARCHIVOS ESTÁTICOS
 app.use(express.static('./public'));
+
+//El método secret es para que sirva sólo en nuestra página.
+app.use(session({secret:'Secreto'})); 
 
 
 app.use('/', mainRouter) ;

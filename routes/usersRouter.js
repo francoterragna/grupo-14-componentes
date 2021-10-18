@@ -24,6 +24,12 @@ const validations = [
    
 ];
 
+const validationsLogin =[
+   body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Tienes que escribir un correo electrónico válido'),
+   body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
+]
+
+
 const usersController = require ('../controllers/usersControllers');
 
 router.get('/register', usersController.showRegister);
@@ -31,6 +37,7 @@ router.post('/register',uploadFile.single('img-profile'),validations ,usersContr
 
 
 router.get('/login', usersController.login);
+router.post('/login',validationsLogin , usersController.processLogin)
 
 router.get('/list', usersController.list);
 

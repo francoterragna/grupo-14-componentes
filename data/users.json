@@ -34,5 +34,23 @@
   "password": "vyV3AA.!PnLCG5#",
   "confirmPassword": "vyV3AA.!PnLCG5#",
   "image": "1634394464763_img_.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Franco",
+  "lastName": "Nicolás",
+  "email": "franquito.terragna.nieto@gmail.com",
+  "password": "1234",
+  "confirmPassword": "1234",
+  "image": "1634591450522_img_.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Franco",
+  "lastName": "Nicolás",
+  "email": "franquito.terragna.nieto@gmail.com",
+  "password": "1234",
+  "confirmPassword": "1234",
+  "image": "1634591451481_img_.jpg"
  }
 ]

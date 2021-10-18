@@ -7,26 +7,33 @@
     <main class="main-login">
         <div class="fondo-login">
             <h2 class="titulo-login">Ingresar</h2>
-            <form action="/home" method="GET" class="form-login">
-
-            <div class="login-facebook"><a href="#"></a><i class="fab fa-facebook-square"></i>
-                 <label for="login-facebook">
+            <form action="/usuarios/login" method="POST" class="form-login">
+                <div class="login-facebook"><a href="#"></a><i class="fab fa-facebook-square"></i>
+                    <label for="login-facebook">
                      Facebook Login
                     </label></a>
                 </div>
                 <br>
                 <hr>    
                 <br>
-                <label for="usuario" class="label-login">Nombre de usuario</label>
-                <br><input class="input-login" type="text" name="usuario" placeholder="Usuario"><br>
+                <% if (locals.errors && errors.email) { %>
+                 <p><%= errors.email.msg %></p>
+                <% } %>
+                <br>
+                 
+                <label for="usuario" class="label-login">Email</label><br>
+                <input class="input-login" type="email" name="usuario" placeholder="Email"><br>
             
-                <label for="contraseña" class="label-login">Contraseña</label>
-                <br><input class="input-login" type="password" name="contraseña" placeholder="Contraseña"><br>
+                <label for="contraseña" class="label-login">Contraseña</label><br>
+                <input class="input-login" type="password" name="contraseña" placeholder="Contraseña"><br>
             
-                <a href="#" class="olvidar-contraseña">¿Olvidaste tu contraseña?</a><br>
+                <a href="/7856" class="olvidar-contraseña">¿Olvidaste tu contraseña?</a><br>
                 <button type="submit" class="ingresar-boton">Ingresar</button>
         
-                <p class="registrarse-texto">¿No tenés cuenta? ¡Registrate!</p><a href="/usuarios/register" class="enlace-registrarse"><div class="registrarse-boton">Registrarse</div></a>
+                <p class="registrarse-texto">¿No tenés cuenta? ¡Registrate!</p>
+                <a href="/usuarios/register" class="enlace-registrarse">
+                    <div class="registrarse-boton">Registrarse</div>
+                </a>
             </form>
         </div>
     </main>
