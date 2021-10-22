@@ -34,3 +34,17 @@
 
 5- Sobre la marcha ibamos asignando las tareas en relacion de lo que faltaba, es un punto que consideramos mejorar.
 
+SPRINT 4:
+
+Empezar a hacer: Comenzar a hacer las reuniones daily para ponernos al tanto constantemente sobre el avance del proyecto.
+
+Hacer más: Tendriamos que consultar más seguido al resto del grupo cuando nos encontremos con alguna dificultad.
+
+Continuar haciendo: Creemos que debemos continuar con la buena comunicación entre los integrantes del grupo.
+
+Hacer menos: Dejar de trabajar en una sola rama, para así poder diversificar el trabajo, sin esperar que el compañero haga un commit en la rama main. 
+
+Dejar de hacer: Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
+
+
+
