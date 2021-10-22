@@ -12,31 +12,31 @@ const usersController = {
     } ,
 
     processLogin: (req,res) =>{
-        let errors = check(req);
-        let usuarioALoguearse;
-        console.log(errors);
-        if(errors.isEmpty()){ //SI NO HAY ERRORES...
-            for(let i = 0; i < users.length ; i++){
-                if(users[i].email == req.body.email){ // VERIFICA QUE EL EMAIL DE LA BASE DE DATOS SEA IGUAL AL EMAIL DEL FORMULARIO
-                    if(req.body.password == users[i].password){ // VERIFICACIÓN DE CONTRASEÑA CON LA DATABASE
-                        usuarioALoguearse = usuarios[i];
-                    }
-                }
-            }
+        // let errors = check(req);
+        // let usuarioALoguearse;
+        // console.log(errors);
+        // if(errors.isEmpty()){ //SI NO HAY ERRORES...
+        //     for(let i = 0; i < users.length ; i++){
+        //         if(users[i].email == req.body.email){ // VERIFICA QUE EL EMAIL DE LA BASE DE DATOS SEA IGUAL AL EMAIL DEL FORMULARIO
+        //             if(req.body.password == users[i].password){ // VERIFICACIÓN DE CONTRASEÑA CON LA DATABASE
+        //                 usuarioALoguearse = usuarios[i];
+        //             }
+        //         }
+        //     }
             
-            if(usuarioALoguearse == undefined){
-                res.render('login', {errors:[
-                    {msg:'Las credenciales son incorrectas'}
-                ]})
-            }
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.redirect('/');
-        }else{
-            res.render('login', {errors:errors.mapped()})
-        }
+    //         if(usuarioALoguearse == undefined){
+    //             res.render('login', {errors:[
+    //                 {msg:'Las credenciales son incorrectas'}
+    //             ]})
+    //         }
+    //         req.session.usuarioLogueado = usuarioALoguearse;
+    //         res.redirect('/');
+    //     }else{
+    //         res.render('login', {errors:errors.mapped()})
+    //     }
     },
 
-    showRegister:(req,res) => res.render('register'),
+    showRegister:(req,res) =>{res.render('register')} ,
 
     saveRegister: (req,res) => {
         const resultValidation = validationResult(req);
