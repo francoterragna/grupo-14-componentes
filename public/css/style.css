@@ -63,7 +63,16 @@ header{
     margin-right: 10px;
 }
 .carrito:hover{
-    animation: movimiento 0.2s linear infinite alternate;
+    -webkit-animation: movimiento 0.2s linear infinite alternate;
+            animation: movimiento 0.2s linear infinite alternate;
+}
+@-webkit-keyframes movimiento {
+    0%{
+        transform: rotateZ(25deg);
+    }
+    100%{
+        transform: rotateZ(-25deg);
+    }
 }
 @keyframes movimiento {
     0%{
@@ -156,7 +165,8 @@ header{
     width: 50px;
     height: 50px; 
     border-radius: 10px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .aviso-cuotas{
@@ -227,7 +237,8 @@ main{
 .oferta span{
     background-color: #000;
     color: #ffffff;
-    animation: aumentar .3s infinite linear alternate; 
+    -webkit-animation: aumentar .3s infinite linear alternate;
+            animation: aumentar .3s infinite linear alternate; 
     font-weight: lighter;
     
 }
@@ -236,7 +247,8 @@ main{
 .remera{
     background-image: url(https://media.discordapp.net/attachments/878420009041395797/890270794662432818/HD-wallpaper-oriental-pattern-black-abstract.png?width=739&height=657);
     background-size: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .remera span{
@@ -608,7 +620,8 @@ background-color: #3483fa;
 color: white;   
 border-radius: 5px;
 border: none;
-animation: aumentar .5s infinite linear alternate;
+-webkit-animation: aumentar .5s infinite linear alternate;
+        animation: aumentar .5s infinite linear alternate;
 }
 .button-agregar-carrito{
 background-color: #ddd;
@@ -725,12 +738,30 @@ border: none;
     border-radius: 5px;
 }
 
+@-webkit-keyframes aumentar {
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(107%);
+    }
+}
+
 @keyframes aumentar {
     0%{
         transform: scale(100%);
     }
     100%{
         transform: scale(107%);
+    }
+}
+
+@-webkit-keyframes descuento {
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(115%);
     }
 }
 
@@ -1100,7 +1131,8 @@ color: #000;
     height: 200px;
     border-radius: 50%;
     line-height: 86px;
-    animation: aumentar .5s infinite linear alternate;
+    -webkit-animation: aumentar .5s infinite linear alternate;
+            animation: aumentar .5s infinite linear alternate;
 }
 
 .main-not-found p {
@@ -1145,7 +1177,8 @@ outline: #ccc;
     }
     .article-product img{
         height: 300px;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     .article-product:hover{
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
@@ -1250,7 +1283,8 @@ outline: #ccc;
     }
     .article-product img{
         height: 300px;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     .article-product:hover{
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
@@ -1348,8 +1382,10 @@ outline: #ccc;
    }
    .article-product img{
        height: 400px;
-       object-fit: contain;
-       object-position: top;
+       -o-object-fit: contain;
+          object-fit: contain;
+       -o-object-position: top;
+          object-position: top;
    }
 }
 
