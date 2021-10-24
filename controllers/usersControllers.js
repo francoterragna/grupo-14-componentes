@@ -36,7 +36,7 @@ const usersController = {
         // }
     },
 
-    showRegister:(req,res) => res.render('register'),
+    showRegister:(req,res) =>{res.render('register')} ,
 
     saveRegister: (req,res) => {
         const resultValidation = validationResult(req);
