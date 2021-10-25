@@ -204,7 +204,7 @@ main{
     font-size: 20px;
     right: 30px;
     top: -45px;
-    -webkit-animation: descuento .3s infinite linear alternate; ;
+    -webkit-animation: descuento .3s infinite linear alternate; 
     animation: descuento .3s infinite linear alternate;
 }
 /* .descuento-section{
