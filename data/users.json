@@ -52,5 +52,41 @@
   "password": "1234",
   "confirmPassword": "1234",
   "image": "1634591451481_img_.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "Franco",
+  "lastName": "Terragna",
+  "email": "francoterragna@hotmail.com",
+  "password": "$2a$10$a/h4FdUzpUqOvU2kLs.v6.wVuRoIoke9mXwRSEgpKLLq1zPEwwrB6",
+  "confirmPassword": "1234",
+  "image": "1635197484949_img_.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "Franco",
+  "lastName": "Terragna",
+  "email": "francoterragna@hotmail.com",
+  "password": "$2a$10$w.iqAcw69pxjlsf4bBKhx.6S4UPbxTpiKw3miActf8akv302ealm6",
+  "confirmPassword": "1234",
+  "image": "1635197699541_img_.jpg"
+ },
+ {
+  "id": 9,
+  "firstName": "Franco",
+  "lastName": "Terragna",
+  "email": "francoterragna10@gmail.com",
+  "password": "$2a$10$Y15EXx2Czyg5tSr1ar7UauEWkxSBDWPzILUbNyOO7DQeEmFDWloFK",
+  "confirmPassword": "$2a$10$ipNoIY.acZjZC6jEJjMQXOj0DcrgO/nAAvyIcwiokJ0hxFlcuBLaK",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 10,
+  "firstName": "Franco",
+  "lastName": "Terragna",
+  "email": "francoterragna@hotmail.com",
+  "password": "$2a$10$sEAjKCtGyUdLcxnqJMpCVuMN96N4xu1cmVsdsDgiCqIPKl8ylYLAm",
+  "confirmPassword": "$2a$10$92tnf0Z3u3aqSnx6o2106ec92BulOWWeInUCbxMVBK/KMqnw6LV7e",
+  "image": "img-default.jpg"
  }
 ]

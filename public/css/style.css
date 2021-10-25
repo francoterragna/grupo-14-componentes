@@ -215,8 +215,6 @@ main{
             animation: movimientoOfertas 30s infinite linear alternate;
 }
 
-
-
 .section-home span{
     padding: 8px;
     color:black;
@@ -224,6 +222,7 @@ main{
     font-family: 'Luckiest Guy', cursive;
     transition: all .3s;
 }
+
 .section-home:hover span{
     font-size: 35px;
     

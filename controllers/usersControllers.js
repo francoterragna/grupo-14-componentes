@@ -2,6 +2,7 @@ const fs = require ('fs');
 const path = require ('path');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcrypt = require('bcryptjs');
 
 const { validationResult } = require('express-validator') 
 
@@ -23,7 +24,6 @@ const usersController = {
         //             }
         //         }
         //     }
-            
         //     if(usuarioALoguearse == undefined){
         //         res.render('login', {errors:[
         //             {msg:'Las credenciales son incorrectas'}
@@ -53,13 +53,14 @@ const usersController = {
         }else{
             imageName = 'img-default.jpg';
         }
-
+        
         let newUser = {
             id: users[users.length-1].id + 1,
             ...req.body,
+            password: bcrypt.hashSync(req.body.password,10),
+            confirmPassword: bcrypt.hashSync(req.body.password,10),
             image: imageName
         };
-
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
         res.redirect('/');

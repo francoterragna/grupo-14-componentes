@@ -21,8 +21,13 @@ const validations = [
    body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Debes escribir un correo electrónico válido')
    ,
    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-   
-];
+   body('confirmPassword').notEmpty().withMessage('Tienes que escribir una contraseña').custom((value, {req}) => {
+      if (value !== req.body.password) {
+            throw new Error('Las contraseñas deben ser iguales');
+   }
+       return true;
+})
+   ];
 
 const validationsLogin =[
    body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Tienes que escribir un correo electrónico válido'),

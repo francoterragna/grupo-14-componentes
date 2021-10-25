@@ -45,16 +45,17 @@
                 </div><br>
                 <div class="form-contraseña">
                     <label>Creá tu constraseña</label><br>
-                    <input class="ingresar-texto" type="password" name="password" 
-                    value="<%= locals.oldData ? oldData.password : null %>" >
+                    <input class="ingresar-texto" type="password" name="password">
                     <% if (locals.errors && errors.password) { %>
-                     
                         <div class="text-danger"> <%= errors.password.msg %>   </div>
                         <% } %>
                 </div>
                 <div class="form-confirm-contraseña">
                     <label>Confirmá tu contraseña</label><br>
                     <input class="ingresar-texto" type="password" name="confirmPassword" >
+                    <% if (locals.errors && errors.confirmPassword) { %>
+                        <div class="text-danger"> <%= errors.confirmPassword.msg %>   </div>
+                        <% } %>
                 </div>
 
                 <button type="submit" class="boton-enviar">Enviar</button>
