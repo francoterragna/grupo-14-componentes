@@ -207,31 +207,40 @@ main{
     -webkit-animation: descuento .3s infinite linear alternate; 
     animation: descuento .3s infinite linear alternate;
 }
-/* .descuento-section{
-    -webkit-animation: fadeOutUp descuento .3s infinite linear alternate;
-} */
 .section-home:hover{
     box-shadow: 0 0 15px 15px #666;
     transform: scale(105%);
     z-index: 1000;
 }
 
+
+
 .section-home span{
     padding: 8px;
     color:black;
     background-color: white;
     font-family: 'Luckiest Guy', cursive;
+    transition: all .3s;
+}
+.section-home:hover span{
+    font-size: 35px;
+    /* transform: scale(105%); */
 }
 
 .oferta{
     background-image: url(https://us.123rf.com/450wm/maxborovkov/maxborovkov1603/maxborovkov160300080/53629759-fiesta-de-fondo-negro-con-confeti-de-color-ilustraci%C3%B3n-del-vector-.jpg?ver=6);
-    /* background-size: 100%; */
-    
     background-position: center;
-   
+    animation: movimientoOfertas 30s infinite linear alternate;
 }
 
-
+@keyframes movimientoOfertas {
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: 2000px 1000px;
+    }
+}
 
 
 .oferta span{
@@ -240,7 +249,6 @@ main{
     -webkit-animation: aumentar .3s infinite linear alternate;
             animation: aumentar .3s infinite linear alternate; 
     font-weight: lighter;
-    
 }
 
 
@@ -1184,14 +1192,7 @@ outline: #ccc;
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
     }
 
-
-
-
 }
-
-
-
-
 
 @media (min-width:750px){
 
@@ -1213,10 +1214,32 @@ outline: #ccc;
     .contenedor-mercado-pago{
         width: 90%;
     }
+    .logo{
+        width: 50px;
+        height: 54px;
+        margin-top: 10px;
+    }
+    .fa-search{
+        font-size: 30px;
+    }
+
+    .carrito{
+        font-size: 30px;
+        margin-right: 20px;
+    }
+
     nav{
         display: flex;
         color:black;
-        justify-content: flex-end;
+        justify-content: center;
+        font-size: 20px;
+    }
+    .crear-cuenta{
+        border-right: 1px solid #666;
+    }
+
+    .ingresa{
+        border-right: 1px solid #666;
     }
     .hamburguesa{
         display: none;
@@ -1232,7 +1255,7 @@ outline: #ccc;
     }
 
     .ul-derecha li a{
-        padding: 0 6px;
+        padding: 0 20px;
         color: #000;
     }
 
@@ -1288,6 +1311,10 @@ outline: #ccc;
     }
     .article-product:hover{
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+    }
+    .user{
+        font-size: 50px;
+        margin-top: 15px;
     }
 }
 
@@ -1387,6 +1414,16 @@ outline: #ccc;
        -o-object-position: top;
           object-position: top;
    }
+
+   .oferta span{
+       font-size: 45px;
+}
+
+.user{
+    font-size: 50px;
+    margin-top: 15px;
+}
+   
 }
 
 
