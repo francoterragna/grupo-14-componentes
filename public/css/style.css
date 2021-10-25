@@ -211,6 +211,7 @@ main{
     box-shadow: 0 0 15px 15px #666;
     transform: scale(105%);
     z-index: 1000;
+    animation: movimientoOfertas 30s infinite linear alternate;
 }
 
 
@@ -224,7 +225,7 @@ main{
 }
 .section-home:hover span{
     font-size: 35px;
-    /* transform: scale(105%); */
+    
 }
 
 .oferta{
@@ -272,7 +273,7 @@ main{
 }
 
 .pantalones{
-    background-image: url(https://cdn.discordapp.com/attachments/878420009041395797/890270235687522394/images.png);
+    background-image: url(https://m.media-amazon.com/images/I/A1Pg3TE5ylL._AC_SX450_.jpg);
 }
 
 .pantalones span {
@@ -316,7 +317,7 @@ main{
 }
 
 .camperas{
-    background-image: url(https://p4.wallpaperbetter.com/wallpaper/514/822/545/call-of-duty-ghosts-dark-white-video-games-wallpaper-preview.jpg);
+    background-image: url(https://fondosmil.com/th/31112.jpg);
     background-size: cover;
 }
 
@@ -1303,6 +1304,7 @@ outline: #ccc;
         display: inline-block;
         width: 40%;
         margin: 25px 10px;
+        transition: all .3s;
     }
     .article-product img{
         height: 300px;
@@ -1311,6 +1313,7 @@ outline: #ccc;
     }
     .article-product:hover{
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+        transform: scale(103%);
     }
     .user{
         font-size: 50px;
