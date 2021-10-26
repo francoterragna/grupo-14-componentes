@@ -8,7 +8,7 @@
         <button class="lupa"><i class="fas fa-search"></i></button>
         
     </div>
-    <i class="fas fa-bars hamburguesa">
+    <!-- <i class="fas fa-bars hamburguesa">
         <div class="menu-desplegable">
             <p>REMERAS</p>
             <p>BUZOS</p>
@@ -23,7 +23,31 @@
             <p>ACCESORIOS</p>
             <i class="fas fa-times"></i>
         </div>
-    </i>
+    </i> -->
+    <a class="btn p-1 btn-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      <i class="fas fa-bars hamburguesa"></i>
+      </a>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Productos</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+            <a href="/productos/remera"><p>REMERAS</p></a><br>
+            <a href="/productos/buzo"><p>BUZOS</p></a><br>
+            <a href="/productos/pantalon"><p>PANTALONES</p></a><br>
+            <a href="/productos/camisa"><p>CAMISAS</p></a><br>
+            <a href="/productos/malla"><p>TRAJES DE BAÑO</p></a><br>
+            <a href="/productos/medias"><p>MEDIAS</p></a><br>
+            <a href="/productos/gorra"><p>GORRAS</p></a><br>
+            <a href="/productos/campera"><p>CAMPERAS</p></a><br>
+            <a href="/productos/bermuda"><p>BERMUDAS</p></a><br>
+            <a href="/productos/accesorio"><p>ACCESORIOS</p></a><br>
+            <!-- <i class="fas fa-times"></i> -->
+          
+        </div>
+      </div>
     <a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
     </div>
     <nav>
