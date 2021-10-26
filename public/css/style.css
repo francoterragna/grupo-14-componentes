@@ -198,6 +198,19 @@ main{
     transition: all .3s;
 }
 
+.appWhatsapp{
+    position:fixed;
+    right: 26px;
+    bottom: 100px;
+    width: 60px;
+    z-index: 9000;
+}
+
+.appWhatsapp img{
+    width: 100%;
+    height: auto;
+}
+
 a{
     color: black;
 }
