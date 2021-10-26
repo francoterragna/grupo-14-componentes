@@ -208,7 +208,8 @@ main{
     animation: descuento .3s infinite linear alternate;
 }
 .section-home:hover{
-    box-shadow: 0 0 15px 15px #666;
+    /* box-shadow: 0 0 15px 15px #666; */
+   box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.65);
     transform: scale(105%);
     z-index: 1000;
     -webkit-animation: movimientoOfertas 30s infinite linear alternate;
@@ -219,7 +220,10 @@ main{
     padding: 8px;
     color:black;
     background-color: white;
-    font-family: 'Luckiest Guy', cursive;
+    /* font-family: 'Luckiest Guy', cursive; */
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Zen Antique Soft', serif;
+    letter-spacing: 0.2rem;
     transition: all .3s;
 }
 
