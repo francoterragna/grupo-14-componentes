@@ -149,10 +149,6 @@ header{
     font-size: 25px;
 }
 
-.fa-times:active .menu-desplegable{
-    display: none;
-}
-
 .hamburguesa{
     color: #000;
     font-size: 25px;
@@ -1273,9 +1269,6 @@ outline: #ccc;
     .ingresa{
         border-right: 1px solid #666;
     }
-    .hamburguesa{
-        display: none;
-    }
 
     .ul-izquierdo{
         display: flex;
@@ -1359,6 +1352,10 @@ outline: #ccc;
 
     .contenedor-carrito{
         width: 70%;
+    }
+
+    .hamburguesa{
+        font-size: 35px;
     }
 
     .cupon-boton:hover{
