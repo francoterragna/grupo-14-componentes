@@ -1256,6 +1256,10 @@ outline: #ccc;
         margin-right: 20px;
     }
 
+    .hamburguesa{
+        font-size: 35px;
+    }
+
     nav{
         display: flex;
         color:black;
@@ -1352,10 +1356,6 @@ outline: #ccc;
 
     .contenedor-carrito{
         width: 70%;
-    }
-
-    .hamburguesa{
-        font-size: 35px;
     }
 
     .cupon-boton:hover{
