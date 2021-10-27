@@ -46,5 +46,21 @@ Hacer menos: Dejar de trabajar en una sola rama, para así poder diversificar el
 
 Dejar de hacer: Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
 
+SPRINT 5: 
 
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+1- Comenzar a poner al día al nuevo integrante del grupo.
+
+2- Buscar más complementos para que ayuden al crecimiento de la página y no quedarnos solo con lo ofrecido en el playground.
+
+3- Tener buena comunicación para seguir terminando en tiempo y forma los pedidos de los sprints.
+
+4- Si bien nos lo propusimos en el anterior sprint, seguimos con el objetivo de diversificar el proyecto trabajando en varias ramas. 
+
+5- Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
 
