@@ -1152,7 +1152,8 @@ transform:rotateZ(15deg);
     color: #000;
 }
 .article-product p{
-    color: #3fcf52;
+    color: #43d307;
+    font-size: 25px;
 }
 .article-product h4{
 color: #000;
