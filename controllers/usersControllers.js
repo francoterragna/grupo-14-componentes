@@ -54,13 +54,15 @@ const usersController = {
             imageName = 'img-default.jpg';
         }
         
+        
         let newUser = {
             id: users[users.length-1].id + 1,
             ...req.body,
             password: bcrypt.hashSync(req.body.password,10),
             confirmPassword: bcrypt.hashSync(req.body.password,10),
             image: imageName
-        };
+            };
+        
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
         res.redirect('/');

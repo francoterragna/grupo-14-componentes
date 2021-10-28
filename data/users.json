@@ -88,5 +88,59 @@
   "password": "$2a$10$sEAjKCtGyUdLcxnqJMpCVuMN96N4xu1cmVsdsDgiCqIPKl8ylYLAm",
   "confirmPassword": "$2a$10$92tnf0Z3u3aqSnx6o2106ec92BulOWWeInUCbxMVBK/KMqnw6LV7e",
   "image": "img-default.jpg"
+ },
+ {
+  "id": 11,
+  "firstName": "Juan",
+  "lastName": "Sanchez",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$Des27yhmo5T.MSyMj/ALc.HpQXy9lX2I05029LOl0UrHNVtCAFM8O",
+  "confirmPassword": "$2a$10$..kBbAv53/2xPN7BRQQmMOlgsqVbH3kHz7EoNLT/Ahtw/636.epcK",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 12,
+  "firstName": "Roberto",
+  "lastName": "Sanchez",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$U930fFTQhahMAWLCHaVXvuEFUQG4FQUZgbbaOsG6vLfeJnndNmgES",
+  "confirmPassword": "$2a$10$OAIipIqB/j9rThaVyZ71nOnk9SVwNcLpa435NC38uX4K5.1hzyhoO",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 13,
+  "firstName": " jua",
+  "lastName": "Sanchez",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$pTLhA6n4qA/ZfJ.FxbhXt.pQdKbZJkZleTFW8btpTCXfL/TVcHFca",
+  "confirmPassword": "$2a$10$VAQlFKA2tvABTCU5EbaYd.sJvRlzaivWxJdUPiOfY2CkeqGIqHiZC",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 14,
+  "firstName": " jua",
+  "lastName": "fritz",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$MxOxcp/0Mzq01yJoP7TiIuFbstzaaX./H2RssVpJ1yZoHAHWS.QKi",
+  "confirmPassword": "$2a$10$L/s3Ek9bZPAkiQRi2HjD9OdW54bNmrg.V38Do10Yc1uXovikuqXJq",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 15,
+  "firstName": "Juan",
+  "lastName": "aaa",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$teFgZljvIBX77wceK7zP1.rwmzYMdbaCguzECGhAI3mlLdT4RcCUG",
+  "confirmPassword": "123",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 16,
+  "firstName": "Juan",
+  "lastName": "Sanchez",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$TP0lWKeXkoYRrE0K3FmntOQrld5Wkv2fBglWcYOhX.zZL3YAjJwje",
+  "confirmPassword": "123",
+  "image": "img-default.jpg"
  }
 ]
