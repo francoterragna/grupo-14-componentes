@@ -843,13 +843,22 @@ border: none;
 border: 1px solid red;
 }
 .input-producto{  
-    width: 22px;
+    width: 35px;
 } 
 
 .nombre-producto, .precio-producto, .cantidad-producto{
     padding: 5px;
     width: 33%;
     color: black;
+}
+
+.boton-sumar{
+    border: 1px solid #ccc;
+    padding: 3px;
+}
+.boton-restar {
+    border: 1px solid #ccc;
+    padding: 3px;
 }
 
 .div-precio-total{
@@ -882,7 +891,6 @@ Aca empieza el CSS del login
 
 .main-login{
     text-align: center;
-    /* background-image: url(https://images.ole.com.ar/2021/01/22/LSpcCMae5_1256x620__1.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;

@@ -15,6 +15,10 @@ const productosController = {
         let id = req.params.id;
         let category = products.filter(producto => producto.category == id)
         res.render('productSelect', {category})
+    },
+    showDiscount: (req,res) => {
+        let enOferta = products.filter(producto=> producto.discount > 0);
+        res.render('ofertas', {enOferta});
     } 
 }
 
