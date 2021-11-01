@@ -4,8 +4,6 @@
     <a href="/usuarios/login" class='btn btn-secondary btn-lg my-3 ingresar'>Login</a>
     <a href="/usuarios/register" class="btn btn-secondary btn-lg my-3 crear-cuenta">Creá tu cuenta</a>
     <div class="lupa-barra">
-      <!-- <i class="far fa-user-circle user"></i> -->
-        <!-- <input type="text" placeholder="Buscar..." class="buscador"> -->
         <button class="lupa"><i class="fas fa-search"></i></button>
         
     </div>
@@ -14,10 +12,58 @@
       </a>
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Productos</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+
+        <p>
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Administrar ></a>
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="agregarProducto">
+                <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Productos ></button>
+        </p>
+        <div class="row">
+          <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body">
+                <div class="productos-nav">
+                  <div class="offcanvas-body">
+                    <a href="/productos/remera"><p>REMERAS</p></a>
+                    <hr>
+                    <a href="/productos/buzo"><p>BUZOS</p></a>
+                    <hr>
+                    <a href="/productos/pantalon"><p>PANTALONES</p></a>
+                    <hr>
+                    <a href="/productos/camisa"><p>CAMISAS</p></a>
+                    <hr>
+                    <a href="/productos/malla"><p>MALLAS</p></a>
+                    <hr>
+                    <a href="/productos/medias"><p>MEDIAS</p></a>
+                    <hr>
+                    <a href="/productos/gorra"><p>GORRAS</p></a>
+                    <hr>
+                    <a href="/productos/campera"><p>CAMPERAS</p></a>
+                    <hr>
+                    <a href="/productos/bermuda"><p>BERMUDAS</p></a>
+                    <hr>
+                    <a href="/productos/accesorio"><p>ACCESORIOS</p></a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- <div class="offcanvas-body">
             <a href="/productos/remera"><p>REMERAS</p></a><br>
             <a href="/productos/buzo"><p>BUZOS</p></a><br>
             <a href="/productos/pantalon"><p>PANTALONES</p></a><br>
@@ -31,8 +77,7 @@
             <br>
             <br>
             <br>
-            <a href="/administrador/agregarProducto">Agregar producto</a><br>
-        </div>
+        </div> -->
       </div>
     <a href="/productos/carrito"><i class="fas fa-shopping-cart carrito"></i></a>
     </div>
