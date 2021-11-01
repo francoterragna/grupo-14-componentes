@@ -1490,3 +1490,15 @@ outline: #ccc;
         object-fit: cover;
     }
 }
+@media(min-width: 1400px){
+    .foto-carrusel{
+        object-position: 10px -260px;
+        object-fit: cover;
+    }
+    .section-home{
+        height: 200px;
+    }
+    .section-home span{
+        line-height: 200px;
+    }
+}
