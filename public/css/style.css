@@ -1502,3 +1502,9 @@ outline: #ccc;
         line-height: 200px;
     }
 }
+@media(min-width:1600px){
+    .foto-carrusel{
+        object-position: 10px -300px;
+        object-fit: cover;
+    }
+}
