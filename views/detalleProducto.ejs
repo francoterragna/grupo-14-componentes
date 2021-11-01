@@ -7,6 +7,8 @@
     <main>
         <!-- <%= console.log(product.name) %>  -->
         <div class="detalle-producto">
+            <br>
+            <a href="/administrador/modificarProducto/<%= product.id %> " class="button-agregar-carrito">Modificar producto</a><br>
             <img src='/img/products/<%=product.image %>'  alt=<%=product.description%>  class="imagen-producto">
             <h2 class ="titulo-producto"><%= product.name %> </h2>
             <h4 class="titulo-producto"> <%= product.description %>  </h4>
@@ -40,6 +42,7 @@
                 <textarea name="" id="" cols="60" rows="10" placeholder="Hacenos tu consulta" class="textarea-consultas"></textarea><br>
                 <button type="submit">Enviar</button>
             </form>
+            
         </div>
     </main>
 
