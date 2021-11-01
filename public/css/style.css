@@ -2,17 +2,11 @@
     margin:0px;
     padding:0px;
     font-family: 'Roboto', sans-serif;
-    
 }
-
-
-
 
 body{
     min-width: 375px;
 }
-
-
 
 /* .__                       .___            
 |  |__   ____ _____     __| _/___________ 
@@ -120,14 +114,18 @@ header{
 
 .seis-cuotas {
     text-align: center;
-    height: 35px;
-    line-height: 35px;
+    height: 50px;
+    line-height: 50px;
      font-family: 'Righteous', cursive;
-     font-size: 25px;
+     font-size: 30px;
      color:white;
-     background-color: black;
+     background-color: #4770ad;
      margin-top: 10px;
  }
+
+.btn-lg{
+    display: none;
+}
 
 .menu-desplegable{
     position:fixed;
@@ -1270,7 +1268,6 @@ outline: #ccc;
     .logo{
         width: 50px;
         height: 54px;
-        margin-top: 10px;
     }
     .fa-search{
         font-size: 30px;
@@ -1292,10 +1289,6 @@ outline: #ccc;
         font-size: 20px;
     }
     .crear-cuenta{
-        border-right: 1px solid #666;
-    }
-
-    .ingresa{
         border-right: 1px solid #666;
     }
 
@@ -1386,6 +1379,11 @@ outline: #ccc;
        padding-left: 0;
     }
 
+    .btn-lg{
+        display: flex;
+        font-size: 0.8rem;
+
+    }
     .contenedor-carrito{
         width: 70%;
     }
@@ -1483,6 +1481,12 @@ outline: #ccc;
 @media(min-width:1200px){
     .carrusel{
         height: 300px !important;
+    }
+
+    .btn-lg{
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        border-radius: 0.3rem;
     }
     
     .foto-carrusel{
