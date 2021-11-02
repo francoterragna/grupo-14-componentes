@@ -101,8 +101,12 @@ header{
     
 }
 
+p{
+    margin-top: 20px;
+}
+
 .agregarProducto{
-    padding: 5px;
+    padding: 10px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
@@ -127,7 +131,7 @@ header{
     height: 50px;
     line-height: 50px;
      font-family: 'Righteous', cursive;
-     font-size: 30px;
+     font-size: 20px;
      color:white;
      background-color: #4770ad;
      margin-top: 10px;
@@ -550,7 +554,6 @@ textarea{
 .container-form{
     padding: 35px 0px;
     text-align: center;
-    background-color: rgba(200,200,200, 0.5);
 }
 .form-titulo{
     /* margin: 20px; */
@@ -1397,6 +1400,10 @@ outline: #ccc;
     .contenedor-carrito{
         width: 70%;
     }
+
+    .seis-cuotas {
+         font-size: 30px;
+     }
 
     .cupon-boton:hover{
         cursor: pointer;
