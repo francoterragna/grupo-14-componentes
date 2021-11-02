@@ -105,18 +105,12 @@ header{
     padding: 5px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    /* width: 200px; */
-    /* border-radius: 5px; */
-    /* margin: 0 140px; */
 }
 
-.productos-nav{
-
-}
-
-.multi-collapse{
+.offcanvas{
     overflow: scroll;
 }
+
 .user:hover{
     transform:scale(110%);
 }
