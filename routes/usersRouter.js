@@ -4,6 +4,8 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 
+const bcrypt = require('bcryptjs');
+
 const { body } = require('express-validator')
 
 const storage = multer.diskStorage({ 

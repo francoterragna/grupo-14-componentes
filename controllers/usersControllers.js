@@ -4,6 +4,8 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
 
+const User = require ('../models/User.js');
+
 const { validationResult } = require('express-validator') 
 
 const usersController = {
@@ -47,25 +49,46 @@ const usersController = {
             })
         }
 
-        let imageName;
-        if (req.file != undefined){
-            imageName = req.file.filename;
-        }else{
-            imageName = 'img-default.jpg';
-        }
+        let userInDB = User.findByField('email', req.body.email);
         
-        
-        let newUser = {
-            id: users[users.length-1].id + 1,
+        if(userInDB){
+            return res.render ('register', {
+                errors: {
+                    email:{
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+        });
+    }
+
+        // let imageName;
+        // if (req.file != undefined){
+        //     imageName = req.file.filename;
+        // }else{
+        //     imageName = 'img-default.jpg';
+        // }
+
+        let userToCreate = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password,10),
-            confirmPassword: bcrypt.hashSync(req.body.password,10),
-            image: imageName
-            };
+            avatar: req.file.filename
+        }
+
+        User.create(userToCreate);
+        return res.send('Se guardó el usuario')
         
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
-        res.redirect('/');
+        // let newUser = {
+        //     id: users[users.length-1].id + 1,
+        //     ...req.body,
+        //     password: bcrypt.hashSync(req.body.password,10),
+        //     confirmPassword: bcrypt.hashSync(req.body.password,10),
+        //     image: imageName
+        //     };
+        
+        // users.push(newUser);
+        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
+        // res.redirect('/');
     },
 
     list: (req,res) => {
