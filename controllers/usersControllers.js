@@ -1,10 +1,6 @@
-const fs = require ('fs');
-const path = require ('path');
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 
-const User = require ('../models/User.js');
+const User = require ('../models/User');
 
 const { validationResult } = require('express-validator') 
 
@@ -12,30 +8,26 @@ const usersController = {
 
     login: (req,res) =>{
         res.render('login')
-    } ,
+    },
 
     processLogin: (req,res) =>{
-        // let errors = check(req);
-        // let usuarioALoguearse;
-        // console.log(errors);
-        // if(errors.isEmpty()){ //SI NO HAY ERRORES...
-        //     for(let i = 0; i < users.length ; i++){
-        //         if(users[i].email == req.body.email){ // VERIFICA QUE EL EMAIL DE LA BASE DE DATOS SEA IGUAL AL EMAIL DEL FORMULARIO
-        //             if(req.body.password == users[i].password){ // VERIFICACIÓN DE CONTRASEÑA CON LA DATABASE
-        //                 usuarioALoguearse = usuarios[i];
-        //             }
-        //         }
-        //     }
-        //     if(usuarioALoguearse == undefined){
-        //         res.render('login', {errors:[
-        //             {msg:'Las credenciales son incorrectas'}
-        //         ]})
-        //     }
-        //     req.session.usuarioLogueado = usuarioALoguearse;
-        //     res.redirect('/');
-        // }else{
-        //     res.render('login', {errors:errors.mapped()})
-        // }
+
+        let userToLogin = User.findByField('email',req.body.email);
+        
+        if(userToLogin){
+            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(passIsOk){
+                return res.send('Bien ahí')
+            };
+        };
+        
+        return res.render('login', {
+            errors:{
+                email:{
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+            }
+        });
     },
 
     showRegister:(req,res) =>{res.render('register')} ,
@@ -62,21 +54,21 @@ const usersController = {
         });
     }
 
-        // let imageName;
-        // if (req.file != undefined){
-        //     imageName = req.file.filename;
-        // }else{
-        //     imageName = 'img-default.jpg';
-        // }
+        let imageName;
+        if (req.file != undefined){
+            imageName = req.file.filename;
+        }else{
+            imageName = 'img-default.jpg';
+        }
 
         let userToCreate = {
             ...req.body,
-            password: bcrypt.hashSync(req.body.password,10),
-            avatar: req.file.filename
+            password: bcryptjs.hashSync(req.body.password,10),
+            image: imageName,
         }
 
-        User.create(userToCreate);
-        return res.send('Se guardó el usuario')
+        let userCreated = User.create(userToCreate);
+        return res.redirect('/')
         
         // let newUser = {
         //     id: users[users.length-1].id + 1,

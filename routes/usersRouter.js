@@ -44,7 +44,7 @@ router.post('/register',uploadFile.single('img-profile'),validations ,usersContr
 
 
 router.get('/login', usersController.login);
-router.post('/login',validationsLogin , usersController.processLogin)
+router.post('/login',usersController.processLogin);
 
 router.get('/list', usersController.list);
 
