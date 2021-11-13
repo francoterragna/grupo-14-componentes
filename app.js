@@ -28,7 +28,11 @@ app.use(express.json());
 app.use(express.static('./public'));
 
 //El método secret es para que sirva sólo en nuestra página.
-app.use(session({secret:'Secreto'})); 
+app.use(session({
+    secret:'Secreto',
+    resave: false,
+    saveUninitialized: false
+})); 
 
 
 app.use('/', mainRouter) ;

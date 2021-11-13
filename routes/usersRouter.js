@@ -6,6 +6,9 @@ const multer = require('multer');
 
 const bcrypt = require('bcryptjs');
 
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
 const { body } = require('express-validator')
 
 const storage = multer.diskStorage({ 
@@ -34,18 +37,21 @@ const validations = [
 const validationsLogin =[
    body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Tienes que escribir un correo electrónico válido'),
    body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
-]
+];
+
 
 
 const usersController = require ('../controllers/usersControllers');
 
-router.get('/register', usersController.showRegister);
+router.get('/register', guestMiddleware ,usersController.showRegister);
 router.post('/register',uploadFile.single('img-profile'),validations ,usersController.saveRegister)
 
 
-router.get('/login', usersController.login);
+router.get('/login', guestMiddleware ,usersController.login);
 router.post('/login',usersController.processLogin);
 
 router.get('/list', usersController.list);
+
+router.get('/profile', authMiddleware ,usersController.profile);
 
 module.exports = router;

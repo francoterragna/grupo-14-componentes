@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator')
 const usersController = {
 
     login: (req,res) =>{
+        console.log(req.session)
         res.render('login')
     },
 
@@ -17,10 +18,19 @@ const usersController = {
         if(userToLogin){
             let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(passIsOk){
-                return res.send('Bien ahí')
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('profile')
             };
+            return res.render('login', {
+                errors:{
+                    email:{
+                        msg: 'Las credenciales son incorrectas'
+                    }
+                }
+            })
         };
-        
+
         return res.render('login', {
             errors:{
                 email:{
@@ -69,23 +79,17 @@ const usersController = {
 
         let userCreated = User.create(userToCreate);
         return res.redirect('/')
-        
-        // let newUser = {
-        //     id: users[users.length-1].id + 1,
-        //     ...req.body,
-        //     password: bcrypt.hashSync(req.body.password,10),
-        //     confirmPassword: bcrypt.hashSync(req.body.password,10),
-        //     image: imageName
-        //     };
-        
-        // users.push(newUser);
-        // fs.writeFileSync(usersFilePath, JSON.stringify(users, null ,' '));
-        // res.redirect('/');
     },
 
     list: (req,res) => {
         
         res.render('usersList', {users});
+    },
+
+    profile: (req,res) => {
+        res.render('profile', {
+            user: req.session.userLogged
+        })
     }
 }
 
