@@ -34,5 +34,23 @@
   "password": "$2a$10$Kn16sPUnyhlkDBdrDl/V5ew94IQ6r8qNlFzhymmhLsTG1Rd.uCCbW",
   "confirmPassword": "qwerty",
   "image": "img-default.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Ulises",
+  "lastName": "Fritz",
+  "email": "ulifritz8@gmail.com",
+  "password": "$2a$10$4KsFNUZbAJiaBfQGEmuNKecw2AgTq8QkH09e.l12QgJrPBe2N/Roe",
+  "confirmPassword": "123",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Juan",
+  "lastName": "Sanchez",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$193w83AoTFiEGX9ss7uMuO01UjG2Y34mlU0dOeGSlB6U51x/KQjAu",
+  "confirmPassword": "123",
+  "image": "1637017191816_img_.jpg"
  }
 ]

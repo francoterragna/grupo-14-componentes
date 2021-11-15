@@ -72,6 +72,14 @@ header{
     color: #000;
     margin-right: 10px;
 }
+
+.perfil{
+    border: none;
+    font-size: 30px;
+    color: #000;
+    margin-right: 10px;
+}
+
 .carrito:hover{
     -webkit-animation: movimiento 0.2s linear infinite alternate;
             animation: movimiento 0.2s linear infinite alternate;
