@@ -64,3 +64,4 @@ SPRINT 5:
 
 5- Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
 
+cambios
