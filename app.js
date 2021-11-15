@@ -4,6 +4,7 @@ const path = require('path');
 const session = require ('express-session');
 const PORT = process.env.PORT || 3030;
 
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
 //ROUTS
@@ -34,6 +35,7 @@ app.use(session({
     saveUninitialized: false
 })); 
 
+app.use(userLoggedMiddleware);
 
 app.use('/', mainRouter) ;
 app.use('/usuarios', usuariosRouter)
