@@ -3,8 +3,8 @@
   <a href="/"><img src="https://http2.mlstatic.com/D_NQ_NP_758613-MLA47047446747_082021-W.jpg" alt="" class="logo"></a>
   <% if (locals.isLogged) { %>
    
-    <a href="/usuarios/profile"><i class="fas fa-user-circle perfil"></i></a>
-  <!-- <a href="/usuarios/profile"><img src="/public/img/users/<%= locals.userLogged.image%>"width="40" style="border-radius: 100%;" alt="foto" class="perfil"></a> -->
+    <!-- <a href="/usuarios/profile"><i class="fas fa-user-circle perfil"></i></a> -->
+  <a href="/usuarios/profile"><img src="/img/users/<%= locals.userLogged.image%>"width="55px" style="border-radius: 100%;" alt="foto" class="perfil"></a>
   <% } else{ %> 
     <a href="/usuarios/login" class='btn btn-secondary btn-lg my-3 ingresar'>Login</a>
   <a href="/usuarios/register" class="btn btn-secondary btn-lg my-3 crear-cuenta">Creá tu cuenta</a>
