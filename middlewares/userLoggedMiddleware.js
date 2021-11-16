@@ -1,6 +1,6 @@
 const User = require('../models/User');
 
-function userLoggedMiddleware(req,res,next){
+function userLoggedMiddleware(req, res, next){
     res.locals.isLogged = false;
 
     // let emailInCookie = req.cookies.userEmail;
@@ -13,7 +13,7 @@ function userLoggedMiddleware(req,res,next){
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
     };
-    // console.log(emailInCookie); 
+  
 
     next();
 }
