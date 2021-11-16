@@ -1226,6 +1226,19 @@ input:focus{
 outline: #ccc;
     }
 
+/* CSS PROFILE */
+
+.div-profile img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+
+
+
+
+
+
 /* @media(min-width:550px){
     .article-product{
         display: inline-block;
@@ -1362,6 +1375,10 @@ outline: #ccc;
     }
     .medios-de-pago{
         margin-bottom: 30px;
+    }
+    .div-profile img {
+     width: 25%;
+     
     }
 }
 @media(min-width:980px){
