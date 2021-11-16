@@ -14,6 +14,9 @@ const usuariosRouter = require ('./routes/usersRouter');
 const adminRoutes = require('./routes/adminRoutes');
 
 
+//DEFINIENDO COOKIE
+const cookies = require('cookie-parser');
+
 // Definiendo el TEMPLATE ENGINES
 app.set('view engine', 'ejs');
 
@@ -42,6 +45,7 @@ app.use('/usuarios', usuariosRouter)
 app.use('/productos', productosRouter);
 app.use('/administrador', adminRoutes);
 
+app.use(cookies());
 
 //ERROR 404
 app.use((req,res,next) => {
