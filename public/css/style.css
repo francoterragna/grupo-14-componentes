@@ -75,9 +75,9 @@ header{
 
 .perfil{
     border: none;
-    font-size: 30px;
     color: #000;
-    margin-right: 10px;
+    margin: 0 10px 0 15px;
+    width: 50px;
 }
 
 .carrito:hover{
@@ -1451,6 +1451,7 @@ outline: #ccc;
     }
 
 
+
     .detalle-producto-edit .imagen-producto{
        width: 35%
    }
@@ -1472,6 +1473,10 @@ outline: #ccc;
 
    .oferta span{
        font-size: 45px;
+    }
+
+    .perfil{
+        width: 60px;
     }
 
     .user{
