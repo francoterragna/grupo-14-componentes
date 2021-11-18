@@ -7,6 +7,41 @@ const { validationResult } = require('express-validator')
 const usersController = {
 
     
+    login: (req,res) =>{
+        
+        return res.render('login')
+    },
+
+    processLogin: (req,res) =>{
+        let userToLogin = User.findByField('email',req.body.email);
+        
+        if(userToLogin){
+            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(passIsOk){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                if(req.body.recordarme){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                }
+                return res.redirect('/usuarios/profile')
+            };
+            return res.render('login', {
+                errors:{
+                    email:{
+                        msg: 'Las credenciales son incorrectas'
+                    }
+                }
+            })
+        };
+
+        return res.render('login', {
+            errors:{
+                email:{
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+            }
+        });
+    },
     showRegister:(req,res) =>{
         // res.cookie('testing', 'Hola!', {maxAge: 1000* 30});
         return res.render('register')
@@ -51,42 +86,6 @@ const usersController = {
         return res.redirect('/')
     },
     
-    login: (req,res) =>{
-        // console.log(req.cookies)
-        // console.log(req.cookies.testing);
-        return res.render('login')
-    },
-
-    processLogin: (req,res) =>{
-        let userToLogin = User.findByField('email',req.body.email);
-        
-        if(userToLogin){
-            let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(passIsOk){
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                if(req.body.recordarme){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
-                }
-                return res.redirect('/usuarios/profile')
-            };
-            return res.render('login', {
-                errors:{
-                    email:{
-                        msg: 'Las credenciales son incorrectas'
-                    }
-                }
-            })
-        };
-
-        return res.render('login', {
-            errors:{
-                email:{
-                    msg: 'No se encuentra este email en nuestra base de datos'
-                }
-            }
-        });
-    },
 
     list: (req,res) => {
         
@@ -99,6 +98,7 @@ const usersController = {
         })
     },
     logout: (req,res)=>{
+        res.clearCookier('userEmail');
         req.session.destroy();  
         return res.redirect('/');
     }
