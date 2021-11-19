@@ -1159,7 +1159,8 @@ transform:rotateZ(15deg);
     border: 1px solid #ccc;
     width: 99%;
     margin-top: 15px;
-    
+   position: relative;
+
 }
 .article-product img{
     width: 100%;
@@ -1167,9 +1168,13 @@ transform:rotateZ(15deg);
 .article-product h5{
     color: #000;
 }
-.article-product p{
+.article-product .descuento{
     color: #43d307;
     font-size: 25px;
+    position: relative;
+    width: 135px;
+    bottom: 470px;
+    background-color: blue;
 }
 .article-product h4{
 color: #000;
@@ -1367,6 +1372,9 @@ outline: #ccc;
         height: 300px;
         -o-object-fit: cover;
            object-fit: cover;
+    }
+    .article-product{
+        border: none
     }
     .article-product:hover{
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
