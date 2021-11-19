@@ -41,6 +41,8 @@ app.use(session({
 app.use(cookies());
 app.use(userLoggedMiddleware);
 
+
+
 app.use('/', mainRouter) ;
 app.use('/usuarios', usuariosRouter)
 app.use('/productos', productosRouter);

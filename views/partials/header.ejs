@@ -46,11 +46,14 @@
                 <a href="/usuarios/logout">CERRAR SESIÓN</a>
               </div>
               <% } %> 
-
-              <div class="agregarProducto">
-                <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
-              </div>
-                
+              <% if (locals.isLogged && locals.userLogged.category === 'admin') { %>
+               
+                <div class="agregarProducto">
+                  <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
+                </div>
+                <% } else {%>
+                  <div></div>
+                <% } %> 
           </div>
         <!-- </div> -->
       <!-- </div> -->

@@ -13,13 +13,14 @@ const storage = multer.diskStorage({
 
 
 const adminController = require('../controllers/adminController');
+const adminMiddleware = require('../middlewares/adminMiddleware')
     
-router.get('/agregarProducto', adminController.agregarProducto);
+router.get('/agregarProducto', adminMiddleware,adminController.agregarProducto);
 router.post('/agregarProducto',uploadFile.single('imagenProductoNuevo') ,adminController.create);
 
-router.get('/modificarProducto/:id', adminController.modificarProducto);
-router.put('/modificarProducto/:id', uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios)
-router.delete('/eliminar/:id', adminController.delete)
+router.get('/modificarProducto/:id',adminMiddleware ,adminController.modificarProducto);
+router.put('/modificarProducto/:id', uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios);
+router.delete('/eliminar/:id', adminController.delete);
 
 
 module.exports = router;

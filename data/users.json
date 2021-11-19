@@ -14,7 +14,7 @@
   "lastName": "Kubacki",
   "email": "ckubacki1@japanpost.jp",
   "password": "NkkzGz",
-  "category": "admin",
+  "category": "client",
   "img": "default-img.png"
  },
  {
@@ -22,6 +22,7 @@
   "firstName": "Franco",
   "lastName": "Terragna",
   "email": "francoterragna@hotmail.com",
+  "category": "admin",
   "password": "$2a$10$T0gOvE/9P4MairNDY6G6Z.ysxcZ9BYWQqGGpqc/1gzLOjjCoOOy6u",
   "confirmPassword": "asd",
   "image": "img-default.jpg"
@@ -31,6 +32,7 @@
   "firstName": "fds",
   "lastName": "Nicolás",
   "email": "franquito_terragna_nieto@gmail.com",
+  "category": "client",
   "password": "$2a$10$Kn16sPUnyhlkDBdrDl/V5ew94IQ6r8qNlFzhymmhLsTG1Rd.uCCbW",
   "confirmPassword": "qwerty",
   "image": "img-default.jpg"
@@ -40,6 +42,7 @@
   "firstName": "Ulises",
   "lastName": "Fritz",
   "email": "ulifritz8@gmail.com",
+  "category": "admin",
   "password": "$2a$10$4KsFNUZbAJiaBfQGEmuNKecw2AgTq8QkH09e.l12QgJrPBe2N/Roe",
   "confirmPassword": "123",
   "image": "img-default.jpg"
@@ -49,6 +52,7 @@
   "firstName": "Juan",
   "lastName": "Sanchez",
   "email": "juan@gmail.com",
+  "category": "client",
   "password": "$2a$10$193w83AoTFiEGX9ss7uMuO01UjG2Y34mlU0dOeGSlB6U51x/KQjAu",
   "confirmPassword": "123",
   "image": "1637017191816_img_.jpg"
@@ -67,9 +71,19 @@
   "firstName": "gf",
   "lastName": "qwerty",
   "email": "asd@hola.com",
-  "category": "admin",
+  "category": "client",
   "password": "$2a$10$UxF4two95pp.0nfq6dxrGOhJq5uqa2cSYsWIj4Qd23bWnkbuSNEQu",
   "confirmPassword": "123",
   "image": "img-default.jpg"
+ },
+ {
+  "id": 9,
+  "firstName": "Roberto",
+  "lastName": "Sanchez",
+  "email": "rober@gmail.com",
+  "category": "client",
+  "password": "$2a$10$9BD5PWnRGx6f0ugjYbtrl.GBwe/zSKa1dhBwgsvIa8IK1DiQ2/RYi",
+  "confirmPassword": "123",
+  "image": "1637329559849_img_.jpg"
  }
 ]
