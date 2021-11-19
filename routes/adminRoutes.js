@@ -19,7 +19,7 @@ router.get('/agregarProducto', adminMiddleware,adminController.agregarProducto);
 router.post('/agregarProducto',uploadFile.single('imagenProductoNuevo') ,adminController.create);
 
 router.get('/modificarProducto/:id',adminMiddleware ,adminController.modificarProducto);
-router.put('/modificarProducto/:id', uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios);
+router.put('/modificarProducto/:id',uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios);
 router.delete('/eliminar/:id', adminController.delete);
 
 

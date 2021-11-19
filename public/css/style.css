@@ -1164,17 +1164,19 @@ transform:rotateZ(15deg);
 }
 .article-product img{
     width: 100%;
+    height: 622px;
+    object-fit:cover
 }
 .article-product h5{
     color: #000;
 }
 .article-product .descuento{
-    color: #43d307;
+    color: #fff;
     font-size: 25px;
     position: relative;
     width: 135px;
-    bottom: 470px;
-    background-color: blue;
+    bottom: 690px;
+    background-color: #28b36e;
 }
 .article-product h4{
 color: #000;
@@ -1191,12 +1193,12 @@ color: #000;
 }
 .main-not-found h2 {
     border: 5px solid red;
-    width: 200px;
+    width: 215px;
     margin: 0 auto;
     color: red;
-    height: 200px;
+    height: 215px;
     border-radius: 50%;
-    line-height: 86px;
+    line-height: 90px;
     -webkit-animation: aumentar .5s infinite linear alternate;
             animation: aumentar .5s infinite linear alternate;
 }
@@ -1240,28 +1242,6 @@ outline: #ccc;
     border-radius: 50%;
     width: 80%;
 }
-
-
-
-
-
-
-
-/* @media(min-width:550px){
-    .article-product{
-        display: inline-block;
-        width: 40%;
-        margin: 25px 10px;
-    }
-    .article-product img{
-        height: 300px;
-        -o-object-fit: cover;
-           object-fit: cover;
-    }
-    .article-product:hover{
-        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
-    }
-} */
 
 @media (min-width:750px){
 
@@ -1369,12 +1349,15 @@ outline: #ccc;
         transition: all .3s;
     }
     .article-product img{
-        height: 300px;
+        height: 500px;
         -o-object-fit: cover;
            object-fit: cover;
     }
     .article-product{
         border: none
+    }
+    .article-product .descuento{
+        bottom:558px
     }
     .article-product:hover{
         box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
@@ -1390,6 +1373,12 @@ outline: #ccc;
     .div-profile img {
      width: 25%;
      
+    }
+
+    .main-not-found h2{
+        width: 260px;
+        height: 260px;
+        line-height: 110px;
     }
 }
 @media(min-width:980px){
@@ -1475,9 +1464,9 @@ outline: #ccc;
        
    }
    .article-product img{
-        height: 400px;
-        -o-object-fit: contain;
-            object-fit: contain;
+        height: 500px;
+        -o-object-fit: cover;
+            object-fit: cover;
         -o-object-position: top;
             object-position: top;
    }
@@ -1527,6 +1516,10 @@ outline: #ccc;
         object-position: 10px -200px;
         object-fit: cover;
     }
+
+    .article-product .descuento{
+        bottom: 570px
+    }
 }
 @media(min-width: 1400px){
     .foto-carrusel{
@@ -1544,5 +1537,9 @@ outline: #ccc;
     .foto-carrusel{
         object-position: 10px -300px;
         object-fit: cover;
+    }
+
+    .article-product img {
+        object-fit: contain;
     }
 }

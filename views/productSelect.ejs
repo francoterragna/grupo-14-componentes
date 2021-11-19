@@ -12,9 +12,13 @@
                 <article class="article-product">
                     <a href="/productos/detalle/<%= producto.id %> ">
                         <img src="/img/products/<%= producto.image %>" alt="Imagen">
-                        <h4> <%= producto.name %></h4>
-                        <h5>$<%= producto.price %></h5>
+                        <h2> <%= producto.name %></h2>
+                        <% if(producto.discount.length == 0){ %> 
+                        <h3>$<%= producto.price %></h3>
+                        <% } %> 
                         <% if(producto.discount > 0){ %> 
+                            <h6>Antes $<%= producto.price %> </h6>
+                            <h3>Ahora $<%= producto.price - (producto.price * (producto.discount/100)) %>   </h3>
                             <p class="descuento"><%= producto.discount %>% OFF </p>
                         <% }else{ %> 
                         <p><br></p>
