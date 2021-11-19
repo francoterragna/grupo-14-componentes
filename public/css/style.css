@@ -567,6 +567,9 @@ label{
     font-weight: bold;
 }
 
+.tipeOfUser{
+    display: none;
+}
 
 .text-danger{
     color: #bf1313;

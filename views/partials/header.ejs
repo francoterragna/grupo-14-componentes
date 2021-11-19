@@ -8,6 +8,7 @@
   <% } else{ %> 
     <a href="/usuarios/login" class='btn btn-secondary btn-lg my-3 ingresar'>Login</a>
   <a href="/usuarios/register" class="btn btn-secondary btn-lg my-3 crear-cuenta">Creá tu cuenta</a>
+  
     <% } %>
   <div class="lupa-barra">
     <button class="lupa"><i class="fas fa-search"></i></button>
@@ -28,19 +29,28 @@
       </p>
       <!-- <div class="row"> -->
         <!-- <div class="col"> -->
+          
+          
+          
           <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="agregarProducto">
-              <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
-            </div>
-            <div class="agregarProducto">
-              <a href="/usuarios/login">LOGIN</a>
-            </div>
-            <div class="agregarProducto">
-              <a href="/usuarios/register">CREÁ TU CUENTA</a>
-            </div>
-            <div class="agregarProducto">
-              <a href="/usuarios/logout">CERRAR SESIÓN</a>
-            </div>
+              <% if (!locals.isLogged) { %>
+               
+                <div class="agregarProducto">
+                  <a href="/usuarios/login">LOGIN</a>
+                </div>
+                <div class="agregarProducto">
+                  <a href="/usuarios/register">CREÁ TU CUENTA</a>
+                </div>
+                <% } else{%>
+                <div class="agregarProducto">
+                <a href="/usuarios/logout">CERRAR SESIÓN</a>
+              </div>
+              <% } %> 
+
+              <div class="agregarProducto">
+                <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
+              </div>
+                
           </div>
         <!-- </div> -->
       <!-- </div> -->

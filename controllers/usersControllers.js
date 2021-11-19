@@ -85,7 +85,6 @@ const usersController = {
         let userCreated = User.create(userToCreate);
         return res.redirect('/')
     },
-    
 
     list: (req,res) => {
         
@@ -98,7 +97,7 @@ const usersController = {
         })
     },
     logout: (req,res)=>{
-        res.clearCookier('userEmail');
+        res.clearCookie('userEmail');
         req.session.destroy();  
         return res.redirect('/');
     }

@@ -52,5 +52,24 @@
   "password": "$2a$10$193w83AoTFiEGX9ss7uMuO01UjG2Y34mlU0dOeGSlB6U51x/KQjAu",
   "confirmPassword": "123",
   "image": "1637017191816_img_.jpg"
+ },
+ {
+  "id": 7,
+  "firstName": "fds",
+  "lastName": "sdf",
+  "email": "caca@hotmail.com",
+  "password": "$2a$10$vBREZMed4uuYNsuCeMnKtO/QXmLhE5Q.cA5OumVNwKApI2hEBhKcq",
+  "confirmPassword": "asd",
+  "image": "img-default.jpg"
+ },
+ {
+  "id": 8,
+  "firstName": "gf",
+  "lastName": "qwerty",
+  "email": "asd@hola.com",
+  "category": "admin",
+  "password": "$2a$10$UxF4two95pp.0nfq6dxrGOhJq5uqa2cSYsWIj4Qd23bWnkbuSNEQu",
+  "confirmPassword": "123",
+  "image": "img-default.jpg"
  }
 ]

@@ -38,6 +38,7 @@ app.use(session({
     saveUninitialized: false
 })); 
 
+app.use(cookies());
 app.use(userLoggedMiddleware);
 
 app.use('/', mainRouter) ;
@@ -45,7 +46,6 @@ app.use('/usuarios', usuariosRouter)
 app.use('/productos', productosRouter);
 app.use('/administrador', adminRoutes);
 
-app.use(cookies());
 
 //ERROR 404
 app.use((req,res,next) => {
