@@ -5,6 +5,7 @@ Integrantes:
  Franco Terragna
  Santiago Gatica
  Ulises Fritz
+ Omar Cavallieri
 
 https://www.luxo.com
 

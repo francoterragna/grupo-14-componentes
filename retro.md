@@ -1,3 +1,6 @@
+
+SPRINT 2:
+
 1. Comenzar a hacer.
 2. Hacer más.
 3. Continuar haciendo.
@@ -15,7 +18,7 @@
 5- Dejar de modificar el código sin previo aviso a los compañeros del team.
 
 
-
+SPRINT 3:
 
 1- ¿Qué fue lo más dificil que les tocó hacer?
 2- ¿Qué fue lo que más les gustó hacer?
@@ -64,3 +67,21 @@ SPRINT 5:
 
 5- Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
 
+
+SPRINT 6:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+1- Comenzar a investigar más por nuestra cuenta temas como sequelize o bases de datos, y no quedarnos solamente con el contenido del curso.
+
+2- Hacer más dinámica la página del carrito de compras
+
+3- Seguir organizándonos de la manera que lo venimos haciendo para llegar a tiempo con todos los sprints.
+
+4- No dejar pasar tantos días para ponernos a adelantar el sprint.
+
+5- Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
