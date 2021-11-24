@@ -17,7 +17,7 @@
                         <h3>$<%= producto.price %></h3>
                         <% } %> 
                         <% if(producto.discount > 0){ %> 
-                            <h6>Antes $<%= producto.price %> </h6>
+                            <h6>Antes <span>$<%= producto.price %></span> </h6>
                             <h3>Ahora $<%= producto.price - (producto.price * (producto.discount/100)) %>   </h3>
                             <p class="descuento"><%= producto.discount %>% OFF </p>
                         <% }else{ %> 

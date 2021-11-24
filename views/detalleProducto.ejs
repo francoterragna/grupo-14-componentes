@@ -7,7 +7,11 @@
     <main>
         <div class="detalle-producto">
             <br>
+            <% if (locals.isLogged && locals.userLogged.category === 'admin') { %>
                <a href="/administrador/modificarProducto/<%= product.id %> " class="button-agregar-carrito">Modificar producto</a><br>
+               <% }else{ %>
+                <div></div>
+                <% } %>  
             <img src='/img/products/<%=product.image %>'  alt=<%=product.description%>  class="imagen-producto">
             <h2 class ="titulo-producto"><%= product.name %> </h2>
             <h4 class="titulo-producto"> <%= product.description %>  </h4>

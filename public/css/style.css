@@ -225,6 +225,11 @@ a{
     color: black;
 }
 
+.article-product h6 span{
+    text-decoration: line-through 1.5px red;
+}
+
+
 .descuento-section{
     position: absolute;
     color: #0f0;
