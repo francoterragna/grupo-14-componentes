@@ -3,6 +3,9 @@ const path = require ('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+//const db = require('../database/models');
+//const sequelize = db.sequelize
+// const {Op} = require('sequelize');
 
 const adminController = {
     agregarProducto: (req,res) => res.render('agregarProducto'),
@@ -22,6 +25,13 @@ const adminController = {
         products.push(newProduct);
         fs.writeFileSync(productsFilePath,JSON.stringify(products,null, ' '));
         res.redirect('/administrador/agregarProducto');
+
+        //db.Product.create({
+        //  ...req.body,
+        //  image: imageName
+        //})
+        //.then(() => res.redirect('/administrador/agregarProducto'))
+        //.catch(err => res.send(err))
     },
     
     
