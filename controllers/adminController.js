@@ -9,7 +9,10 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const adminController = {
     agregarProducto: (req,res) => res.render('agregarProducto'),
-    
+    //Hay que mandarle el db.Category.findAll() a la vista para no hardcodear la selección de categorías
+    // y poder hacer un forEach
+
+
     create:(req,res)=> {
         let imageName;
         if(req.file != undefined){
