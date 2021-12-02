@@ -18,6 +18,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const cookies = require('cookie-parser');
 
 // Definiendo el TEMPLATE ENGINES
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 //CONFIGURACIONES PARA PUT Y DELETE

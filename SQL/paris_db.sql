@@ -1,10 +1,11 @@
-CREATE TABLE `products` (
+ CREATE TABLE `products` (
    `id` INT NOT NULL,
    `name` TEXT NOT NULL,
    `description` TEXT,
    `category` TEXT NOT NULL,
    `size` TEXT NOT NULL,
-   `discount` INT NOT NULL,
+   `discount` INT,
+   `price` FLOAT not null, 
    PRIMARY KEY (`id`)
 );
 
@@ -27,16 +28,16 @@ CREATE TABLE `sizes` (
 
 CREATE TABLE `ventas_users` (
    `id` INT NOT NULL AUTO_INCREMENT,
-   `user_id` INT NOT NULL AUTO_INCREMENT,
-   `product_id` INT NOT NULL AUTO_INCREMENT,
-   `cantidad` INT NOT NULL AUTO_INCREMENT,
+   `user_id` INT NOT NULL,
+   `product_id` INT NOT NULL,
+   `cantidad` INT NOT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `product_size` (
    `id` INT NOT NULL AUTO_INCREMENT,
-   `product_id` INT NOT NULL AUTO_INCREMENT,
-   `size_id` INT NOT NULL AUTO_INCREMENT,
+   `product_id` INT NOT NULL,
+   `size_id` INT NOT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -74,3 +75,7 @@ ALTER TABLE `user_category` ADD CONSTRAINT `FK_0cdb695c-e7f6-428a-9084-eab395bae
 ALTER TABLE `user_category` ADD CONSTRAINT `FK_51686f12-3107-447d-aeb6-e713038e438b` FOREIGN KEY (`category_id`) REFERENCES `category`(`id`)  ;
 
 ALTER TABLE `img` ADD CONSTRAINT `FK_833eafd4-2c70-461f-bf7e-58b62ad70213` FOREIGN KEY (`product_id`) REFERENCES `products`(`id`)  ;
+
+
+
+
