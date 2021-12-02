@@ -26,17 +26,22 @@
                 <div>
                     <label for="categoria-producto">Categoría</label><br>
                     <select name="category" id="categoria-producto" class="ingresar-texto" >
-                        <option value="remera">REMERA</option>
+                        <% categories.forEach(category => { %>
+                            
+                            <option value="<%=category.name.toLowerCase()%>"> <%=category.name.toUpperCase()%></option>
+
+                            <% }) %> 
+                        <!-- <option value="remera">REMERA</option>
                         <option value="buzo">BUZO</option>
                         <option value="pantalon">PANTALON</option>
                         <option value="camisa">CAMISA</option>
-                        <option value="malla">TRAJE DE BAÑO</option>
+                        <option value="malla">MALLA</option>
                         <option value="medias">MEDIAS</option>
                         <option value="gorra">GORRA</option>
                         <option value="campera">CAMPERA</option>
                         <option value="bermuda">BERMUDA</option>
                         <option value="sudadera">SUDADERA</option>
-                        <option value="accesorio">ACCESORIO</option>
+                        <option value="accesorio">ACCESORIO</option> -->
                     </select>
                 </div>
                 <div>

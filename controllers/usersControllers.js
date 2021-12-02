@@ -5,7 +5,6 @@ const User = require ('../database/models/User');
 const { validationResult } = require('express-validator') 
 
 const usersController = {
-
     
     login: (req,res) =>{
         

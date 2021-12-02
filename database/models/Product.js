@@ -26,6 +26,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         image: {
             type: dataTypes.STRING
+        },
+        price: {
+            type: dataTypes.FLOAT,
+            allowNull: false
         }
     }
     let config = {
