@@ -17,15 +17,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false,
         },
-        size: {
-            type: dataTypes.STRING,
-            allowNull: false,
-        },
         discount: {
             type: dataTypes.INTEGER
-        },
-        image: {
-            type: dataTypes.STRING
         },
         price: {
             type: dataTypes.FLOAT,
@@ -36,7 +29,13 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'products',
         timestamps: false
     }
-    const Product = sequelize.define(alias, cols, config)
+    const Product = sequelize.define(alias, cols, config);
+    Product.associate = models => {
+        Product.hasMany(models.Image, {
+            as: 'img',
+            foreignKey: 'product_id'
+        })
+    }
 
     return Product;
 } 

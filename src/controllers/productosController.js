@@ -1,26 +1,29 @@
 const fs = require('fs');
 const path = require ('path');
+
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const {Op} = require('sequelize');
+
 const productsFilePath = path.join(__dirname, '../../data/products.json')
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-// const db = require('../database/models');
-// const sequelize = db.sequelize;
-// const {Op} = require('sequelize');
 
 const productosController = {
     detalle: (req,res) =>{
         let id= req.params.id;
-        let product = products.find(product => product.id == id);
-        res.render('detalleProducto', {product});
-        // db.Product.findByPk(id)
-        //.then(product => res.render('detalleProducto', {product})
-        //.catch(err => res.send(err))
+        // let product = products.find(product => product.id == id);
+        // res.render('detalleProducto', {product});
+        db.Product.findByPk(id)
+        .then(product => res.render('detalleProducto', {product}))
+        .catch(err => res.send(err))
     },
     carrito: (req,res) => res.render('carrito'),
+
      showProduct: (req,res) =>{
         let category = req.params.category;
         let productos = products.filter(producto => producto.category == category)
         res.render('productSelect', {productos})
+
         //db.Product.findAll({
             //where: {
             //category: req.params.category;
