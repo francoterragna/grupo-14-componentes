@@ -12,7 +12,8 @@
                <% }else{ %>
                 <div></div>
                 <% } %>  
-            <img src='/img/products/<%=product.image %>'  alt=<%=product.description%>  class="imagen-producto">
+                <div></div>
+            <img src='/img/products/<%=img[0].name%>' alt='<%=product.description%>' class="imagen-producto">
             <h2 class ="titulo-producto"><%= product.name %> </h2>
             <h4 class="titulo-producto"> <%= product.description %>  </h4>
             <h2>$<%= product.price %> </h2><br>

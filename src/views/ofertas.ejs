@@ -10,8 +10,12 @@
         <section class="section-product">
             <% enOferta.forEach(producto => { %>
                 <article class="article-product">
-                    <a href="/productos/detalle/<%= producto.id %> ">
-                        <img src="/img/products/<%= producto.image %>" alt="Imagen">
+                    <% for(let i=0; i < img.length ; i++) { %>
+                        <a href="/productos/detalle/<%= producto.id %> ">
+                            <% if(img[i].product_id == producto.id){ %> 
+                                <img src="/img/products/<%= img[i].name %>" alt="Imagen">
+                                <% } %> 
+                                <% } %> 
                         <h2> <%= producto.name %></h2>
                         <% if(producto.discount.length == 0){ %> 
                         <h3>$<%= producto.price %></h3>
