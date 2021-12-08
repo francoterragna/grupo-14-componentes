@@ -25,6 +25,7 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'product_id'
         })
     }
+    
 
     return Image;
 } 

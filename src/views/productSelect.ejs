@@ -10,22 +10,27 @@
         <section class="section-product">
             <% productos.forEach(producto => { %>
                 <article class="article-product">
+                <% for(let i=0; i < img.length ; i++) { %>
                     <a href="/productos/detalle/<%= producto.id %> ">
-                        <img src="/img/products/<%= producto.image %>" alt="Imagen">
+                        <% if(img[i].product_id == producto.id){ %> 
+                            <img src="/img/products/<%= img[i].name %>" alt="Imagen">
+                            <% } %> 
+                            <% } %> 
                         <h2> <%= producto.name %></h2>
-                        <% if(producto.discount.length == 0){ %> 
-                        <h3>$<%= producto.price %></h3>
-                        <% } %> 
-                        <% if(producto.discount > 0){ %> 
-                            <h6>Antes <span>$<%= producto.price %></span> </h6>
-                            <h3>Ahora $<%= producto.price - (producto.price * (producto.discount/100)) %>   </h3>
-                            <p class="descuento"><%= producto.discount %>% OFF </p>
-                        <% }else{ %> 
-                        <p><br></p>
+                        <% if(producto.discount == null){ %> 
+                            <h3>$<%= producto.price %></h3>
+                            <% } %> 
+                            <% if(producto.discount > 0){ %> 
+                                <h6>Antes <span>$<%= producto.price %></span> </h6>
+                                <h3>Ahora $<%= producto.price - (producto.price * (producto.discount/100)) %>   </h3>
+                                <p class="descuento"><%= producto.discount %>% OFF </p>
+                            <% }else{ %> 
+                        <p><br><br></p>
                             <% } %>
                     </a>
+                    
                 </article>
-            <% }) %> 
+                <% }) %> 
         </section>
     </main>
     <%- include('./partials/footer.ejs') %> 

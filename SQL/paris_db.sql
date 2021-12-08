@@ -166,6 +166,9 @@ ALTER TABLE `img` ADD CONSTRAINT `FK_833eafd4-2c70-461f-bf7e-58b62ad70213` FOREI
     INSERT INTO products values(88,'Riñonera negra','Riñonera negra','accesorio',NULL,2200);
     INSERT INTO products values(89,'Neseser negro','Neseser negro','accesorio',NULL,1500);
 
-
+insert into img values(1,'1634059312561_img_.jpg', 2);
+insert into img values(2,'1634399383827_img_.jpg', 4);
+insert into img values(3,'1634063882064_img_.jpg', 5);
+insert into img values(4,'1634081104621_img_.jpg', 9);
 
 
