@@ -1,8 +1,12 @@
 const bcryptjs = require('bcryptjs');
 
-// const User = require ('../database/models/User');
+const User = require ('../database/models/User');// Todas las funcionalidades de User.js se van a hacer acá en el controller
 
-const { validationResult } = require('express-validator') 
+const { validationResult } = require('express-validator');
+
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const {Op} = require('sequelize');
 
 const usersController = {
     
@@ -12,8 +16,14 @@ const usersController = {
     },
 
     processLogin: (req,res) =>{
-        let userToLogin = User.findByField('email',req.body.email);
-        
+        let userToLogin = db.User.findOne({
+            where:{email: req.body.email}
+        })
+        console.log(userToLogin);
+        //User.findByField('email',req.body.email);
+
+
+
         if(userToLogin){
             let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(passIsOk){
@@ -44,6 +54,12 @@ const usersController = {
     showRegister:(req,res) =>{
         // res.cookie('testing', 'Hola!', {maxAge: 1000* 30});
         return res.render('register')
+    },
+
+    createUser: (req,res) => {
+        db.User.create({
+            
+        })
     },
     
     saveRegister: (req,res) => {

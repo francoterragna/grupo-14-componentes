@@ -24,6 +24,10 @@ header{
     height: 20%;
 }
 
+.offcanvas-start {
+    width: 250px !important;
+}
+
 .carousel-indicators{
     display: none;
 }
@@ -1418,6 +1422,10 @@ outline: #ccc;
     .div-precio-total{
         width: 50%;
         margin: 0 auto;
+    }
+
+    .offcanvas-start {
+        width: 400px !important;
     }
 
     .contenedor-footer{

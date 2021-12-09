@@ -34,8 +34,7 @@ const adminController = {
         res.redirect('/administrador/agregarProducto');
 
         //db.Product.create({
-        //  ...req.body,
-        //  image: imageName
+        //  ...req.body
         //})
         //.then(() => res.redirect('/administrador/agregarProducto'))
         //.catch(err => res.send(err))
