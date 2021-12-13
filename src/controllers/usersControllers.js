@@ -19,7 +19,36 @@ const usersController = {
         let userToLogin = db.User.findOne({
             where:{email: req.body.email}
         })
-        console.log(userToLogin);
+            .then(() => {
+            //   let userToLogin = user
+              if(userToLogin){
+                  let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                  if(passIsOk){
+                      delete userToLogin.password;
+                      req.session.userLogged = userToLogin;
+                      if(req.body.recordarme){
+                          res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                      }
+                      return res.redirect('/usuarios/profile')
+                  };
+                  return res.render('login', {
+                      errors:{
+                          email:{
+                              msg: 'Las credenciales son incorrectas'
+                          }
+                      }
+                  })
+              };
+      
+              return res.render('login', {
+                  errors:{
+                      email:{
+                          msg: 'No se encuentra este email en nuestra base de datos'
+                      }
+                  }
+              });
+            })
+            console.log(userToLogin);
         //User.findByField('email',req.body.email);
 
         if(userToLogin){
@@ -54,11 +83,7 @@ const usersController = {
         return res.render('register')
     },
 
-    createUser: (req,res) => {
-        db.User.create({
-            
-        })
-    },
+  
     
     saveRegister: (req,res) => {
         const resultValidation = validationResult(req);
@@ -69,9 +94,15 @@ const usersController = {
             })
         }
         
-        let userInDB = User.findByField('email', req.body.email);
-        
-        if(userInDB){
+        db.User.findOne({
+            where:{
+                email: req.body.email
+            }
+        })
+        .then(userInDB => { 
+           
+            if(userInDB){
+
             return res.render ('register', {
                 errors: {
                     email:{
@@ -79,26 +110,62 @@ const usersController = {
                     }
                 },
                 oldData: req.body
-            });
-        }
-        
-        let imageName;
-        if (req.file != undefined){
-            imageName = req.file.filename;
+            })
         }else{
-            imageName = 'img-default.jpg';
+            let imageName;
+            if (req.file != undefined){
+                    imageName = req.file.filename;
+            }else{
+                    imageName = 'img-default.jpg';
+            }
+            db.User.create({
+                first_name: req.body.firstName,
+                last_name: req.body.lastName,
+                email: req.body.email,
+                category: req.body.category,
+                img: imageName,
+                password: req.body.password
+            }).then(()=> res.redirect('/login'))
         }
-        
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10),
-            image: imageName,
-        }
-        
-        let userCreated = User.create(userToCreate);
-        return res.redirect('/')
-    },
 
+    
+    })
+    .catch(errors => res.send(errors))
+       
+    },
+        
+    
+        
+        
+        // if(userInDB){
+            //     return res.render ('register', {
+        //         errors: {
+            //             email:{
+        //                 msg: 'Este email ya está registrado'
+        //             }
+        //         },
+        //         oldData: req.body
+        //     });
+        // }
+        
+        // let imageName;
+        // if (req.file != undefined){
+        //         imageName = req.file.filename;
+        // }else{
+        //         imageName = 'img-default.jpg';
+        // }
+        
+        // let userToCreate = {
+            //     ...req.body,
+            //     password: bcryptjs.hashSync(req.body.password,10),
+            //     image: imageName,
+            // }
+        
+            // let userCreated = User.create(userToCreate);
+            // return res.redirect('/')
+        
+            
+            
     list: (req,res) => {
         
         res.render('usersList', {users});
