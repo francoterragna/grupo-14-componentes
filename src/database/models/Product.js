@@ -35,7 +35,15 @@ module.exports = (sequelize, dataTypes) => {
             as: 'img',
             foreignKey: 'product_id'
         })
+        Product.belongsToMany(models.User, {
+                as: 'users',
+                foreignKey: 'user_id',
+                through: 'ventas_users',
+                timestamps: false
+            })
     }
+   
+    
 
     return Product;
 } 

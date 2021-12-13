@@ -77,8 +77,8 @@ ALTER TABLE `img` ADD CONSTRAINT `FK_833eafd4-2c70-461f-bf7e-58b62ad70213` FOREI
 
 
 
-    INSERT INTO products values(2,'Remera París','Remera paris Messi','remera',10,25000),
-    INSERT INTO products values(3,'Buzo','Buzo negro','buzo',NULL,15000),
+    INSERT INTO products values(2,'Remera París','Remera paris Messi','remera',10,25000);
+    INSERT INTO products values(3,'Buzo','Buzo negro','buzo',NULL,15000);
     INSERT INTO products values(4,'Remera París Negra','Remera bien piolonaaa','remera',NULL,20,4000);
     INSERT INTO products values(5,'Remera blanca','Remera blanca','remera',15,354);
     INSERT INTO products values(6,'Remera Nirvana','Remera negra con estampado de la banda Nirvana','remera',20,4000);
