@@ -48,6 +48,11 @@ const adminController = {
     }, 
 
     enviarCambios: (req,res) =>{
+
+            
+
+
+
         let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
         let newImage;
