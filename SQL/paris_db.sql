@@ -20,7 +20,7 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `sizes` (
-   `id` INT,
+   `id` INT AUTO_INCREMENT,
    `name` TEXT NOT NULL,
    PRIMARY KEY (`id`)
 );

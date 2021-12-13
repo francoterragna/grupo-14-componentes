@@ -22,8 +22,6 @@ const usersController = {
         console.log(userToLogin);
         //User.findByField('email',req.body.email);
 
-
-
         if(userToLogin){
             let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(passIsOk){
@@ -119,3 +117,4 @@ const usersController = {
 }
 
 module.exports = usersController;
+
