@@ -26,10 +26,8 @@
                 <div>
                     <label for="categoria-producto">Categoría</label><br>
                     <select name="category" id="categoria-producto" class="ingresar-texto" >
-                        <% categories.forEach(category => { %>
-                            
+                        <% categories.forEach(category => { %>  
                             <option value="<%=category.name.toLowerCase()%>"> <%=category.name.toUpperCase()%></option>
-
                             <% }) %> 
                     </select>
                 </div>

@@ -16,9 +16,6 @@ const adminController = {
         .catch(error => res.send(error))
     },
     
-    //Hay que mandarle el db.Category.findAll() a la vista para no hardcodear la selección de categorías
-    // y poder hacer un forEach
-    
     create:(req,res)=> {
         let imageName;
         if(req.file != undefined){
@@ -43,7 +40,6 @@ const adminController = {
         // .catch(err => res.send(err))
     },
     
-    
     modificarProducto: (req,res) =>{
         let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id); 
@@ -51,7 +47,6 @@ const adminController = {
     }, 
 
     enviarCambios: (req,res) =>{
-        
         let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
         let newImage;
@@ -60,8 +55,6 @@ const adminController = {
         }else{
            newImage = req.file.filename
         }
-
-
         productToEdit ={
             id: productToEdit.id,
             ...req.body,
@@ -74,11 +67,10 @@ const adminController = {
 			}
 			return producto;
 		});
-
         fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 		res.redirect('/');
-
     },
+
     delete: (req,res) => {
       let  id = req.params.id;
       let finalProducts =   products.filter(product => product.id != id)
@@ -86,9 +78,6 @@ const adminController = {
       fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
       res.redirect('/')
     }
-    
-    
-
 };
 
 module.exports = adminController;

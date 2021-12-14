@@ -1,12 +1,3 @@
-// 1. Guardar el usuario en la DB
-
-// 2. Buscar al usuario que se quiere loguear 
-
-// 3. Buscar un usuario por su id                 LISTO
-
-// 4. Editar la información de un usuario
-
-
 module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
