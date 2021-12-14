@@ -9,6 +9,8 @@ const {Op} = require('sequelize');
 
 const adminController = {
     agregarProducto: (req,res) => {
+
+
         db.Category.findAll()
         .then(categories => res.render('agregarProducto', {categories}))
         .catch(error => res.send(error))

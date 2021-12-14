@@ -20,7 +20,7 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `sizes` (
-   `id` INT AUTO_INCREMENT,
+   `id` INT,
    `name` TEXT NOT NULL,
    PRIMARY KEY (`id`)
 );
@@ -79,7 +79,7 @@ ALTER TABLE `img` ADD CONSTRAINT `FK_833eafd4-2c70-461f-bf7e-58b62ad70213` FOREI
 
     INSERT INTO products values(2,'Remera París','Remera paris Messi','remera',10,25000);
     INSERT INTO products values(3,'Buzo','Buzo negro','buzo',NULL,15000);
-    INSERT INTO products values(4,'Remera París Negra','Remera bien piolonaaa','remera',NULL,20,4000);
+    INSERT INTO products values(4,'Remera París Negra','Remera bien piolonaaa','remera',20,4000);
     INSERT INTO products values(5,'Remera blanca','Remera blanca','remera',15,354);
     INSERT INTO products values(6,'Remera Nirvana','Remera negra con estampado de la banda Nirvana','remera',20,4000);
     INSERT INTO products values(7,'Remera Hollister','Remera Hollister color azul oscuro con estampado colorido','remera',10,3200);
@@ -171,6 +171,7 @@ insert into img values(2,'1634399383827_img_.jpg', 4);
 insert into img values(3,'1634063882064_img_.jpg', 5);
 insert into img values(4,'1634081104621_img_.jpg', 9);
 
+
 insert into img values (5, '1634060899870_img_.jpg', 3);
 insert into img values (6, '1634080901977_img_.jpg', 6);
 insert into img values (7, '1634081013537_img_.jpg', 7);
@@ -219,6 +220,7 @@ insert into img values (49, '1634092665900_img_.jpg', 49);
 insert into img values (50, '1634092701882_img_.jpg', 50);
 insert into img values (51, '1634093641928_img_.jpg', 51);
 insert into img values (52, '1634093685160_img_.jpg', 52);
+
 insert into img values (53, '1634093714134_img_.jpg', 53);
 insert into img values (54, '1634093798322_img_.jpg', 54);
 insert into img values (55, '1634093825651_img_.jpg', 55);
@@ -257,5 +259,11 @@ insert into img values (87, '1634243238352_img_.jpg', 87);
 insert into img values (88, '1634243311692_img_.jpg', 88);
 insert into img values (89, '1634243445371_img_.jpg', 89);
 
+ALTER TABLE paris_db.sizes MODIFY COLUMN id int(11) auto_increment NOT NULL;
 
+insert into users values (1, 'Ulises', 'Fritz', 'ulifritz8@gmail.com', 'img-default.jpg','admin','123')
 
+update users set category= 'admin' where id = 3
+update users set category= 'admin' where id = 5
+
+select * from users u 
