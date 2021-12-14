@@ -20,26 +20,27 @@ const adminController = {
     // y poder hacer un forEach
     
     create:(req,res)=> {
-        // let imageName;
-        // if(req.file != undefined){
-        //     imageName = req.file.filename;
-        // }else{
-        //     imageName = 'products-default.png'
-        // }
-        // let newProduct = {
-        //     id : products[products.length - 1].id + 1,
-        //     ...req.body,
-        //     image: imageName
-        // }
-        // products.push(newProduct);
-        // fs.writeFileSync(productsFilePath,JSON.stringify(products,null, ' '));
-        // res.redirect('/administrador/agregarProducto');
-
-        db.Product.create({
-         ...req.body
-        })
-        .then(() => res.redirect('/administrador/agregarProducto'))
-        .catch(err => res.send(err))
+        let imageName;
+        if(req.file != undefined){
+            imageName = req.file.filename;
+        }else{
+            imageName = 'products-default.png'
+        }
+        // db.Product.create({
+        //  name: req.body.name,
+        //  description: req.body.description,
+        //  category: req.body.category,
+        //  discount: req.body.discount,
+        //  price: req.body.price
+        // })
+        // .then(()=>{
+        //     db.Image.create({
+        //         name: 
+        //     })
+        // })
+        
+        // .then(() => res.redirect('/administrador/agregarProducto'))
+        // .catch(err => res.send(err))
     },
     
     

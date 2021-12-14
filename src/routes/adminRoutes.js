@@ -16,7 +16,7 @@ const adminController = require('../controllers/adminController');
 const adminMiddleware = require('../middlewares/adminMiddleware')
     
 router.get('/agregarProducto', adminMiddleware,adminController.agregarProducto);
-router.post('/agregarProducto',uploadFile.single('imagenProductoNuevo') ,adminController.create);
+router.post('/agregarProducto',uploadFile.array('imagenProductoNuevo') ,adminController.create);
 
 router.get('/modificarProducto/:id',adminMiddleware ,adminController.modificarProducto);
 router.put('/modificarProducto/:id',uploadFile.single('imagenProductoModificado') ,adminController.enviarCambios);

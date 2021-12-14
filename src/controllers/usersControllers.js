@@ -24,12 +24,9 @@ const usersController = {
         })
         .then((userToLogin) => {
             if(userToLogin){
-                
                 let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-                
-                  
                   if(passIsOk){
-                      delete userToLogin.password;
+                    //   delete userToLogin.password;
                       req.session.userLogged = userToLogin;
                       if(req.body.recordarme){
                           res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
@@ -43,7 +40,6 @@ const usersController = {
                           }
                       }
                   })
-                  
               };
       
               return res.render('login', {
@@ -54,35 +50,6 @@ const usersController = {
                   }
               });
             }).catch(err => res.send(err))
-            
-        //User.findByField('email',req.body.email);
-
-        // if(userToLogin){
-        //     let passIsOk = bcryptjs.compareSync(req.body.password, userToLogin.password);
-        //     if(passIsOk){
-        //         delete userToLogin.password;
-        //         req.session.userLogged = userToLogin;
-        //         if(req.body.recordarme){
-        //             res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
-        //         }
-        //         return res.redirect('/usuarios/profile')
-        //     };
-        //     return res.render('login', {
-        //         errors:{
-        //             email:{
-        //                 msg: 'Las credenciales son incorrectas'
-        //             }
-        //         }
-        //     })
-        // };
-
-        // return res.render('login', {
-        //     errors:{
-        //         email:{
-        //             msg: 'No se encuentra este email en nuestra base de datos'
-        //         }
-        //     }
-        // });
     },
     showRegister:(req,res) =>{
         // res.cookie('testing', 'Hola!', {maxAge: 1000* 30});
