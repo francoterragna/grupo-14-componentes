@@ -142,7 +142,6 @@ const usersController = {
         
     
         
-        
         // if(userInDB){
             //     return res.render ('register', {
         //         errors: {

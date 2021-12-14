@@ -64,6 +64,13 @@ header{
     outline:none;
 }
 
+.inputBuscador{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding-left: 8px
+}
+
 .lupa-barra{
     display: flex;
     width: 60%;
@@ -1250,6 +1257,18 @@ outline: #ccc;
 .div-profile img{
     border-radius: 50%;
     width: 80%;
+}
+
+.boton-profile{
+    border: 3px solid #6aa6ff;
+    background-color: #0d6efd;
+    padding: 5px;
+    color: #fff;
+    border-radius: 8px;
+    width: 20%;
+    font-size: 18px;
+    margin: 25px auto;
+    display: block;
 }
 
 @media (min-width:750px){

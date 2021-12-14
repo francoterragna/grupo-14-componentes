@@ -40,7 +40,7 @@ app.use(session({
 })); 
 
 app.use(cookies());
-// app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 
 
 

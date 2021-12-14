@@ -1,4 +1,4 @@
-const User = require('../database/models/User');// Ésto tiene que venir desde el controller
+const User = require('../controllers/usersControllers');// Ésto tiene que venir desde el controller
 
 function userLoggedMiddleware(req, res, next){
     res.locals.isLogged = false;
