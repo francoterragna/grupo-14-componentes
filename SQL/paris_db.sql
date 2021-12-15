@@ -267,3 +267,25 @@ update users set category= 'admin' where id = 3
 update users set category= 'admin' where id = 5
 
 select * from users u 
+
+insert into category values (1, 'remera');
+insert into category values (2, 'buzo');
+insert into category values (3, 'pantalon');
+insert into category values (4, 'camisa');
+insert into category values (5, 'malla');
+insert into category values (6, 'medias');
+insert into category values (7, 'gorra');
+insert into category values (8, 'campera');
+insert into category values (9, 'bermuda');
+insert into category values (10, 'accesorio');
+
+update products set category = 1  where category = 'remera';
+update products set category_id = 2  where category_id = 'buzo';
+update products set category_id = 3  where category_id = 'pantalon';
+update products set category_id = 4  where category_id = 'camisa';
+update products set category_id = 5  where category_id = 'malla';
+update products set category_id = 6  where category_id = 'medias';
+update products set category_id = 7  where category_id = 'gorra';
+update products set category_id = 8  where category_id = 'campera';
+update products set category_id = 9  where category_id = 'bermuda';
+update products set category_id = 10  where category_id = 'accesorio';
