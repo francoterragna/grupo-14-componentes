@@ -19,8 +19,6 @@ const adminController = {
     },
     
     create:(req,res)=> {
-       
-        
         db.Product.create({
          name: req.body.name,
          description: req.body.description,
@@ -30,17 +28,17 @@ const adminController = {
          stock: req.body.stock
         })
         .then((productoCreado)=>{
-            let imageName = [];
-            if(req.file != undefined){
-                imageName.push(req.file.filename);
+            let imageName;
+            console.log(req.files);
+            if(req.files != undefined){
+                imageName = req.files;
             }
+            
             imageName.forEach(image => {
                 db.Image.create({
-                  name: image,
+                  name: image.filename,
                   product_id: productoCreado.id 
-                
                 })
-                
             });
         })
         

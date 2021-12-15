@@ -9,14 +9,14 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) { 
         cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
     });
-    const uploadFile = multer({ storage });
+    const uploadFile = multer({ storage:storage });
 
 
 const adminController = require('../controllers/adminController');
 const adminMiddleware = require('../middlewares/adminMiddleware')
     
 router.get('/agregarProducto', adminMiddleware,adminController.agregarProducto);
-router.post('/agregarProducto',uploadFile.array('imagenProductoNuevo', 3) ,adminController.create);
+router.post('/agregarProducto',uploadFile.array('imagenProductoNuevo', 3), adminController.create); 
 
 router.get('/modificarProducto/:id',adminMiddleware ,adminController.modificarProducto);
 router.put('/modificarProducto/:id',uploadFile.array('imagenProductoModificado', 3) ,adminController.enviarCambios);

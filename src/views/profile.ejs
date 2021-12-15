@@ -8,10 +8,14 @@
     <main>
         <h1>Bienvenido a tu perfil</h1>
         <div class='div-profile'>
-            <h2><%= user.firstName%> <%= user.lastName %> </h2>
+            <h2><%= user.first_name%> <%= user.last_name %> </h2>
             <img src="/img/users/<%= user.img %>" alt="Img de perfil">
             <p><strong>Email:</strong> <%= user.email %> </p>
-            <p><strong>Categoría:</strong>  <%= user.category %>e  </p>
+            <% if(user.category == 'admin'){ %> 
+                <p><strong>Categoría:</strong>  Administrador </p>
+            <% }else{ %>
+                <p><strong>Categoría:</strong>  Cliente </p>
+            <% } %> 
         </div>
 
         <a href="/" class='boton-profile'>Seguir mirando indumentaria ></a>
