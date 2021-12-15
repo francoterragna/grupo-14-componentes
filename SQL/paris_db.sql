@@ -262,34 +262,3 @@ insert into sizes values (3, 'M');
 insert into sizes values (4, 'L');
 insert into sizes values (5, 'XL');
 insert into sizes values (6, 'XXL');
-
-ALTER TABLE paris_db.sizes MODIFY COLUMN id int(11) auto_increment NOT NULL;
-
-insert into users values (1, 'Ulises', 'Fritz', 'ulifritz8@gmail.com', 'img-default.jpg','admin','123')
-
-update users set category= 'admin' where id = 3
-update users set category= 'admin' where id = 5
-
-select * from users u 
-
-insert into category values (1, 'remera');
-insert into category values (2, 'buzo');
-insert into category values (3, 'pantalon');
-insert into category values (4, 'camisa');
-insert into category values (5, 'malla');
-insert into category values (6, 'medias');
-insert into category values (7, 'campera');
-insert into category values (8, 'bermuda');
-insert into category values (9, 'gorra');
-insert into category values (10, 'accesorio');
-
-update products set category = 1  where category = 'remera';
-update products set category_id = 2  where category_id = 'buzo';
-update products set category_id = 3  where category_id = 'pantalon';
-update products set category_id = 4  where category_id = 'camisa';
-update products set category_id = 5  where category_id = 'malla';
-update products set category_id = 6  where category_id = 'medias';
-update products set category_id = 7  where category_id = 'gorra';
-update products set category_id = 8  where category_id = 'campera';
-update products set category_id = 9  where category_id = 'bermuda';
-update products set category_id = 10  where category_id = 'accesorio';
