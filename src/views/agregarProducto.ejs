@@ -31,21 +31,25 @@
                     <select name="category" id="categoria-producto" class="ingresar-texto" >
                         <% categories.forEach(category => { %>
                             
-                            <option value="<%=category.name%>"> <%=category.name%></option>
+                            <option value="<%=category.id%>">  <%=category.name%></option>
 
                             <% }) %> 
                     </select>
                 </div>
                 <div>
                     <label for="">Talle</label><br>
-                    <select name="size" id="talles" class="ingresar-texto" required>
+                    <% sizes.forEach(size => { %>
+                     <input type="checkbox" name="<%= size.name %>" id="sizes">
+                     <label for="sizes"><%= size.name %> </label>
+                    <% }) %>
+                    <!-- <select name="size" id="talles" class="ingresar-texto" required>
                         <option value="XS">XS</option>
                         <option value="S">S</option>
                         <option value="M">M</option>
                         <option value="L">L</option>
                         <option value="XL">XL</option>
                         <option value="XXL">XXL</option>
-                    </select>
+                    </select> -->
                 </div>
 
                 <div>
@@ -55,6 +59,10 @@
                 <div>
                     <label for="precio">Precio</label><br>
                     <span>$  </span><input type="number" name="price" id="precio-producto" class="ingresar-texto" required>
+                </div>
+                <div>
+                    <label for="stock">Stock</label><br>
+                    <input type="number" name="stock" id="stock-producto" class="ingresar-texto" required>
                 </div>
                 <input type="submit" value="Agregar" class="agregar-submit">
             </form>

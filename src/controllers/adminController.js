@@ -11,38 +11,41 @@ const adminController = {
     agregarProducto: (req,res) => {
 
         db.Category.findAll()
-        .then(categories => res.render('agregarProducto', {categories}))
+        .then(categories => {
+            db.Size.findAll()
+            .then(sizes => res.render('agregarProducto', {categories, sizes}))
+        } )
         .catch(error => res.send(error))
     },
     
     create:(req,res)=> {
-        let imageName = [];
-        if(req.file != undefined){
-            imageName.push(req.file.filename);
-        }else{
-            return res.render('agregarProducto', {
-                errors:{
-                    imagenProductoNuevo:{
-                        msg: 'No se seleccionó ninguna foto'
-                    }
-                }
-            })
-        }
-        // db.Product.create({
-        //  name: req.body.name,
-        //  description: req.body.description,
-        //  category: req.body.category,
-        //  discount: req.body.discount,
-        //  price: req.body.price
-        // })
-        // .then(()=>{
-        //     db.Image.create({
-        //         name: 
-        //     })
-        // })
+       
         
-        // .then(() => res.redirect('/administrador/agregarProducto'))
-        // .catch(err => res.send(err))
+        db.Product.create({
+         name: req.body.name,
+         description: req.body.description,
+         discount: req.body.discount,
+         category_id: req.body.category, 
+         price: req.body.price,
+         stock: req.body.stock
+        })
+        .then((productoCreado)=>{
+            let imageName = [];
+            if(req.file != undefined){
+                imageName.push(req.file.filename);
+            }
+            imageName.forEach(image => {
+                db.Image.create({
+                  name: image,
+                  product_id: productoCreado.id 
+                
+                })
+                
+            });
+        })
+        
+        .then(() => res.redirect('/administrador/agregarProducto'))
+        .catch(err => res.send(err))
     },
     
     modificarProducto: (req,res) =>{
