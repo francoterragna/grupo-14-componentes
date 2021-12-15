@@ -13,8 +13,8 @@ module.exports = (sequelize, dataTypes) => {
         description: {
             type: dataTypes.STRING
         },
-        category: {
-            type: dataTypes.STRING,
+        category_id: {
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         discount: {
@@ -22,6 +22,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         price: {
             type: dataTypes.FLOAT,
+            allowNull: false
+        },
+        stock:{
+            type: dataTypes.INTEGER,
             allowNull: false
         }
     }
@@ -45,6 +49,13 @@ module.exports = (sequelize, dataTypes) => {
             as: 'category',
             foreignKey: 'category_id',
             timestamps: false
+        })
+        Product.belongsToMany(models.Size,{
+            as: 'sizes',
+            foreignKey: 'product_id',
+            through: 'product_size',
+            otherKey: 'size_id'
+
         })
     }
    

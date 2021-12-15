@@ -24,7 +24,8 @@ const productosController = {
      showProduct: (req,res) =>{
         db.Product.findAll({
             where: {
-                category: req.params.category
+                category_id: req.params.category
+                
             }})
         .then((productos)=> {
             db.Image.findAll()
