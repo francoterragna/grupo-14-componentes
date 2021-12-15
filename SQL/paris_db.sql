@@ -274,9 +274,9 @@ insert into category values (3, 'pantalon');
 insert into category values (4, 'camisa');
 insert into category values (5, 'malla');
 insert into category values (6, 'medias');
-insert into category values (7, 'gorra');
-insert into category values (8, 'campera');
-insert into category values (9, 'bermuda');
+insert into category values (7, 'campera');
+insert into category values (8, 'bermuda');
+insert into category values (9, 'gorra');
 insert into category values (10, 'accesorio');
 
 update products set category = 1  where category = 'remera';
