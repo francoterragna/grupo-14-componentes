@@ -16,12 +16,15 @@
                     <input type="text" class="ingresar-texto" name="name" required>
                 </div>
                 <div>
-                    <label for="descripcion-producto">Descripcion del producto</label><br>
+                    <label for="descripcion-producto">Descripción del producto</label><br>
                     <textarea name="description" id="" cols="43" rows="5" class="descripcion-producto" required></textarea>
                 </div>
                 <div>
-                    <label for="insertar-imagen" class="label-insertar-img">Insertar imagen</label> <br> <br>
-                    <input type="file" name="imagenProductoNuevo" required src="imagenProductoNuevo" alt="img-producto-nuevo" class='file-select'>
+                    <label for="insertar-imagen" class="label-insertar-img">Insertar imágenes</label> <br> <br>
+                    <input type="file" name="imagenProductoNuevo" src="imagenProductoNuevo" alt="img-producto-nuevo" class='file-select' multiple>
+                    <% if(locals.errors && errors.imagenProductoNuevo){ %> 
+                        <div class='text-danger'><%= errors.imagenProductoNuevo.msg %> </div>
+                        <% } %> 
                 </div><br><br>
                 <div>
                     <label for="categoria-producto">Categoría</label><br>
@@ -31,17 +34,6 @@
                             <option value="<%=category.name%>"> <%=category.name%></option>
 
                             <% }) %> 
-                        <!-- <option value="remera">REMERA</option>
-                        <option value="buzo">BUZO</option>
-                        <option value="pantalon">PANTALON</option>
-                        <option value="camisa">CAMISA</option>
-                        <option value="malla">MALLA</option>
-                        <option value="medias">MEDIAS</option>
-                        <option value="gorra">GORRA</option>
-                        <option value="campera">CAMPERA</option>
-                        <option value="bermuda">BERMUDA</option>
-                        <option value="sudadera">SUDADERA</option>
-                        <option value="accesorio">ACCESORIO</option> -->
                     </select>
                 </div>
                 <div>

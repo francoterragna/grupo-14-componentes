@@ -31,8 +31,6 @@ router.post('/register',uploadFile.single('img-profile'),validationsRegister ,us
 router.get('/login', guestMiddleware ,usersController.login);
 router.post('/login',usersController.processLogin);
 
-router.get('/list', usersController.list);
-
 router.get('/profile', authMiddleware ,usersController.profile);
 
 router.get('/logout' ,usersController.logout);

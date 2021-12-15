@@ -10,38 +10,40 @@ const {Op} = require('sequelize');
 const adminController = {
     agregarProducto: (req,res) => {
 
-
         db.Category.findAll()
         .then(categories => res.render('agregarProducto', {categories}))
         .catch(error => res.send(error))
     },
     
-    //Hay que mandarle el db.Category.findAll() a la vista para no hardcodear la selección de categorías
-    // y poder hacer un forEach
-    
     create:(req,res)=> {
-        // let imageName;
-        // if(req.file != undefined){
-        //     imageName = req.file.filename;
-        // }else{
-        //     imageName = 'products-default.png'
-        // }
-        // let newProduct = {
-        //     id : products[products.length - 1].id + 1,
-        //     ...req.body,
-        //     image: imageName
-        // }
-        // products.push(newProduct);
-        // fs.writeFileSync(productsFilePath,JSON.stringify(products,null, ' '));
-        // res.redirect('/administrador/agregarProducto');
-
-        db.Product.create({
-         ...req.body
-        })
-        .then(() => res.redirect('/administrador/agregarProducto'))
-        .catch(err => res.send(err))
+        let imageName = [];
+        if(req.file != undefined){
+            imageName.push(req.file.filename);
+        }else{
+            return res.render('agregarProducto', {
+                errors:{
+                    imagenProductoNuevo:{
+                        msg: 'No se seleccionó ninguna foto'
+                    }
+                }
+            })
+        }
+        // db.Product.create({
+        //  name: req.body.name,
+        //  description: req.body.description,
+        //  category: req.body.category,
+        //  discount: req.body.discount,
+        //  price: req.body.price
+        // })
+        // .then(()=>{
+        //     db.Image.create({
+        //         name: 
+        //     })
+        // })
+        
+        // .then(() => res.redirect('/administrador/agregarProducto'))
+        // .catch(err => res.send(err))
     },
-    
     
     modificarProducto: (req,res) =>{
         let id = req.params.id;
@@ -50,7 +52,6 @@ const adminController = {
     }, 
 
     enviarCambios: (req,res) =>{
-        
         let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
         let newImage;
@@ -59,8 +60,6 @@ const adminController = {
         }else{
            newImage = req.file.filename
         }
-
-
         productToEdit ={
             id: productToEdit.id,
             ...req.body,
@@ -73,11 +72,10 @@ const adminController = {
 			}
 			return producto;
 		});
-
         fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 		res.redirect('/');
-
     },
+
     delete: (req,res) => {
       let  id = req.params.id;
       let finalProducts =   products.filter(product => product.id != id)
@@ -85,9 +83,6 @@ const adminController = {
       fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
       res.redirect('/')
     }
-    
-    
-
 };
 
 module.exports = adminController;
