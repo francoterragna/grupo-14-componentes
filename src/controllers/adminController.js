@@ -10,18 +10,23 @@ const {Op} = require('sequelize');
 const adminController = {
     agregarProducto: (req,res) => {
 
-
         db.Category.findAll()
         .then(categories => res.render('agregarProducto', {categories}))
         .catch(error => res.send(error))
     },
     
     create:(req,res)=> {
-        let imageName;
+        let imageName = [];
         if(req.file != undefined){
-            imageName = req.file.filename;
+            imageName.push(req.file.filename);
         }else{
-            imageName = 'products-default.png'
+            return res.render('agregarProducto', {
+                errors:{
+                    imagenProductoNuevo:{
+                        msg: 'No se seleccionó ninguna foto'
+                    }
+                }
+            })
         }
         // db.Product.create({
         //  name: req.body.name,

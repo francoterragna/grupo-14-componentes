@@ -41,9 +41,12 @@ module.exports = (sequelize, dataTypes) => {
                 through: 'ventas_users',
                 timestamps: false
             })
+        Product.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'category_id',
+            timestamps: false
+        })
     }
    
-    
-
     return Product;
 } 
