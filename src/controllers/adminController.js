@@ -93,27 +93,28 @@ const adminController = {
     },
 
     delete: (req,res) => {
-        let idProducto = db.Image.product_id
+        let idProducto = db.Image.product_id;
+      
         db.Product.destroy(
             {
                 where: {id: req.params.id}, force: true
             })
-            .then(()=> {
-                if(idProducto === req.params.id){
-                db.Image.destroy({
-                    where: {product_id: req.params.id  }, force: true
+            .then(productoBorrado => {
+                db.Image.destroy(
+                    {
+                    where: {id: productoBorrado.id  }, force: true
                 })
-            }
-            })
+            }       
+            )
             .then(() => {return res.redirect('/')})
             .catch(err => res.send(err))
-        
+        }
     //   let  id = req.params.id;
     //   let finalProducts =   products.filter(product => product.id != id)
 
     //   fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
     //   res.redirect('/')
     }
-};
+
 
 module.exports = adminController;
