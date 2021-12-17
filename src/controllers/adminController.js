@@ -47,9 +47,24 @@ const adminController = {
     },
     
     modificarProducto: (req,res) =>{
-        let id = req.params.id;
-		let productToEdit = products.find(product => product.id == id); 
-        res.render('modificarProducto', {productToEdit})
+        db.Product.findByPk(req.params.id)
+        .then(productToEdit => {
+            db.Category.findAll()
+            .then( categories => {
+                db.Size.findAll()
+                .then(sizes => {
+                    db.Image.findAll()
+                    .then(image =>{ res.render('modificarProducto', {productToEdit,categories, sizes,image})})
+                   
+            })}
+            )
+           
+        } )
+        .catch(error => res.send(error))
+
+        // let id = req.params.id;
+		// let productToEdit = products.find(product => product.id == id); 
+        // res.render('modificarProducto', {productToEdit})
     }, 
 
     enviarCambios: (req,res) =>{
@@ -78,11 +93,26 @@ const adminController = {
     },
 
     delete: (req,res) => {
-      let  id = req.params.id;
-      let finalProducts =   products.filter(product => product.id != id)
+        let idProducto = db.Image.product_id
+        db.Product.destroy(
+            {
+                where: {id: req.params.id}, force: true
+            })
+            .then(()=> {
+                if(idProducto === req.params.id){
+                db.Image.destroy({
+                    where: {product_id: req.params.id  }, force: true
+                })
+            }
+            })
+            .then(() => {return res.redirect('/')})
+            .catch(err => res.send(err))
+        
+    //   let  id = req.params.id;
+    //   let finalProducts =   products.filter(product => product.id != id)
 
-      fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
-      res.redirect('/')
+    //   fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
+    //   res.redirect('/')
     }
 };
 

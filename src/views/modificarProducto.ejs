@@ -13,7 +13,12 @@
   <main class="main-modificar">
      <div class="modificar-contain">
     <div class="detalle-producto-edit">
-        <img src='/img/products/<%=productToEdit.image%>'  alt=<%= productToEdit.description %>  class="imagen-producto">
+       <% image.forEach(img => { %>
+        <% if (img.product_id === productToEdit.id) { %>
+            
+            <img src='/img/products/<%=img.name%>'  alt=<%= productToEdit.description %>  class="imagen-producto">
+        <% } %>
+       <% }) %>
         
 
         <form action="/administrador/modificarProducto/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -33,32 +38,28 @@
             <div>
                 <label for="categoria-producto">Categoría</label><br>
                 <select name="category" id="categoria-producto" class="ingresar-texto" >
-                    <option value="remera" <%= productToEdit.category == 'remera' ? 'selected' : null %>>REMERA</option>
-                    <option value="buzo" <%= productToEdit.category == 'buzo' ? 'selected' : null %> > BUZO</option>
-                    <option value="pantalon" <%= productToEdit.category == 'pantalon' ? 'selected' : null %>>PANTALON</option>
-                    <option value="camisa" <%= productToEdit.category == 'camisa' ? 'selected' : null %>>CAMISA</option>
-                    <option value="malla" <%= productToEdit.category == 'malla' ? 'selected' : null %>>TRAJE DE BAÑO</option>
-                    <option value="medias" <%= productToEdit.category == 'medias' ? 'selected' : null %>>MEDIAS</option>
-                    <option value="gorra" <%= productToEdit.category == 'gorra' ? 'selected' : null %>>GORRA</option>
-                    <option value="campera"<%= productToEdit.category == 'campera' ? 'selected' : null %>>CAMPERA</option>
-                    <option value="bermuda" <%= productToEdit.category == 'bermuda' ? 'selected' : null %>>BERMUDA</option>
-                    <option value="sudadera" <%= productToEdit.category == 'sudadera' ? 'selected' : null %>>SUDADERA</option>
-                    <option value="accesorio"<%= productToEdit.category == 'accesorio' ? 'selected' : null %>>ACCESORIO</option>
+                    <% categories.forEach(category => { %>
+                        
+                        <option value="<%=category.id%>">  <%=category.name%></option>
+
+                        <% }) %> 
                 </select>
             </div>
-            <label>Talles disponibles:</label><br>
-            <label for="XS">XS</label>
-            <input type="checkbox" name="size" value="XS" id="XS">
-            <label for="S">S</label>
-            <input type="checkbox" name="size" value="S" id="S">
-            <label for="M">M</label>
-            <input type="checkbox" name="size" value="M" id="M">
-            <label for="L">L</label>
-            <input type="checkbox" name="size" value="L" id="L">
-            <label for="XL">XL</label>
-            <input type="checkbox" name="size" value="XL" id="XL">
-            <label for="XXL">XXL</label>
-            <input type="checkbox" name="size" value="XXL" id="XXL"><br>
+            <div>
+                <label for="">Talle</label><br>
+                <% sizes.forEach(size => { %>
+                 <input type="checkbox" name="<%= size.name %>" id="sizes">
+                 <label for="sizes"><%= size.name %> </label>
+                <% }) %>
+                <!-- <select name="size" id="talles" class="ingresar-texto" required>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select> -->
+            </div><br>
             <div>
                 <label for="descuento">Descuento</label><br>
                 <input type="number" name="discount" class="ingresar-texto" placeholder= '<%=productToEdit.discount%>%'  >
