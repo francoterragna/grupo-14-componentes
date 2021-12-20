@@ -32,8 +32,8 @@
                 </textarea>
             </div>
             <div>
-                <label for="insertar-imagen" class="label-insertar-img">Insertar imagen</label> <br> <br>
-                <input type="file" name="imagenProductoModificado"  src="imagenProductoModificado" alt="img-producto-nuevo" class='file-select'>
+                <label for="insertar-imagen" class="label-insertar-img">Insertar imágenes</label> <br> <br>
+                <input type="file" name="imagenProductoModificado"  src="imagenProductoModificado" alt="img-producto-nuevo" class='file-select' multiple>
             </div><br><br>
             <div>
                 <label for="categoria-producto">Categoría</label><br>
@@ -51,22 +51,14 @@
                  <input type="checkbox" name="<%= size.name %>" id="sizes">
                  <label for="sizes"><%= size.name %> </label>
                 <% }) %>
-                <!-- <select name="size" id="talles" class="ingresar-texto" required>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select> -->
             </div><br>
             <div>
                 <label for="descuento">Descuento</label><br>
-                <input type="number" name="discount" class="ingresar-texto" placeholder= '<%=productToEdit.discount%>%'  >
+                <input type="number" name="discount" class="ingresar-texto" value=<%=productToEdit.discount%>  >%
             </div>
             <div>
                 <label for="precio">Precio</label><br>
-                <span>$  </span><input type="number" name="price" id="precio-producto" placeholder='<%= productToEdit.price %> ' class="ingresar-texto" required>
+                <span>$  </span><input type="number" name="price" id="precio-producto" value= <%=productToEdit.price%>  class="ingresar-texto" required>
             </div>
             <button type="submit" class="modificar-button">
                 GUARDAR CAMBIOS<i class="far fa-check-square"></i>

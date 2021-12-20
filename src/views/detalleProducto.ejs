@@ -19,12 +19,9 @@
             <h2>$<%= product.price %> </h2><br>
             <h3 class= "titulo-talles">Talles</h3>
             <div class="caracteristicas-producto">
-                <p>XS</p>
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
-                <p>XXL</p>
+                <% sizes.forEach(size => { %>
+                <p><%= size.name %> </p>
+                <% }) %>
             </div>
             <div class= "contenedor-garantia-stock">
                 <p><i class="fas fa-check iconos-producto"></i>Stock disponible</p>

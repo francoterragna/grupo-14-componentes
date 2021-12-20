@@ -29,7 +29,6 @@ const adminController = {
         })
         .then((productoCreado)=>{
             let imageName;
-            console.log(req.files);
             if(req.files != undefined){
                 imageName = req.files;
             }
@@ -54,66 +53,87 @@ const adminController = {
                 db.Size.findAll()
                 .then(sizes => {
                     db.Image.findAll()
-                    .then(image =>{ res.render('modificarProducto', {productToEdit,categories, sizes,image})})
-                   
+                    .then(image =>{ res.render('modificarProducto', {productToEdit,categories,sizes,image})})
             })}
             )
            
         } )
         .catch(error => res.send(error))
-
-        // let id = req.params.id;
-		// let productToEdit = products.find(product => product.id == id); 
-        // res.render('modificarProducto', {productToEdit})
     }, 
 
     enviarCambios: (req,res) =>{
         let id = req.params.id;
-		let productToEdit = products.find(product => product.id == id);
-        let newImage;
-        if(req.file == undefined){
-            newImage = productToEdit.image
-        }else{
-           newImage = req.file.filename
-        }
-        productToEdit ={
-            id: productToEdit.id,
-            ...req.body,
-            image : newImage
-        };
+        db.Product.update({
+            name: req.body.name,
+            description: req.body.description,
+            discount: req.body.discount,
+            category_id: req.body.category, 
+            price: req.body.price,
+            stock: req.body.stock
+        },{
+        where: {id:  id}
+        })
+        .then(producto => {
+            let archivos = req.files;
+                if(archivos.length > 0){
+                    
+                    for(let i=0; i<archivos.length; i++){
+                        db.Image.upsert({ 
+                            name: archivos[i].filename
+                        },
+                        {
+                            where: {product_id: id}
+                        })
+                        .then((imagen) => res.send({producto,imagen}))
+                    }
+                }
+        })
+            
+            .catch(() => res.send('Se ha producido un error, intente de nuevo más tarde'))
+        
+        
+		// let productToEdit = products.find(product => product.id == id);
+        // let newImage;
+        // if(req.file == undefined){
+        //     newImage = productToEdit.image
+        // }else{
+        //    newImage = req.file.filename
+        // }
+        // productToEdit ={
+        //     id: productToEdit.id,
+        //     ...req.body,
+        //     image : newImage
+        // };
 
-        let newProduct = products.map(producto => {
-			if (producto.id == productToEdit.id) {
-				return producto = {...productToEdit};
-			}
-			return producto;
-		});
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-		res.redirect('/');
+        // let newProduct = products.map(producto => {
+		// 	if (producto.id == productToEdit.id) {
+		// 		return producto = {...productToEdit};
+		// 	}
+		// 	return producto;
+		// });
+        // fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
+		// res.redirect('/');
     },
 
     delete: (req,res) => {
-        let idProducto = db.Image.product_id;
-      
-        db.Product.destroy(
+
+        db.Image.destroy(
             {
-                where: {id: req.params.id}, force: true
+                where: {product_id: req.params.id},
+                force: true
+            }
+        )
+        .then(() => {
+            db.Product.destroy(
+            {
+                where: {id: req.params.id},
+                force: true
             })
-            .then(productoBorrado => {
-                db.Image.destroy(
-                    {
-                    where: {id: productoBorrado.id  }, force: true
-                })
             }       
             )
-            .then(() => {return res.redirect('/')})
+            .then(() => {return res.send('Se eliminó el producto')})
             .catch(err => res.send(err))
         }
-    //   let  id = req.params.id;
-    //   let finalProducts =   products.filter(product => product.id != id)
-
-    //   fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '))
-    //   res.redirect('/')
     }
 
 

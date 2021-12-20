@@ -10,11 +10,14 @@ const productosController = {
     detalle: (req,res) =>{
         let id= req.params.id;
         db.Product.findByPk(id)
-        .then((product) =>{
+        .then(product =>{
             db.Image.findAll({
                 where: {product_id: id}
             })
-            .then(img => res.render('detalleProducto', {product, img}))
+            .then(img =>{
+                db.Size.findAll()
+                .then(sizes => res.render('detalleProducto', {product, img, sizes}))
+            })
         })
         .catch(err => res.send(err))
     },
