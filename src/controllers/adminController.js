@@ -73,23 +73,38 @@ const adminController = {
         },{
         where: {id:  id}
         })
-        .then(producto => {
-            let archivos = req.files;
-                if(archivos.length > 0){
-                    
-                    for(let i=0; i<archivos.length; i++){
-                        db.Image.upsert({ 
-                            name: archivos[i].filename
+        .then(() => {
+            let archivos = req.files.imagenProductoModificado;
+            let archivos2 = req.files.imagenProductoEditado;
+                if(archivos2.length === 1){
+                     db.Image.update({ 
+                            name: archivos[0].filename
                         },
                         {
                             where: {product_id: id}
                         })
-                        .then((imagen) => res.send({producto,imagen}))
+                        .then(() => res.redirect('/'))
+                    }else if(archivos.length > 1 && archivos.length < 3){
+                        archivos.forEach(image => {
+                            db.Image.create(
+                                {
+                                    name: image.filename,
+                                    product_id : id
+                                }
+                            )  
+                        })
+                        .then(()=> res.send('mas de una menos de 3'))
+                       
                     }
-                }
+                    else if(archivos.length > 3){
+                        res.send('Sólo puedes mandar 3 fotos')
+                    }
+                    else{
+                        res.redirect('/')
+                    }
+                
         })
-            
-            .catch(() => res.send('Se ha producido un error, intente de nuevo más tarde'))
+        .catch(() => res.send('Se ha producido un error, intente de nuevo más tarde'))
         
         
 		// let productToEdit = products.find(product => product.id == id);
