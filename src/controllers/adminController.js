@@ -74,16 +74,16 @@ const adminController = {
         where: {id:  id}
         })
         .then(() => {
-            let archivos = req.files.imagenProductoModificado;
-            let archivos2 = req.files.imagenProductoEditado;
-                if(archivos2.length === 1){
+            let archivos = req.files;
+            console.log(archivos)
+                if(archivos.length === 1){
                      db.Image.update({ 
                             name: archivos[0].filename
                         },
                         {
                             where: {product_id: id}
                         })
-                        .then(() => res.redirect('/'))
+                        .then(() => res.send('actualizaste'))
                     }else if(archivos.length > 1 && archivos.length < 3){
                         archivos.forEach(image => {
                             db.Image.create(
