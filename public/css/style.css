@@ -1270,6 +1270,22 @@ outline: #ccc;
     margin: 25px auto;
     display: block;
 }
+.editar-perfil{
+    text-align: right;
+    margin-right: 2%;
+}
+.h4-contraseña{
+    margin: 20px;
+}
+.act-button{
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #4770ad;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 33%;
+}
 
 @media (min-width:750px){
 

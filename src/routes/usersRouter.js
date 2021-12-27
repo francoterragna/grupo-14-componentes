@@ -33,6 +33,9 @@ router.post('/login',usersController.processLogin);
 
 router.get('/profile', authMiddleware ,usersController.profile);
 
+router.get('/editarPerfil/:id', authMiddleware, usersController.editarPerfil);
+router.put('/editarPerfil/:id',usersController.actualizarUsuario);
+
 router.get('/logout' ,usersController.logout);
 
 module.exports = router;

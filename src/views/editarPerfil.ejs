@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <title>Perfil</title>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        <h3>Editar Perfil</h3>
+        <hr>
+            <div class='div-profile'>
+                <form action="/usuarios/editarPerfil/?_method=PUT">
+                        <div class="form-nombre">
+
+                            <label for="">Editar Nombre de usuario </label><br>
+                            <input class="ingresar-texto" type="text" name="firstName" value="<%= user.first_name %> ">
+                         </div>
+                         <div class="form-nombre">
+
+                            <label >Editar Apellido</label><br>
+                            <input class="ingresar-texto" type="text" name="lastName" value="<%= user.last_name %>">
+                        </div>
+                    <label for="imgProfile">Editar Foto de Perfil</label><br>
+                    <input  type="file" name="imgProfile" id="" value="<%= user.img %>"><br>
+                    <div class="form-contraseña">
+                        <h4 class="h4-contraseña">Cambiar Contraseña</h4>
+                        <label for="">Contraseña anterior:</label><br>
+                        <input class="ingresar-texto" type="password" name="confirmPassword">
+                        <div  class="form-confirm-contraseña">
+                            <label for="">Contraseña Nueva:</label><br>
+                            <input class="ingresar-texto" type="password" name="newPassword">
+
+                        </div>
+                    </div>
+                    <button type="submit" class="act-button">ACTUALIZAR</button>
+                </form>
+            </div>
+
+      
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+    <script type="text/javascript" src="../jquey/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const {Op} = require('sequelize');
+const req = require('express/lib/request');
 
 
 const usersController = {
@@ -102,7 +103,7 @@ const usersController = {
     
     })
     .catch(errors => res.send(errors))
-       
+    
     },
 
     profile: (req,res) => {
@@ -110,10 +111,45 @@ const usersController = {
             user: req.session.userLogged
         })
     },
+    editarPerfil: (req,res) => {
+        db.Users.findByPk(req.params.id)
+        .then(() => {
+          res.render('editarPerfil',{
+              user:req.session.userLogged
+          })
+           
+        } )
+        .catch(error => res.send(error))
+    },
+    actualizarUsuario: (req,res) => {
+        let imageName;
+        if (req.file != undefined){
+                imageName = req.file.filename;
+        }
+        else{
+                imageName = 'img-default.jpg';
+            };
+        let passwordOk;  
+        if(bcryptjs.hash(req.body.confirmPassword, User.password)){
+        passwordOk = req.body.newPassword
+        }
+        db.User.update({
+            first_name: req.body.firstName,
+            last_name: req.body.lastName,
+            img: imageName,
+            password: bcryptjs.hashSync(passwordOk,10)
+           },{
+                where:{
+
+                }
+           })
+           .then(res.redirect('/usuarios/profile'))
+    },
     logout: (req,res)=>{
         res.clearCookie('userEmail');
         req.session.destroy();  
         return res.redirect('/');
+
     }
 }
 
