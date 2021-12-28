@@ -123,7 +123,6 @@ const usersController = {
         .catch(error => res.send(error))
     },
     actualizarUsuario: (req,res) => {
-        let imageName= 'hola';
         let id = req.params.id;
         if (req.file != undefined){
                 imageName = req.file.filename;
