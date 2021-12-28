@@ -34,7 +34,7 @@ router.post('/login',usersController.processLogin);
 router.get('/profile', authMiddleware ,usersController.profile);
 
 router.get('/editarPerfil/:id', authMiddleware, usersController.editarPerfil);
-router.put('/editarPerfil/:id',usersController.actualizarUsuario);
+router.put('/editarPerfil/:id',uploadFile.single('img-profile') ,usersController.actualizarUsuario);
 
 router.get('/logout' ,usersController.logout);
 

@@ -10,3 +10,7 @@ Integrantes:
 https://www.luxo.com
 
 Link del trello: https://trello.com/b/gVTXecut/proyecto-integrador-componentes 
+
+PARA QUE EL PROYECTO FUNCIONE:
+1- npm i
+2- npm start

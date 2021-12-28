@@ -112,7 +112,8 @@ const usersController = {
         })
     },
     editarPerfil: (req,res) => {
-        db.Users.findByPk(req.params.id)
+        let id = req.params.id;
+        db.User.findByPk(id)
         .then(() => {
           res.render('editarPerfil',{
               user:req.session.userLogged
@@ -122,28 +123,33 @@ const usersController = {
         .catch(error => res.send(error))
     },
     actualizarUsuario: (req,res) => {
-        let imageName;
+        let imageName= 'hola';
+        let id = req.params.id;
         if (req.file != undefined){
                 imageName = req.file.filename;
         }
         else{
                 imageName = 'img-default.jpg';
             };
-        let passwordOk;  
-        if(bcryptjs.hash(req.body.confirmPassword, User.password)){
-        passwordOk = req.body.newPassword
-        }
-        db.User.update({
-            first_name: req.body.firstName,
-            last_name: req.body.lastName,
-            img: imageName,
-            password: bcryptjs.hashSync(passwordOk,10)
-           },{
-                where:{
-
+            db.User.findByPk(id)
+            .then(user => {
+                let passwordOk = bcryptjs.compareSync(req.body.confirmPassword, user.password);
+                if(passwordOk){
+                var newPassword = req.body.newPassword
                 }
-           })
-           .then(res.redirect('/usuarios/profile'))
+                db.User.update({
+                    first_name: req.body.firstName,
+                    last_name: req.body.lastName,
+                    img: imageName,
+                    password: bcryptjs.hashSync(newPassword,10)
+                   },{
+                        where:{
+                            id: req.params.id
+                        }
+                   })
+                   .then(res.redirect('/usuarios/profile'))
+                   .catch(err => res.send('Ocurrió un error'))
+            })
     },
     logout: (req,res)=>{
         res.clearCookie('userEmail');

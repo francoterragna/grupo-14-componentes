@@ -9,10 +9,10 @@
         <h3>Editar Perfil</h3>
         <hr>
             <div class='div-profile'>
-                <form action="/usuarios/editarPerfil/?_method=PUT">
+                <form action="/usuarios/editarPerfil/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class="form-nombre">
 
-                            <label for="">Editar Nombre de usuario </label><br>
+                            <label for="">Editar Nombre de usuario</label><br>
                             <input class="ingresar-texto" type="text" name="firstName" value="<%= user.first_name %> ">
                          </div>
                          <div class="form-nombre">
@@ -21,7 +21,7 @@
                             <input class="ingresar-texto" type="text" name="lastName" value="<%= user.last_name %>">
                         </div>
                     <label for="imgProfile">Editar Foto de Perfil</label><br>
-                    <input  type="file" name="imgProfile" id="" value="<%= user.img %>"><br>
+                    <input  type="file" name="img-profile" id="" value="<%= user.img %>"><br>
                     <div class="form-contraseña">
                         <h4 class="h4-contraseña">Cambiar Contraseña</h4>
                         <label for="">Contraseña anterior:</label><br>
@@ -34,9 +34,10 @@
                     </div>
                     <button type="submit" class="act-button">ACTUALIZAR</button>
                 </form>
+                <form action="/usuarios/eliminarPerfil/<%= user.id %>?_method=DELETE" method="POST">
+                
+                </form>
             </div>
-
-      
     </main>
     <%- include('./partials/footer.ejs') %> 
     <script type="text/javascript" src="../jquey/jquery-3.6.0.min.js"></script>
