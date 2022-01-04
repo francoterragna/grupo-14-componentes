@@ -638,7 +638,9 @@ label{
     cursor: pointer;
 }
 
-
+.input-image{
+    margin:20px
+}
 
 
 /* -----------------------------------------

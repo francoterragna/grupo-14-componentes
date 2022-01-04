@@ -13,11 +13,17 @@
             <form action="/administrador/agregarProducto" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="nuevo-producto">Nombre del producto</label> <br>
-                    <input type="text" class="ingresar-texto" name="name" required>
+                    <input type="text" class="ingresar-texto" name="name" >
+                    <% if (locals.errors && errors.name) { %>
+                        <div class="text-danger"> <%= errors.name.msg %>   </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="descripcion-producto">Descripción del producto</label><br>
-                    <textarea name="description" id="" cols="43" rows="5" class="descripcion-producto" required></textarea>
+                    <textarea name="description" id="" cols="43" rows="5" class="descripcion-producto" ></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="text-danger"> <%= errors.description.msg %>   </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="insertar-imagen" class="label-insertar-img">Insertar imágenes</label> <br> <br>
@@ -58,11 +64,11 @@
                 </div>
                 <div>
                     <label for="precio">Precio</label><br>
-                    <span>$  </span><input type="number" name="price" id="precio-producto" class="ingresar-texto" required>
+                    <span>$  </span><input type="number" name="price" id="precio-producto" class="ingresar-texto" >
                 </div>
                 <div>
                     <label for="stock">Stock</label><br>
-                    <input type="number" name="stock" id="stock-producto" class="ingresar-texto" required>
+                    <input type="number" name="stock" id="stock-producto" class="ingresar-texto" >
                 </div>
                 <input type="submit" value="Agregar" class="agregar-submit">
             </form>

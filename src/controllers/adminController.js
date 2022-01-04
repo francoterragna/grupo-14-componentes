@@ -106,28 +106,6 @@ const adminController = {
         })
         .catch(() => res.send('Se ha producido un error, intente de nuevo más tarde'))
         
-        
-		// let productToEdit = products.find(product => product.id == id);
-        // let newImage;
-        // if(req.file == undefined){
-        //     newImage = productToEdit.image
-        // }else{
-        //    newImage = req.file.filename
-        // }
-        // productToEdit ={
-        //     id: productToEdit.id,
-        //     ...req.body,
-        //     image : newImage
-        // };
-
-        // let newProduct = products.map(producto => {
-		// 	if (producto.id == productToEdit.id) {
-		// 		return producto = {...productToEdit};
-		// 	}
-		// 	return producto;
-		// });
-        // fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-		// res.redirect('/');
     },
 
     delete: (req,res) => {
@@ -146,7 +124,7 @@ const adminController = {
             })
             }       
             )
-            .then(() => {return res.send('Se eliminó el producto')})
+            .then(() => {return res.redirect('/')})
             .catch(err => res.send(err))
         }
     }

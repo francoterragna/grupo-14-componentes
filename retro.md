@@ -85,3 +85,5 @@ SPRINT 6:
 4- No dejar pasar tantos días para ponernos a adelantar el sprint.
 
 5- Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
+
+

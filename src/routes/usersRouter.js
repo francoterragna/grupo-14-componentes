@@ -25,7 +25,7 @@ const uploadFile = multer({ storage });
 const usersController = require ('../controllers/usersControllers');
 
 router.get('/register', guestMiddleware ,usersController.showRegister);
-router.post('/register',uploadFile.single('img-profile'),validationsRegister ,usersController.saveRegister)
+router.post('/register',uploadFile.single('imgProfile'),validationsRegister ,usersController.saveRegister)
 
 
 router.get('/login', guestMiddleware ,usersController.login);
@@ -34,7 +34,7 @@ router.post('/login',usersController.processLogin);
 router.get('/profile', authMiddleware ,usersController.profile);
 
 router.get('/editarPerfil/:id', authMiddleware, usersController.editarPerfil);
-router.put('/editarPerfil/:id',uploadFile.single('img-profile') ,usersController.actualizarUsuario);
+router.put('/editarPerfil/:id',uploadFile.single('imgProfile') ,usersController.actualizarUsuario);
 
 router.get('/logout' ,usersController.logout);
 

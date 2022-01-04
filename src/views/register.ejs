@@ -38,7 +38,10 @@
                 </div>
                 <div>
                     <label>Elegí tu foto de perfil</label><br><br>
-                    <input type="file" name="imgProfile" id="">
+                    <input  class='input-image' type="file" name="imgProfile" id=""><br>
+                    <% if (locals.errors && errors.imgProfile) { %>
+                        <div class="text-danger"> <%= errors.imgProfile.msg %>   </div>
+                    <% } %>
                 </div><br>
                 <select name="category" class='tipeOfUser' id="">
                     <option value="client" selected>Cliente</option>
