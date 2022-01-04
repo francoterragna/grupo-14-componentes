@@ -2,6 +2,7 @@ const fs = require ('fs');
 const path = require ('path');
 const productsFilePath = path.join(__dirname, '../../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { validationResult } = require('express-validator');
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -19,6 +20,8 @@ const adminController = {
     },
     
     create:(req,res)=> {
+        const resultValidation = validationResult(req);
+
         db.Product.create({
          name: req.body.name,
          description: req.body.description,
@@ -40,7 +43,14 @@ const adminController = {
                 })
             });
         })
-        
+
+        .then(() =>{
+        if(resultValidation.errors.length > 0 ){
+            db.Category.findAll()
+            .then( res.render('agregarProducto', {
+                errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
+                oldData: req.body // PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
+            }))}})
         .then(() => res.redirect('/administrador/agregarProducto'))
         .catch(err => res.send(err))
     },
