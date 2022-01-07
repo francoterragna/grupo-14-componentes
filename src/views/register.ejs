@@ -13,10 +13,12 @@
             
                 <div class="form-nombre">
                     <label>Nombre</label><br>
-                    <input class="ingresar-texto" type="text" name="firstName" 
+                    <input class="ingresar-texto input_name" type="text" name="firstName" 
                     value="<%= locals.oldData ? oldData.firstName : null %>" >
                     <% if (locals.errors && errors.firstName) { %>
-                        <div class="text-danger"><%= errors.firstName.msg %></div>
+                        <div class="text-danger"><%= errors.firstName.msg %>
+                        <ul></ul>
+                        </div>
                     <% } %>
                 </div>
                 
@@ -38,7 +40,7 @@
                 </div>
                 <div>
                     <label>Elegí tu foto de perfil</label><br><br>
-                    <input  class='input-image' type="file" name="imgProfile" id=""><br>
+                    <input  class='input-image' type="file" name="imgProfile" id="input-image"><br>
                     <% if (locals.errors && errors.imgProfile) { %>
                         <div class="text-danger"> <%= errors.imgProfile.msg %>   </div>
                     <% } %>
@@ -50,14 +52,20 @@
                     <label>Creá tu constraseña</label><br>
                     <input class="ingresar-texto" type="password" name="password">
                     <% if (locals.errors && errors.password) { %>
-                        <div class="text-danger"> <%= errors.password.msg %>   </div>
+                        <div class="text-danger"> <%= errors.password.msg %> 
+                        <ul>
+
+                        </ul>  
+                    </div>
                     <% } %>
                 </div>
                 <div class="form-confirm-contraseña">
                     <label>Confirmá tu contraseña</label><br>
                     <input class="ingresar-texto" type="password" name="confirmPassword" >
                     <% if (locals.errors && errors.confirmPassword) { %>
-                        <div class="text-danger"> <%= errors.confirmPassword.msg %>   </div>
+                        <div class="text-danger"> <%= errors.confirmPassword.msg %>
+                        <ul></ul>
+                        </div>
                     <% } %>
                 </div>
 
@@ -67,6 +75,7 @@
         </div>
     </main>
     <%- include('./partials/footer.ejs') %>
+    <script  type="text/javascript" src="/js/frontRegister.js"></script>
     <script type="text/javascript" src="../jquey/jquery-3.6.0.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
