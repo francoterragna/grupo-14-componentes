@@ -9,22 +9,22 @@
         <h2 class="form-titulo">Completá tus datos</h2>
        
         <div class="container-form">
-            <form action="/usuarios/register" method="POST" class="form-control" enctype="multipart/form-data">
-            
+            <form action="/usuarios/register" method="POST" class="form-control" enctype="multipart/form-data"><br>
+                <ul class='error-name text-danger'></ul>
                 <div class="form-nombre">
                     <label>Nombre</label><br>
                     <input class="ingresar-texto input_name" type="text" name="firstName" 
                     value="<%= locals.oldData ? oldData.firstName : null %>" >
                     <% if (locals.errors && errors.firstName) { %>
                         <div class="text-danger"><%= errors.firstName.msg %>
-                        <ul></ul>
+                        
                         </div>
                     <% } %>
                 </div>
                 
                 <div class="form-nombre">
                     <label>Apellido</label> <br>
-                    <input class="ingresar-texto" type="text" name="lastName" 
+                    <input class="ingresar-texto input_lastName" type="text" name="lastName" 
                     value="<%= locals.oldData ? oldData.lastName : null %>" >
                     <% if (locals.errors && errors.lastName) { %>
                         <div class="text-danger"> <%= errors.lastName.msg %>   </div>
