@@ -37,8 +37,8 @@ window.addEventListener('load',function(){
          if(errores.length > 0) {
              e.preventDefault();
              
-             alert('Hay errores en el formulario');
-             console.log(errores)
+            //  alert('Hay errores en el formulario');
+            //  console.log(errores)
              errores.map(error => {ulErrores.innerHTML += '<li>' + error + '</li>'})
             }
      })

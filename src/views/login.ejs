@@ -19,14 +19,18 @@
                 <br>
                  
                 <label for="usuario" class="label-login">Email</label><br>
-                <input class="input-login" type="email" name="email" placeholder="Email"><br>
+                <input class="input-login email-login" type="email" name="email" placeholder="Email">
+                <ul  style ='padding: 0px' class='error-email text-danger'></ul>
+                <br>
                 <% if(locals.errors && errors.email){ %>
                     <div class="text-danger">
                         <%= errors.email.msg %> 
                     </div> 
                     <% } %> 
                 <label for="contraseña" class="label-login">Contraseña</label><br>
-                <input class="input-login" type="password" name="password" placeholder="Contraseña"><br>
+                <input class="input-login pass-login" type="password" name="password" placeholder="Contraseña">
+                <ul  style ='padding: 0px' class='error-pass text-danger'></ul>
+                <br>
             
                 <input type="checkbox" name="recordarme" id="recordarme">
                 <label for="recordarme">Recordar mi usuario</label><br><br>
@@ -42,5 +46,6 @@
     <%- include('./partials/footer.ejs') %>
     <script type="text/javascript" src="../jquey/jquery-3.6.0.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/frontLogin.js"></script>
 </body>
 </html>
