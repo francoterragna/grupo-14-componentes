@@ -9,20 +9,48 @@ let errorPass = document.querySelector('.error-pass');
 let errorEmail = document.querySelector('.error-email');
 
 
-email.addEventListener('blur', function(){
+// email.addEventListener('blur', function(){
     
- errorEmail.innerHTML = 'Ingresa tu Email';
+//  errorEmail.innerHTML = 'Ingresa tu Email';
       
-      })
-// email.addEventListener('change',function(){
-//         errorEmail.innerHTML = ''
-//     })
+//       })
+email.addEventListener('keyup',function(){
+        if(email.value.length >= 1){
+        email.style.borderColor = 'green'
+        errorEmail.innerHTML = '';
+        }
+        else{
+                email.style.borderColor = 'red'
+                errorEmail.innerHTML = 'Ingresa tu Email';
+        }
+    })
 
-password.addEventListener('blur', function(){
+//     password.addEventListener('blur', function(){
     
-        errorPass.innerHTML = 'Ingresa tu Contraseña';
-})
-  
+//         errorEmail.innerHTML = 'Ingresa tu Contraseña';
+             
+//              })
+       password.addEventListener('keyup',function(){
+               if(password.value.length >= 1){
+               password.style.borderColor = 'green'
+               errorPass.innerHTML = '';
+               }
+               else{
+                       password.style.borderColor = 'red'
+                       errorPass.innerHTML = 'Ingresa tu Contraseña';
+               }
+           })
+
+// password.addEventListener('blur', function(){
+    
+//         errorPass.innerHTML = 'Ingresa tu Contraseña';
+      
+// })
+//   password.addEventListener('change',function(){
+//                 errorPass.innerHTML = '';
+           
+          
+//   })
     
 })
 

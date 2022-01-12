@@ -58,13 +58,13 @@ const usersController = {
     },
 
     saveRegister: (req,res) => {
-        const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0 ){
-            return res.render ('register', {
-                errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
-                oldData: req.body // PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
-            })
-        }
+        // const resultValidation = validationResult(req);
+        // if(resultValidation.errors.length > 0 ){
+        //     return res.render ('register', {
+        //         errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
+        //         oldData: req.body // PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
+        //     })
+        // }
         db.User.findOne({
             where:{
                 email: req.body.email

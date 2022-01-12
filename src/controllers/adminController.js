@@ -21,7 +21,21 @@ const adminController = {
     
     create:(req,res)=> {
         const resultValidation = validationResult(req);
-
+        let categories = [1,2,3]
+        let sizes = [1,2,3]
+        db.Category.findAll()
+        .then(categories =>{
+            db.Size.findAll()
+            .then(sizes => {if(resultValidation.errors.length > 0 ){
+                return res.render('agregarProducto', {
+                    errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
+                    oldData: req.body,// PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
+                    categories:categories,
+                    sizes:sizes
+    
+                })} }) 
+        })
+       
         db.Product.create({
          name: req.body.name,
          description: req.body.description,
@@ -43,14 +57,8 @@ const adminController = {
                 })
             });
         })
-
-        .then(() =>{
-        if(resultValidation.errors.length > 0 ){
-            db.Category.findAll()
-            .then( res.render('agregarProducto', {
-                errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
-                oldData: req.body // PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
-            }))}})
+    
+       
         .then(() => res.redirect('/administrador/agregarProducto'))
         .catch(err => res.send(err))
     },
