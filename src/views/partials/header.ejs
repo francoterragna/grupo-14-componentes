@@ -27,6 +27,14 @@
         <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Administrar ></a>
       </p>
           <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <% if (locals.isLogged && locals.userLogged.category === 'admin') { %>
+             
+              <div class="agregarProducto">
+                <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
+              </div>
+              <% } else {%>
+                <div></div>
+              <% } %> 
               <% if (!locals.isLogged) { %>
                
                 <div class="agregarProducto">
@@ -40,14 +48,6 @@
                 <a href="/usuarios/logout">CERRAR SESIÓN</a>
               </div>
               <% } %> 
-              <% if (locals.isLogged && locals.userLogged.category === 'admin') { %>
-               
-                <div class="agregarProducto">
-                  <a href="/administrador/agregarProducto">AGREGAR PRODUCTO</a>
-                </div>
-                <% } else {%>
-                  <div></div>
-                <% } %> 
           </div>
       <p>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Productos ></button>
