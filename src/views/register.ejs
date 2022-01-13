@@ -42,6 +42,7 @@
                 <div>
                     <label>Elegí tu foto de perfil</label><br><br>
                     <input  class='input-image' type="file" name="imgProfile" id="input-image"><br>
+                    <ul style ='padding: 0px' class='error-apellido text-danger'></ul>
                     <% if (locals.errors && errors.imgProfile) { %>
                         <div class="text-danger"> <%= errors.imgProfile.msg %>   </div>
                     <% } %>

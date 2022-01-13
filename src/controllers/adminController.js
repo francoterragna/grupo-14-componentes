@@ -21,48 +21,46 @@ const adminController = {
     
     create:(req,res)=> {
         const resultValidation = validationResult(req);
-        let categories = [1,2,3]
-        let sizes = [1,2,3]
         db.Category.findAll()
         .then(categories =>{
             db.Size.findAll()
-            .then(sizes => {if(resultValidation.errors.length > 0 ){
-                return res.render('agregarProducto', {
+            .then(sizes => {
+                if(resultValidation.errors.length > 0 ){
+                res.render('agregarProducto', {
                     errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
                     oldData: req.body,// PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
                     categories:categories,
                     sizes:sizes
-    
-                })} }) 
-        })
-       
-        db.Product.create({
-         name: req.body.name,
-         description: req.body.description,
-         discount: req.body.discount,
-         category_id: req.body.category, 
-         price: req.body.price,
-         stock: req.body.stock
-        })
-        .then((productoCreado)=>{
-            let imageName;
-            if(req.files != undefined){
-                imageName = req.files;
-            }
-            
-            imageName.forEach(image => {
-                db.Image.create({
-                  name: image.filename,
-                  product_id: productoCreado.id 
                 })
-            });
+            }else{
+                db.Product.create({
+                 name: req.body.name,
+                 description: req.body.description,
+                 discount: req.body.discount,
+                 category_id: req.body.category, 
+                 price: req.body.price,
+                 stock: req.body.stock
+                })
+                .then((productoCreado)=>{
+                    let imageName;
+                    if(req.files != undefined){
+                        imageName = req.files;
+                    }
+                    
+                    imageName.forEach(image => {
+                        db.Image.create({
+                          name: image.filename,
+                          product_id: productoCreado.id 
+                        })
+                    });
+                })
+                .then(() => res.redirect('/administrador/agregarProducto'))
+                .catch(err => res.send(err))
+            }
+        }) 
         })
-    
        
-        .then(() => res.redirect('/administrador/agregarProducto'))
-        .catch(err => res.send(err))
     },
-    
     modificarProducto: (req,res) =>{
         db.Product.findByPk(req.params.id)
         .then(productToEdit => {

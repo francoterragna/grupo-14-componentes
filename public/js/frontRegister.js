@@ -1,5 +1,7 @@
 // Validaciones del Register 
 
+// const path = require ('path');
+
 window.addEventListener('load',function(){
 
      let formulario = document.querySelector('form');
@@ -8,7 +10,9 @@ window.addEventListener('load',function(){
      let campoEmail = document.querySelector('.input_email');
      let campoImagen = document.querySelector('.input-image');
      let campoPassword = document.querySelector('.input-password');
-     let campoConfirmPassword = document.querySelector('.confirm-password')
+     let campoConfirmPassword = document.querySelector('.confirm-password');
+
+     
 
     //EVENTOS DEL FORMULARIO
     formulario.addEventListener('submit', function(e){
@@ -34,11 +38,30 @@ window.addEventListener('load',function(){
              errores.push('El email tiene que tener un formato válido')
          }
 
+            let extensionesValidas = ['.jpg', '.jpeg', '.gif', '.png'];
+            if(campoImagen.value){
+                let contador = 0;
+                let contador2 = 0;
+            extensionesValidas.map(extension => {
+                if(campoImagen.value.includes(extension)){
+                    contador ++;
+                }
+                else{
+                    contador2 ++;
+                }
+                if(contador == 1 && contador2 == 3){
+                    console.log('todo bien')
+                }
+                else if(contador == 0 && contador2 == 4){
+                    errores.push('Las extensiones de imagen permitidas son .jpg, .jpeg, .png, .gif')
+                }
+            })
+        }
          if(errores.length > 0) {
              e.preventDefault();
              
              alert('Hay errores en el formulario');
-             console.log(errores)
+            //  console.log(errores)
              errores.map(error => {ulErrores.innerHTML += '<li>' + error + '</li>'})
             }
      })
