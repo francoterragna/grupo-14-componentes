@@ -18,6 +18,7 @@ window.addEventListener('load',function(){
     formulario.addEventListener('submit', function(e){
          let errores = [];
          let ulErrores = document.querySelector('.errores-form');
+         let tituloErrores = document.querySelector('titulo-errores');
          ulErrores.innerHTML = '';
          if(campoNombre.value == '') {
              errores.push('El campo de nombre tiene que estar completo');
@@ -38,10 +39,10 @@ window.addEventListener('load',function(){
              errores.push('El email tiene que tener un formato válido')
          }
 
-            let extensionesValidas = ['.jpg', '.jpeg', '.gif', '.png'];
-            if(campoImagen.value){
-                let contador = 0;
-                let contador2 = 0;
+        let extensionesValidas = ['.jpg', '.jpeg', '.gif', '.png'];
+        if(campoImagen.value){
+            let contador = 0;
+            let contador2 = 0;
             extensionesValidas.map(extension => {
                 if(campoImagen.value.includes(extension)){
                     contador ++;
@@ -49,42 +50,43 @@ window.addEventListener('load',function(){
                 else{
                     contador2 ++;
                 }
-                if(contador == 1 && contador2 == 3){
+                if(contador2 == 3){
                     console.log('todo bien')
                 }
-                else if(contador == 0 && contador2 == 4){
+                else if(contador2 == 4){
                     errores.push('Las extensiones de imagen permitidas son .jpg, .jpeg, .png, .gif')
                 }
             })
         }
-         if(errores.length > 0) {
-             e.preventDefault();
+        if(errores.length > 0) {
+            e.preventDefault();
              
-             alert('Hay errores en el formulario');
+            alert('Hay errores en el formulario');
             //  console.log(errores)
-             errores.map(error => {ulErrores.innerHTML += '<li>' + error + '</li>'})
-            }
-     })
+            errores.map(error => {ulErrores.innerHTML += '<li>' + error + '</li>'})
+            tituloErrores.innerHTML = 'ERRORES DEL FORMULARIO';
+        }
+    })
 
      //CAMPO DE NOMBRE
-     campoNombre.addEventListener('keyup', function(){
-         let ulErrorNombre = document.querySelector('.error-nombre')
-         if (campoNombre.value.length < 3){
-             campoNombre.style.borderColor = 'red';
-            ulErrorNombre.innerHTML = 'El nombre debe tener al menos 3 caracteres';
-         }
-         else{
-             ulErrorNombre.innerHTML = '';
-             campoNombre.style.borderColor = 'green';
-         }
+    campoNombre.addEventListener('keyup', function(){
+        let ulErrorNombre = document.querySelector('.error-nombre')
+        if (campoNombre.value.length < 3){
+            campoNombre.style.borderColor = 'red';
+            ulErrorNombre.innerHTML = '<li> El nombre debe tener al menos 3 caracteres </li>';
+        }
+        else{
+            ulErrorNombre.innerHTML = '';
+            campoNombre.style.borderColor = 'green';
+        }
      })
 
      //CAMPO DE APELLIDO
-     campoApellido.addEventListener('keyup', function(){
+    campoApellido.addEventListener('keyup', function(){
        let ulErrorApellido = document.querySelector('.error-apellido')
         if (campoApellido.value.length < 3){
             campoApellido.style.borderColor = 'red';
-           ulErrorApellido.innerHTML = 'El apellido debe tener al menos 3 caracteres';
+           ulErrorApellido.innerHTML = '<li> El apellido debe tener al menos 3 caracteres </li>';
         }
         else{
             ulErrorApellido.innerHTML = '';
@@ -97,11 +99,11 @@ window.addEventListener('load',function(){
         let ulErrorPassword = document.querySelector('.error-password')
         if (campoPassword.value.length < 8 || campoPassword.value.length >20){
             campoPassword.style.borderColor = 'red';
-           ulErrorPassword.innerHTML = 'La contraseña debe tener entre 8 y 20 caracteres';
+            ulErrorPassword.innerHTML = '<li> La contraseña debe tener entre 8 y 20 caracteres </li>';
         }
         else if(campoPassword.value == '12345678'){
             campoPassword.style.borderColor = 'red';
-           ulErrorPassword.innerHTML = 'Esforzate mas con la contraseña dale ;)';
+            ulErrorPassword.innerHTML = '<li> Esforzate mas con la contraseña dale ;) </li>';
         }
         else{
             ulErrorPassword.innerHTML = '';
@@ -114,7 +116,7 @@ window.addEventListener('load',function(){
         let ulErrorConfirmPassword = document.querySelector('.error-confirmPass')
         if (campoPassword.value != campoConfirmPassword.value){
             campoConfirmPassword.style.borderColor = 'red';
-            ulErrorConfirmPassword.innerHTML = 'Las contraseñas deben ser iguales';
+            ulErrorConfirmPassword.innerHTML = '<li> Las contraseñas deben ser iguales </li>';
         }
         else{
             ulErrorConfirmPassword.innerHTML = '';

@@ -27,7 +27,7 @@
                 </div>
                 <div>
                     <label for="insertar-imagen" class="label-insertar-img">Insertar imágenes</label> <br> <br>
-                    <input type="file" name="imagenProductoNuevo" src="imagenProductoNuevo" alt="img-producto-nuevo" class='file-select' value="<%= locals.oldData ? oldData.imagenProductoNuevo : null %>"multiple>
+                    <input type="file" name="imagenProductoNuevo" src="imagenProductoNuevo" alt="img-producto-nuevo" class='file-select' value="<%= locals.oldData ? oldData.imagenProductoNuevo : null %>" multiple>
                     <br><br>
                     <% if(locals.errors && errors.imagenProductoNuevo){ %> 
                         <div class='text-danger'><%= errors.imagenProductoNuevo.msg %> </div>
