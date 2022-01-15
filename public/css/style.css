@@ -152,8 +152,6 @@ p{
     display: none;
 }
 
-
-
 .hamburguesa:active .menu-desplegable{
     left: 35%;
     text-align: left;
@@ -255,8 +253,6 @@ a{
     padding: 8px;
     color:black;
     background-color: white;
-    /* font-family: 'Luckiest Guy', cursive; */
-    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'Zen Antique Soft', serif;
     letter-spacing: 0.2rem;
     transition: all .3s;
@@ -1282,10 +1278,6 @@ outline: #ccc;
     width: 33%;
 }
 
-.errores-form{
-    border: 1px solid blue;
-}
-
 @media (min-width:750px){
 
     .main-home{
@@ -1576,6 +1568,21 @@ outline: #ccc;
     .article-product .descuento{
         bottom: 570px
     }
+
+    .formulario-flex-1{
+        flex-grow: 2;
+    }
+
+    .formulario-flex-2{
+        flex-grow: 1;
+    }
+
+    .contenedor-formulario-flex{
+        display: flex;
+        align-items: center;
+    }
+
+
 }
 @media(min-width: 1400px){
     .foto-carrusel{

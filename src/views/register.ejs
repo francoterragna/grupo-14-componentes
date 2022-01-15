@@ -12,67 +12,81 @@
             <form action="/usuarios/register" method="POST" class="form-control" enctype="multipart/form-data"><br>
                 <p class='titulo-errores'></p>
                     <ul class='errores-form text-danger' style ='list-style:none; font-size:18px'></ul>
-                <div class="form-nombre">
-                    <label>Nombre</label><br>
-                    <input class="ingresar-texto input_name" type="text" name="firstName" 
-                    value="<%= locals.oldData ? oldData.firstName : null %>" >
-                    <ul  style ='padding: 0px' class='error-nombre text-danger'></ul>
-                    <% if (locals.errors && errors.firstName) { %>
-                        <div class="text-danger"><%= errors.firstName.msg %>
-                        </div>
-                    <% } %>
-                </div>
-                
-                <div class="form-nombre">
-                    <label>Apellido</label> <br>
-                    <input class="ingresar-texto input_lastName" type="text" name="lastName" 
-                    value="<%= locals.oldData ? oldData.lastName : null %>" >
-                    <ul  style ='padding: 0px' class='error-apellido text-danger'></ul>
-                    <% if (locals.errors && errors.lastName) { %>
-                        <div class="text-danger"> <%= errors.lastName.msg %>   </div>
-                    <% } %>
-                </div>
-                <div class="form-email">
-                    <label>Email</label><br>
-                    <input class="ingresar-texto input_email" type="text" name="email" 
-                     value="<%= locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="text-danger"> <%= errors.email.msg %>   </div>
-                    <% } %>
-                </div>
-                <div>
-                    <label>Elegí tu foto de perfil</label><br><br>
-                    <input  class='input-image' type="file" name="imgProfile" id="input-image"><br>
-                    <ul style ='padding: 0px' class='error-apellido text-danger'></ul>
-                    <% if (locals.errors && errors.imgProfile) { %>
-                        <div class="text-danger"> <%= errors.imgProfile.msg %>   </div>
-                    <% } %>
-                </div><br>
-                <select name="category" class='tipeOfUser' id="">
-                    <option value="client" selected>Cliente</option>
-                </select>
-                <div class="form-contraseña">
-                    <label>Creá tu constraseña</label><br>
-                    <input class="ingresar-texto input-password" type="password" name="password">
-                    <ul  style ='padding: 0px' class='error-password text-danger'></ul>
-                    <% if (locals.errors && errors.password) { %>
-                        <div class="text-danger"> <%= errors.password.msg %> 
-                        <ul>
+                    
+                    <div class='contenedor-formulario-flex'>
 
-                        </ul>  
+                            <div class = 'formulario-flex-1'>
+
+                                <div class="form-nombre">
+                                    <label>Nombre</label><br>
+                                    <input class="ingresar-texto input_name" type="text" name="firstName" 
+                                    value="<%= locals.oldData ? oldData.firstName : null %>" >
+                                    <ul  style ='padding: 0px' class='error-nombre text-danger'></ul>
+                                    <% if (locals.errors && errors.firstName) { %>
+                                        <div class="text-danger"><%= errors.firstName.msg %>
+                                        </div>
+                                    <% } %>
+                                </div>
+                                
+                                <div class="form-nombre">
+                                    <label>Apellido</label> <br>
+                                    <input class="ingresar-texto input_lastName" type="text" name="lastName" 
+                                    value="<%= locals.oldData ? oldData.lastName : null %>" >
+                                    <ul  style ='padding: 0px' class='error-apellido text-danger'></ul>
+                                    <% if (locals.errors && errors.lastName) { %>
+                                        <div class="text-danger"> <%= errors.lastName.msg %>   </div>
+                                    <% } %>
+                                </div>
+                                <div class="form-email">
+                                    <label>Email</label><br>
+                                    <input class="ingresar-texto input_email" type="text" name="email" 
+                                    value="<%= locals.oldData ? oldData.email : null %>">
+                                    <% if (locals.errors && errors.email) { %>
+                                        <div class="text-danger"> <%= errors.email.msg %>   </div>
+                                    <% } %>
+                                </div>
+
+                            </div>
+
+                            <div class= 'formulario-flex-2'>
+
+                                <div>
+                                    <label>Elegí tu foto de perfil</label><br><br>
+                                    <input  class='input-image' type="file" name="imgProfile" id="input-image"><br>
+                                    <ul style ='padding: 0px' class='error-apellido text-danger'></ul>
+                                    <% if (locals.errors && errors.imgProfile) { %>
+                                        <div class="text-danger"> <%= errors.imgProfile.msg %>   </div>
+                                    <% } %>
+                                </div><br>
+                                <select name="category" class='tipeOfUser' id="">
+                                    <option value="client" selected>Cliente</option>
+                                </select>
+                                <div class="form-contraseña">
+                                    <label>Creá tu constraseña</label><br>
+                                    <input class="ingresar-texto input-password" type="password" name="password">
+                                    <ul  style ='padding: 0px' class='error-password text-danger'></ul>
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="text-danger"> <%= errors.password.msg %> 
+                                        <ul>
+
+                                        </ul>  
+                                    </div>
+                                    <% } %>
+                                </div>
+                                <div class="form-confirm-contraseña">
+                                    <label>Confirmá tu contraseña</label><br>
+                                    <input class="ingresar-texto confirm-password" type="password" name="confirmPassword" >
+                                    <ul  style ='padding: 0px' class='error-confirmPass text-danger'></ul>
+                                    <% if (locals.errors && errors.confirmPassword) { %>
+                                        <div class="text-danger"> <%= errors.confirmPassword.msg %>
+                                        <ul></ul>
+                                        </div>
+                                    <% } %>
+                                </div>
+
+                            </div>
+
                     </div>
-                    <% } %>
-                </div>
-                <div class="form-confirm-contraseña">
-                    <label>Confirmá tu contraseña</label><br>
-                    <input class="ingresar-texto confirm-password" type="password" name="confirmPassword" >
-                    <ul  style ='padding: 0px' class='error-confirmPass text-danger'></ul>
-                    <% if (locals.errors && errors.confirmPassword) { %>
-                        <div class="text-danger"> <%= errors.confirmPassword.msg %>
-                        <ul></ul>
-                        </div>
-                    <% } %>
-                </div>
 
                 <button type="submit" class="boton-enviar">Enviar</button>
                 <button type="reset" class="boton-borrar">Borrar</button>

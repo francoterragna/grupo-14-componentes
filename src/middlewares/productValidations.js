@@ -15,6 +15,7 @@ const productValidations = [
          throw new Error ('Tienes que subir una imagen');
        } else {
          let fileExtension = path.extname(files[0].originalname);
+        //  console.log(fileExtension)
         if (!acceptedExtensions.includes(fileExtension)) {
             throw new Error (`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
           }
