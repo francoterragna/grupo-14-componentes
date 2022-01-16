@@ -16,7 +16,7 @@ let errorEmail = document.querySelector('.error-email');
 //       })
 email.addEventListener('keyup',function(){
         if(email.value.length >= 1){
-        email.style.borderColor = 'green'
+        email.style.borderColor = '#1ed12d'
         errorEmail.innerHTML = '';
         }
         else{
@@ -32,7 +32,7 @@ email.addEventListener('keyup',function(){
 //              })
        password.addEventListener('keyup',function(){
                if(password.value.length >= 1){
-               password.style.borderColor = 'green'
+               password.style.borderColor = '#1ed12d'
                errorPass.innerHTML = '';
                }
                else{
