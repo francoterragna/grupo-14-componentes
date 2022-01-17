@@ -86,4 +86,19 @@ SPRINT 6:
 
 5- Por el momento estamos conformes con todo lo que hacemos, no encontramos motivo para dejar de hacer ya que el proyecto se encuentra encaminado.
 
+SPRINT 7:
+
+1. Comenzar a hacer.
+2. Hacer más.
+3. Continuar haciendo.
+4. Hacer menos.
+5. Dejar de hacer.
+
+1- Ponernos al día con el Dashboard
+2- Organizarnos con más tiempo antes de cada sprint, en este caso el último.
+3- Seguir dividiendo por nombre las tareas asignadas, ya que es la mejor manera cuando no podemos hacerlo en llamada.
+4- No dejarnos estar con el tiempo.
+5- No modificar el código ajeno sin consulta.
+
+
 
