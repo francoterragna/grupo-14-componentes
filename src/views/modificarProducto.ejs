@@ -26,16 +26,25 @@
                 <label for="nuevo-producto">Nombre del producto</label> <br>
                 <input type="text" class="ingresar-texto nombre-producto" name="name" value='<%= productToEdit.name %>' required>
                 <ul style ='padding: 0px' class='error-nombre text-danger'></ul>
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger"> <%= errors.name.msg %>   </div>
+                <% } %>
             </div>
             <div>
                 <label for="descripcion-producto">Descripcion del producto</label><br>
                 <textarea name="description" id="" cols="43" rows="5" class="descripcion-producto" required><%= productToEdit.description %> 
                 </textarea>
                 <ul style ='padding: 0px' class='error-descripcion text-danger'></ul>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger"> <%= errors.description.msg %>   </div>
+                <% } %>
             </div>
             <div>
                 <label for="insertar-imagen" class="label-insertar-img">Insertar imágenes</label> <br> <br>
                 <input type="file" name="imagenProductoModificado"  src="imagenProductoModificado" alt="img-producto-nuevo" class='file-select' multiple>
+                <% if(locals.errors && errors.imagenProductoModificado){ %> 
+                    <div class='text-danger'><%= errors.imagenProductoModificado.msg %> </div>
+                    <% } %> 
             </div><br><br>
             <div>
                 <label for="categoria-producto">Categoría</label><br>
@@ -60,8 +69,11 @@
             </div>
             <div>
                 <label for="precio">Precio</label><br>
-                <span>$  </span><input type="number" name="price" id="precio-producto" value= <%=productToEdit.price%>  class="ingresar-texto precio" required>
+                <span>$  </span><input type="number" name="price" id="precio-producto" value= <%=productToEdit.price%>  class="ingresar-texto precio" >
                 <ul style ='padding: 0px' class='error-precio text-danger'></ul>
+                <% if(locals.errors && errors.price){ %> 
+                    <div class='text-danger'><%= errors.price.msg %> </div>
+                    <% } %> 
             </div>
             <button type="submit" class="modificar-button">
                 GUARDAR CAMBIOS<i class="far fa-check-square"></i>

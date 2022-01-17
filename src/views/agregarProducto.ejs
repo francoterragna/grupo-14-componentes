@@ -61,7 +61,7 @@
                             <label for="">Talle</label><br>
                             <% sizes.forEach(size => { %>
                             <input type="checkbox" name="<%= size.name %>" id="sizes" class="tallesProducto">
-                            <label for="sizes"><%= size.name %> </label>
+                            <label for="sizes" style="margin-bottom: 20px;"><%= size.name %> </label>
                             <% }) %>
                             <ul  style ='padding: 0px' class='errorTallesProducto text-danger'></ul>
                         </div>

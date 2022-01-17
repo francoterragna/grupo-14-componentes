@@ -12,7 +12,10 @@ let precio = document.querySelector('.precioProducto');
 let errorPrecio = document.querySelector('.errorPrecioProducto');
 
 let talles = document.querySelector('.tallesProducto');
-let errorTalles = document.querySelector('.errorTallesProducto')
+let errorTalles = document.querySelector('.errorTallesProducto');
+
+let stock = document.querySelector('.stockProducto');
+let errorStock = document.querySelector('.errorStockProducto');
 
 
 formulario.addEventListener('submit',function(){
@@ -51,10 +54,16 @@ descripcion.addEventListener('keyup',function(){
     else(errorDescripcion.innerHTML = '')
 })
 // Campo Talles
-talles.addEventListener('change',function(e){
-if(!e.target.checked){
-    errorTalles.innerHTML = 'Debes seleccionar al menos 1 talle'
-}
+talles.addEventListener('change',function(){
+
+    if(talles.checked){
+        errorTalles.innerHTML = ''
+    }
+    else{
+        errorTalles.innerHTML = 'Debes seleccionar al menos 1 talle'
+    }
+
+    
 })
 
 
@@ -77,6 +86,16 @@ precio.addEventListener('change',function(){
     }
     else if(precio.value > 0){
         errorPrecio.innerHTML = ''
+    }
+})
+stock.addEventListener('change',function(){
+    if(stock.value < 0){
+        errorStock.innerHTML = 'El stock no puede ser negativo'
+    }else if(stock.value == 0){
+        errorStock.innerHTML = 'Debes ponerle un stock al producto'
+    }
+    else if(stock.value > 0){
+        errorStock.innerHTML = ''
     }
 })
 

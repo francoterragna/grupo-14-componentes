@@ -79,7 +79,26 @@ const adminController = {
 
     enviarCambios: (req,res) =>{
         let id = req.params.id;
-        db.Product.update({
+        const resultValidation = validationResult(req);
+        db.Product.findByPk(req.params.id)
+        .then(productToEdit => {
+        db.Category.findAll()
+        .then(categories =>{
+            db.Size.findAll()
+            .then(sizes => {
+                db.Image.findAll()
+                .then( image =>{
+                if(resultValidation.errors.length > 0 ){
+                res.render('modificarProducto', {
+                    errors: resultValidation.mapped(), // ENVÍA TODOS LOS ERRORES A LA VISTA PARA QUE LOS PODAMOS MOSTRAR
+                    oldData: req.body,// PARA GUARDAR LOS DATOS QUE ESTABAN BIEN ESCRITOS EN EL FORMULARIO
+                    categories:categories,
+                    sizes:sizes,
+                    image:image,
+                    productToEdit:productToEdit
+                })}
+        else{
+            db.Product.update({
             name: req.body.name,
             description: req.body.description,
             discount: req.body.discount,
@@ -122,6 +141,11 @@ const adminController = {
         })
         .catch(() => res.send('Se ha producido un error, intente de nuevo más tarde'))
         
+    }
+    }) 
+    })
+    })
+    })
     },
 
     delete: (req,res) => {
