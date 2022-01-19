@@ -18,9 +18,7 @@ let stock = document.querySelector('.stockProducto');
 let errorStock = document.querySelector('.errorStockProducto');
 
 
-formulario.addEventListener('submit',function(){
-    alert('si')
-})
+
 nombreProducto.addEventListener('blur',function(){
     
     if(nombreProducto.value.length <= 0){
