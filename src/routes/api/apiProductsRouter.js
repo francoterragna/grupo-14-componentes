@@ -6,7 +6,5 @@ const apiProductsController = require ('../../controllers/api/apiProductsControl
 router.get('/buscar', apiProductsController.search)
 router.get('/:id', apiProductsController.show);
 router.get('/', apiProductsController.list);
-router.post('/crear', apiProductsController.store);
-router.delete('/:id', apiProductsController.delete)
 
 module.exports = router;
