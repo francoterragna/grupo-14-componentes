@@ -8,11 +8,12 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 
 //ROUTS
-const mainRouter = require ("./routes/mainRouter");
+const mainRouter = require("./routes/mainRouter");
 const productosRouter = require ('./routes/productosRouter');
 const usuariosRouter = require ('./routes/usersRouter');
 const adminRoutes = require('./routes/adminRoutes');
 const apiProductsRouter = require('./routes/api/apiProductsRouter');
+const apiUsersRouter = require('./routes/api/apiUsersRouter');
 
 
 //DEFINIENDO COOKIE
@@ -49,7 +50,8 @@ app.use('/', mainRouter) ;
 app.use('/usuarios', usuariosRouter)
 app.use('/productos', productosRouter);
 app.use('/administrador', adminRoutes);
-app.use('/api/productos', apiProductsRouter)
+app.use('/api/productos', apiProductsRouter);
+app.use('/api/users', apiUsersRouter);
 
 
 //ERROR 404
