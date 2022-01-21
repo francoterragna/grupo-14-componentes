@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+     <%- include('./partials/head.ejs') %>
+        <title>Productos </title>
+
+ <body>
+    <%- include('./partials/header.ejs') %>
+    
+    <main class="main-product">
+        <% if (products.length == 0) { %>
+            <div>
+                <p>No se encontraron resultados</p>
+            </div>
+        <% }else{ %>
+        <section class="section-product">
+            <% products.forEach(producto => { %>
+                <article class="article-product">
+                <% for(let i=0; i < img.length ; i++) { %>
+                    <a href="/productos/detalle/<%= producto.id %> ">
+                        <% if(img[i].product_id == producto.id){ %> 
+                            <img src="/img/products/<%= img[i].name %>" alt="Imagen">
+                            <% } %> 
+                            <% } %> 
+                        <h2> <%= producto.name %></h2>
+                        <% if(producto.discount == null){ %> 
+                            <h3>$<%= producto.price %></h3>
+                            <% } %> 
+                            <% if(producto.discount > 0){ %> 
+                                <h6>Antes <span>$<%= producto.price %></span> </h6>
+                                <h3>Ahora $<%= producto.price - (producto.price * (producto.discount/100)) %>   </h3>
+                                <p class="descuento"><%= producto.discount %>% OFF </p>
+                            <% }else{ %> 
+                        <p><br><br></p>
+                            <% } %>
+                    </a>
+                </article>
+                <% }) %>
+            </section>
+            <% } %> 
+    </main>
+    <%- include('./partials/footer.ejs') %> 
+    <script type="text/javascript" src="../jquey/jquery-3.6.0.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+ </body>
+</html>

@@ -9,16 +9,7 @@ module.exports = {
             .then(category => {
                 db.Image.findAll()
                 .then(image => {
-                        let remeras = 0;
-                        let buzos = 0;
-                        let pantalones = 0;
-                        let camisas = 0;
-                        let mallas = 0;
-                        let medias = 0;
-                        let gorras = 0;
-                        let camperas = 0;
-                        let bermudas = 0;
-                        let accesorios = 0;
+                        let [remeras, buzos,pantalones, camisas, mallas, medias, gorras, camperas, bermudas, accesorios] = [0,0,0,0,0,0,0,0,0,0];
                     products.map(porCategoria => {
                         if(porCategoria.category_id == 1){
                             remeras ++;
@@ -42,19 +33,30 @@ module.exports = {
                             accesorios ++;
                         }
                     })
+                        
+                        // const imagen = image.map(imagen =>{
+                                products.map(product => {
+                                    image.map(imagen => {
+                                if(imagen.dataValues.product_id == product.dataValues.id){
+                                    product.dataValues.imagen = imagen.dataValues.name
+                                }
+                                    })
+                                })
+                                
+                        
                     return res.status(200).json({
-                        total: products.length,
+                        count: products.length,
                         category: category.length,
-                        remeras: remeras,
-                        buzos: buzos,
-                        pantalones: pantalones,
-                        camisas: camisas,
-                        mallas: mallas,
-                        medias: medias,
-                        gorras: gorras,
-                        camperas: camperas,
-                        bermudas: bermudas,
-                        accesorios: accesorios,
+                        remeras,
+                        buzos,
+                        pantalones,
+                        camisas,
+                        mallas,
+                        medias,
+                        gorras,
+                        camperas,
+                        bermudas,
+                        accesorios,
                         data: products,
                         status: 200
                 })

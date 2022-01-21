@@ -5,7 +5,6 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const {Op} = require('sequelize');
 
-
 const productosController = {
     detalle: (req,res) =>{
         let id= req.params.id;
@@ -41,6 +40,8 @@ const productosController = {
     //HAY QUE APLICAR EL OFFSET PARA QUE TENGA VARIAS PÁGINAS
     showDiscount: (req,res) => {
         let inicio = 0;
+        let boton = req.body.siguiente;
+        console.log(boton);
         db.Product.findAll({
             where: {
                 discount: {[db.Sequelize.Op.gt]:0}
@@ -53,6 +54,23 @@ const productosController = {
             .then((img) => res.render('ofertas', {enOferta, img}))
         } )
         .catch(err => res.send(err))
+    },
+    search: (req,res) => {
+        let id = req.params.id
+        // res.send(req.body);
+        let productoBuscado = req.body.search ? req.body.search : null;
+        db.Product.findAll({
+            where: {name: { [Op.like]: '%' + productoBuscado + '%' } }
+        })
+        .then(products => {
+            db.Image.findAll({
+                //ACA DEJA DE ANDAR PORQUE NO TENGO DEFINIDO EL ID
+                where: {product_id: id}
+            })
+            })
+        .then(img => res.render('findProducts', { products, productoBuscado, img }))
+            
+        .catch(error => res.send(error))
     }
  }
 

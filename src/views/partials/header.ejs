@@ -9,13 +9,14 @@
   <a href="/usuarios/register" class="btn btn-secondary btn-lg my-3 crear-cuenta">Creá tu cuenta</a>
   
     <% } %>
-  <div class="lupa-barra">
-    <input type="text" class='inputBuscador'>
-    <button class="lupa"><i class="fas fa-search"></i></button>
-  </div>
-  
-  <a class="btn p-1 btn-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-    <i class="fas fa-bars hamburguesa"></i>
+    <div class="lupa-barra">
+      <form action='/productos/search' method='POST'>
+        <input type="text" class='inputBuscador' placeholder='Buscar...' name='search'>
+        <button class="lupa"><i class="fas fa-search" type='submit'></i></button>
+      </form>
+    </div>
+    <a class="btn p-1 btn-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      <i class="fas fa-bars hamburguesa"></i>
     </a>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
