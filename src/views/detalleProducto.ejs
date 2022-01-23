@@ -19,9 +19,15 @@
             <h2>$<%= product.price %> </h2><br>
             <h3 class= "titulo-talles">Talles</h3>
             <div class="caracteristicas-producto">
-                <% sizes.forEach(size => { %>
-                <p><%= size.name %> </p>
-                <% }) %>
+                <!-- <% sizes.forEach(size => { %>
+                    <p class='talles'><%= size.name %> </p>
+                    <% }) %> -->
+                <p class='XS'>XS</p>
+                <p class='S'>S</p>
+                <p class='M'>M</p>
+                <p class='XL'>XL</p>
+                <p class='L'>L</p>
+                <p class='XXL'>XXL</p>
             </div>
             <div class= "contenedor-garantia-stock">
                 <p><i class="fas fa-check iconos-producto"></i>Stock disponible</p>
@@ -33,7 +39,10 @@
             <div class="div-cantidad-producto">
                 <input type="text" class ="cantidad-productos-detalle">
                 <button class="sumar-restar-producto-mas">+</button>
-                <button class="sumar-restar-producto-menos">-</button>
+                <button class="sumar-restar-producto-menos">-</button><br>
+                <div>
+                    <p class='cantidad-vacia'></p>
+                </div>
             </div>
         
             <form method="POST" action="/" class ="consultas-producto">
@@ -48,6 +57,7 @@
     </main>
 
     <%- include('./partials/footer.ejs') %>
+    <script type="text/javascript" src="/js/detalleProducto.js"></script>
     <script type="text/javascript" src="../jquey/jquery-3.6.0.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>

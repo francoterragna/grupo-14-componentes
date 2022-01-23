@@ -249,6 +249,11 @@ a{
             animation: movimientoOfertas 30s infinite linear alternate;
 }
 
+.editar-perfil{
+    width: 15%;
+    margin: 0 auto;
+}
+
 .section-home span{
     padding: 8px;
     color:black;
@@ -758,6 +763,10 @@ border: none;
     border: 1px solid #ccc
 }
 
+.caracteristicas-producto p:hover{
+    cursor: pointer;
+}
+
 .consultas-producto{
     margin: 25px 0 25px 0;
     padding: 10px;
@@ -1257,11 +1266,16 @@ outline: #ccc;
     padding: 5px;
     color: #fff;
     border-radius: 8px;
-    width: 20%;
+    width: 50%;
     font-size: 18px;
     margin: 25px auto;
     display: block;
 }
+
+.boton-profile:hover{
+    color:black;
+}
+
 .editar-perfil{
     text-align: right;
     margin-right: 2%;
@@ -1360,6 +1374,7 @@ outline: #ccc;
     .caracteristicas-producto{
         justify-content: center;
     }
+    
     .caracteristicas-producto p {
         margin: 0 25px
     }
@@ -1447,6 +1462,9 @@ outline: #ccc;
         cursor: pointer;
     }
 
+    .boton-profile{
+        width: 30%;
+    }
     .div-precio-total{
         width: 50%;
         margin: 0 auto;
