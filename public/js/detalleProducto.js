@@ -8,6 +8,11 @@ window.addEventListener('load', function(){
     let cantidadVacia = document.querySelector('.cantidad-vacia');
     let botonSumar = document.querySelector('.sumar-restar-producto-mas');
     let botonRestar = document.querySelector('.sumar-restar-producto-menos');
+    let botonAgregarAlCarrito = document.querySelector('.button-agregar-carrito');
+    let titulo = document.querySelector('.titulo-producto');
+    let precio = document.querySelector('.precio');
+    let imagen = document.querySelector('.imagen-producto');
+    let carrito = [];
 
     let inputCantidad = document.querySelector('.cantidad-productos-detalle');
     let botonComprar = document.querySelector('.button-comprar');
@@ -101,4 +106,38 @@ window.addEventListener('load', function(){
             inputCantidad.value--;
         }
     })
+
+    
+    botonAgregarAlCarrito.addEventListener('click', agregarAlCarrito);
+
+    function agregarAlCarrito(e){
+        const button = e.target;
+        let nombreProducto = titulo.innerHTML;
+        let precioProducto = precio.innerHTML;
+        let imagenProducto = imagen.src;
+
+        const newItem = {
+            nombre: nombreProducto,
+            precio: precioProducto,
+            imagen: imagenProducto,
+            cantidad: inputCantidad.value
+        }
+        console.log(newItem);
+        if(inputCantidad.value == 1){
+            alert('Se sumó el producto al carrito de compras');
+            inputCantidad.value = 0;
+        }else if(inputCantidad.value > 1) {
+            alert('Se sumaron los productos al carrito de compras');
+            inputCantidad.value = 0;
+        }else{
+            alert('Debes ingresar un valor mayor a 0 en la cantidad');
+        }
+        addItemCarrito(newItem);
+    }
+
+    function addItemCarrito(newItem){
+        carrito.push(newItem);
+    }
+    console.log(carrito);
+
 })
