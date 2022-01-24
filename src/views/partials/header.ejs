@@ -46,8 +46,11 @@
                 </div>
                 <% } else{%>
                 <div class="agregarProducto">
-                <a href="/usuarios/logout">CERRAR SESIÓN</a>
-              </div>
+                  <a href="/usuarios/logout">CERRAR SESIÓN</a>
+                </div>
+                <div class="agregarProducto">
+                  <a href="/usuarios/editarPerfil/<%= userLogged.id %>">EDITAR PERFIL</a>
+                </div>
               <% } %> 
           </div>
       <p>

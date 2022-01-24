@@ -111,7 +111,9 @@ window.addEventListener('load', function(){
     botonAgregarAlCarrito.addEventListener('click', agregarAlCarrito);
 
     function agregarAlCarrito(e){
+        //Para ver cómo captura el elemento HTML
         const button = e.target;
+        //
         let nombreProducto = titulo.innerHTML;
         let precioProducto = precio.innerHTML;
         let imagenProducto = imagen.src;
@@ -133,11 +135,14 @@ window.addEventListener('load', function(){
             alert('Debes ingresar un valor mayor a 0 en la cantidad');
         }
         addItemCarrito(newItem);
+        
+        console.log(sessionStorage.getItem('producto'))
     }
 
     function addItemCarrito(newItem){
         carrito.push(newItem);
+        sessionStorage.setItem('producto', JSON.stringify(carrito));
+        console.log(carrito);
     }
-    console.log(carrito);
 
 })

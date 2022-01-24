@@ -8,7 +8,7 @@
         <div class="detalle-producto">
             <br>
             <% if (locals.isLogged && locals.userLogged.category === 'admin') { %>
-               <a href="/administrador/modificarProducto/<%= product.id %> " class="button-agregar-carrito">Modificar producto</a><br>
+               <a href="/administrador/modificarProducto/<%= product.id %> " class="button-modificar">Modificar producto</a><br>
                <% }else{ %>
                 <div></div>
                 <% } %>  

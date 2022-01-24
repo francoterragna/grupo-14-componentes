@@ -249,10 +249,6 @@ a{
             animation: movimientoOfertas 30s infinite linear alternate;
 }
 
-.editar-perfil{
-    width: 15%;
-    margin: 0 auto;
-}
 
 .section-home span{
     padding: 8px;
@@ -678,6 +674,23 @@ Aca empieza el css del detalle de producto
     margin: 10px;
     font-weight: bold ;
 }
+
+.button-modificar{
+    width: 35%;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #999;
+}
+
+.button-modificar:hover{
+    background-color: #bbb;
+    color: #000;
+}
+
 .button-comprar{
 background-color: #3483fa; 
 color: white;   
