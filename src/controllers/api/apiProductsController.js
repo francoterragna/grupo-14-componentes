@@ -34,7 +34,6 @@ module.exports = {
                         }
                     })
                         
-                        // const imagen = image.map(imagen =>{
                                 products.map(product => {
                                     image.map(imagen => {
                                 if(imagen.dataValues.product_id == product.dataValues.id){
@@ -43,7 +42,6 @@ module.exports = {
                                     })
                                 })
                                 
-                        
                     return res.status(200).json({
                         count: products.length,
                         category: category.length,
@@ -58,6 +56,7 @@ module.exports = {
                         bermudas,
                         accesorios,
                         data: products,
+                        last: products[products.length - 1],
                         status: 200
                 })
             })
