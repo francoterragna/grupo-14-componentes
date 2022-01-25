@@ -12,7 +12,12 @@ window.addEventListener('load', function(){
     let titulo = document.querySelector('.titulo-producto');
     let precio = document.querySelector('.precio');
     let imagen = document.querySelector('.imagen-producto');
-    let carrito = [];
+
+    let carrito = sessionStorage.getItem('producto') ? JSON.parse(sessionStorage.getItem('producto')) : [];
+
+    console.log('hola ' + carrito);
+    
+    
 
     let inputCantidad = document.querySelector('.cantidad-productos-detalle');
     let botonComprar = document.querySelector('.button-comprar');
@@ -117,14 +122,15 @@ window.addEventListener('load', function(){
         let nombreProducto = titulo.innerHTML;
         let precioProducto = precio.innerHTML;
         let imagenProducto = imagen.src;
+        let cantidadProducto = inputCantidad.value;
 
         const newItem = {
             nombre: nombreProducto,
             precio: precioProducto,
             imagen: imagenProducto,
-            cantidad: inputCantidad.value
+            cantidad: cantidadProducto
         }
-        console.log(newItem);
+        // console.log(newItem);
         if(inputCantidad.value == 1){
             alert('Se sumó el producto al carrito de compras');
             inputCantidad.value = 0;
@@ -136,13 +142,15 @@ window.addEventListener('load', function(){
         }
         addItemCarrito(newItem);
         
-        console.log(sessionStorage.getItem('producto'))
     }
-
+    
+    // let productosGuardados = carrito[0];
+    // console.log(productosGuardados);
     function addItemCarrito(newItem){
         carrito.push(newItem);
-        sessionStorage.setItem('producto', JSON.stringify(carrito));
         console.log(carrito);
+        console.log(sessionStorage.producto);
+        sessionStorage.setItem('producto', JSON.stringify(carrito));
     }
 
 })
