@@ -3,7 +3,10 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
     list: (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            // raw: true,
+            // attributes: ['id','name','description','category_id','discount','price','stock']
+        })
         .then(products => {
             db.Category.findAll()
             .then(category => {
