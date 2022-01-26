@@ -10,7 +10,7 @@ const validationMod = [
         let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
         console.log(files)
         if (files.length == 0) {
-           throw new Error ('Tienes que subir una imagen');
+           console.log('Tienes que subir una imagen');
          } else {
            let fileExtension = path.extname(files[0].originalname);
           //  console.log(fileExtension)

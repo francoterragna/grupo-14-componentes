@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
          if(campoNombre.value == '') {
              errores.push('El campo de nombre tiene que estar completo');
          }
-         if(campoNombre.value.length < 3) {
+         if(campoNombre.value.length < 3){
              errores.push('El nombre debe tener al menos 3 letras');
          }
          if(campoApellido.value == ''){
