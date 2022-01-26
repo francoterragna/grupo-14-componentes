@@ -872,7 +872,7 @@ border: none;
     text-align: left;
 }
 .cupon-boton{
-    background-color: rgb(219, 22, 81);
+    background-color: rgb(22, 140, 219);
     padding: 10px;
     color: white;
     border-radius: 5px;
@@ -884,7 +884,7 @@ border: none;
     box-shadow: 0px 0px 15px 0 #666;
 }
 .fila-principal{
-border: 1px solid red;
+border: 1px solid #ccc;
 }
 .input-producto{  
     width: 35px;
@@ -899,10 +899,26 @@ border: 1px solid red;
 .boton-sumar{
     border: 1px solid #ccc;
     padding: 3px;
+    border-radius: 40%;
 }
 .boton-restar {
     border: 1px solid #ccc;
     padding: 3px;
+    border-radius: 40%;
+}
+
+.h2-precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotito-carrito{
+    display: none;
+}
+
+.signo-numero{
+    display: flex;
 }
 
 .div-precio-total{
@@ -1339,6 +1355,7 @@ outline: #ccc;
         margin-right: 20px;
     }
 
+
     .hamburguesa{
         font-size: 35px;
     }
@@ -1437,6 +1454,19 @@ outline: #ccc;
     .div-profile img {
      width: 25%;
      
+    }
+
+    .fotito-carrito{
+        display: inline-block;
+        width: 200%;
+        margin-top: 20px;
+        transition: .5s;
+        position: relative;
+        z-index: 10;
+    }
+
+    .fotito-carrito:hover{
+        width: 500%;
     }
 
     .main-not-found h2{

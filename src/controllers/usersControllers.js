@@ -125,30 +125,56 @@ const usersController = {
     },
     actualizarUsuario: (req,res) => {
         let id = req.params.id;
-        if (req.file != undefined){
-                imageName = req.file.filename;
-        }
-        else{
-                imageName = 'img-default.jpg';
-            };
-            db.User.findByPk(id)
-            .then(user => {
+        db.User.findByPk(id)
+        .then(user => {
+                if (req.file != undefined){
+                        imageName = req.file.filename;
+                }
+                else{
+                        imageName = user.img;
+                    };
                 let passwordOk = bcryptjs.compareSync(req.body.confirmPassword, user.password);
                 if(passwordOk){
                 var newPassword = req.body.newPassword
                 }
                 db.User.update({
-                    first_name: req.body.firstName,
-                    last_name: req.body.lastName,
-                    img: imageName,
-                    password: bcryptjs.hashSync(newPassword,10)
-                   },{
-                        where:{
-                            id: req.params.id
-                        }
-                   })
-                   .then(res.redirect('/usuarios/profile'))
-                   .catch(err => res.send('Ocurrió un error'))
+                            first_name: req.body.firstName,
+                            last_name: req.body.lastName,
+                            img: imageName,
+                            password: bcryptjs.hashSync(newPassword,10)
+                           },{
+                                where:{
+                                    id: req.params.id
+                                }
+                           })
+                           .then(res.redirect('/usuarios/profile'))
+                           .catch(err => res.send('Ocurrió un error'))
+                // if(req.body.confirmPassword == '' && newPassword == ''){
+                //     db.User.update({
+                //         first_name: req.body.firstName,
+                //         last_name: req.body.lastName,
+                //         img: imageName,
+                //        },{
+                //             where:{
+                //                 id: req.params.id
+                //             }
+                //        })
+                //        .then(res.redirect('/usuarios/profile'))
+                //        .catch(err => res.send('Ocurrió un error'))
+                // }else if(req.body.confirmPassword != null && newPassword != null){
+                //     db.User.update({
+                //         first_name: req.body.firstName,
+                //         last_name: req.body.lastName,
+                //         img: imageName,
+                //         password: bcryptjs.hashSync(newPassword,10)
+                //        },{
+                //             where:{
+                //                 id: req.params.id
+                //             }
+                //        })
+                //        .then(res.redirect('/usuarios/profile'))
+                //        .catch(err => res.send('Ocurrió un error'))
+                // }
             })
     },
     logout: (req,res)=>{

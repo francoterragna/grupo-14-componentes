@@ -18,7 +18,7 @@ const { body } = require('express-validator');
       let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
       console.log(file)
       if (!file) {
-         throw new Error ('Tienes que subir una imagen');
+         console.log ('Tienes que subir una imagen');
        } else {
          let fileExtension = path.extname(file.originalname);
         if (!acceptedExtensions.includes(fileExtension)) {

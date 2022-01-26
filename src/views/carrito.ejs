@@ -10,59 +10,55 @@
 
         <table class="carrito-tabla-control">
         <thead class="fila-principal">
-            <tr >
-                <th> <strong>Nombre</strong> </th>
+            <tr>
+                <th><strong>Foto</strong></th>
+                <th><strong>Nombre</strong></th>
                 <th><strong>Cantidad</strong></th>
                 <th><strong>SubTotal</strong></th>
                <th></th>
             </tr>
         </thead>
+        <p class='sin-productos'></p>
+
         <tbody class="fila-comun">
-            <tr>
-                
-                <td class="nombre-producto">REMERA BASIC IN PROCESS</td>
-
-                <td class="cantidad-producto"><div class="botones-control"><input type="number" class="input-producto"> 
-                
-                    <button class="boton-restar"><i class="fas fa-minus"></i></button>
-                    <button class="boton-sumar"><i class="fas fa-plus"></i></button>
-                </div>
+            <tr class = 'producto-completo-carrito'>
+                <td class='imagen-producto-carrito'> </td>
+                <td class="nombre-producto">
+                    
                 </td>
-
-                <td class="precio-producto">$3.475</td>
-
-                <td class="tarro-basura"><i class="fas fa-trash"></i></td>
-            </tr>
-            <tr class="fila-comun">
-                <td class="nombre-producto">REMERA TH OLD SCHOOL</td>
-                
-                <td class="cantidad-producto"> <div class="botones-control"><input type="number" class="input-producto"> 
-                
-                    <button class="boton-restar"><i class="fas fa-minus"></i></button>
-                    <button class="boton-sumar"><i class="fas fa-plus"></i></button>
-                </div>
+                <td class="cantidad-producto">
+                    <div class="botones-control">
+                        <input type="number" class="input-producto"> 
+                        <button class="boton-restar"><i class="fas fa-minus"></i></button>
+                        <button class="boton-sumar"><i class="fas fa-plus"></i></button>
+                    </div>
                 </td>
-                <td class="precio-producto">$2.750</td>
+                <td class="precio-producto"></td>
                 <td class="tarro-basura"><i class="fas fa-trash"></i></td>
             </tr>
         </tbody>
+
         </table>
     </div>
      <div class="div-precio-total">
          <p>Total:</p>
-         <p>$6.225</p>
+         <div class='signo-numero'>
+         <p>$</p>
+         <p class='precio-total'></p>
+        </div>
      </div>
      <div class="cupon">
-         <div >
+
+        <button type="submit" name="cupon" class="cupon-boton">Seguir la compra por Whatsapp</button>
+         <!-- <div >
              <label for="cupon"></label>
             <input type="text" placeholder="Escribir código cupón" name="cupon" class="cupon-input">
          </div>
          <div >
            <button type="submit" name="cupon" class="cupon-boton" >APLICAR CUPÓN</button>
-         </div>
+         </div> -->
      </div>
 
-     
     </main>    
     
     <%- include('./partials/footer.ejs') %>

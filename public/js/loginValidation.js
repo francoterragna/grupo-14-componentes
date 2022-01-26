@@ -15,7 +15,7 @@ let errorEmail = document.querySelector('.error-email');
       
 //       })
 email.addEventListener('keyup',function(){
-        if(email.value.length >= 1){
+        if(email.value.length >= 5){
         email.style.borderColor = '#1ed12d'
         errorEmail.innerHTML = '';
         }
