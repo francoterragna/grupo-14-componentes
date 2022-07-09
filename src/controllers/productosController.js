@@ -46,7 +46,7 @@ const productosController = {
             where: {
                 discount: {[db.Sequelize.Op.gt]:0}
             },
-            limit: 5,
+            limit: 6,
             offset: inicio
         })
         .then((enOferta) =>{
